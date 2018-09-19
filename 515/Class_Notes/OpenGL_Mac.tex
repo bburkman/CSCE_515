@@ -1,0 +1,59 @@
+%%%%%%%%%%%%
+\section{Running OpenGL on a Mac}
+%%%%%%%%%%%%%
+
+\subsection{Installing OpenGL}
+
+You don't have to.  It comes in the box.  
+
+\subsection{Visual Studio}
+
+\url{https://social.msdn.microsoft.com/Forums/en-US/ef99e9f5-2a48-423b-b6c0-fa5617d7c63d/how-do-i-get-c-to-work-on-visual-studio-for-mac?forum=visualstudiogeneral}
+
+This post was from March 2017, but I think it's still true.  The Microsoft person says that Visual Studio for Mac is designed for building mobile apps, not for general computing.  It does not support {\tt C++}.  She kindly recommends that you run Windows.  
+
+\subsection{How Brad Does It}
+
+\begin{itemize}
+	\item Install GLEW and GLFW.  The easiest way to do it is with Homebrew, which is one of the programs you can install that lets you unleash the Linux power of your Mac.  
+	
+	{\tt brew install glew}
+	
+	Another way to do it is to download the .zip files from the GLEW and GLFW websites and build.  GLEW comes with a {\tt Makefile}, but for GLFW you have to use CMake.  
+	
+	\item Link your code to {\tt glew.h} and {\tt glfw3.h}.  
+	
+	One way to link your code to the library is to replace the 
+	\begin{verbatim}#include <GLFW/glfw3.h>\end{verbatim}
+	with the path to the {\tt glfw3} file on your machine, something like 
+	\begin{verbatim}#include </usr/local/Cellar/glfw/3.2.1/include/GLFW/glfw3.h>\end{verbatim}
+	
+	\item Tell OpenGL which version you want to use.  
+	
+	If you want to run an earlier version of OpenGL, as in Assignment 1 (so you can use {\tt glDrawPixels}, which was removed from the language in Version 3.2), ignore this step, and it will default to 2.1.
+	
+	This trick only works on my Mac if I specify version 3.3.   
+	
+	Put this code in your {\tt main()} function.
+	
+\begin{verbatim}	
+      glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+      glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+      glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+      glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);	
+ \end{verbatim}
+ 
+ \item Compile and Link.  
+ 
+ I use {\tt g++}, the GNU compiler for {\tt C++}.  I use it not just because I'm old (which I am), but because I often run my big jobs in parallel on remote UNIX clusters, and they don't have integrated development environments (IDE's) like Visual Studio.  You have to do everything from a UNIX command line.  Since I have to be proficient in those tools anyway, I use them on my local computer.  
+ 
+ Here's the command I use to compile and link my code.  
+ 
+ {\tt g++ Assignment1.cpp -framework OpenGL -lGLEW -lGLFW}
+ 
+\end{itemize}
+
+\subsection{How Other People Do It}
+ 
+ Send me your stories and I'll put them in.  
+ 

@@ -1,0 +1,42 @@
+\BOOKMARK [1][-]{section.1}{Tuesday 21 August: Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Math Review: Dot Product and Cross Product}{}% 2
+\BOOKMARK [1][-]{section.3}{Math Review: Algebra}{}% 3
+\BOOKMARK [1][-]{section.4}{Math Review: Quaternions}{}% 4
+\BOOKMARK [2][-]{subsection.4.1}{Quaternions as Rotations}{section.4}% 5
+\BOOKMARK [1][-]{section.5}{Thursday 23 August: Raster Display v/s Vector Display}{}% 6
+\BOOKMARK [1][-]{section.6}{Tuesday 28 August: Scan Conversion of a Line Segment}{}% 7
+\BOOKMARK [1][-]{section.7}{Thursday 30 August: Scan Conversion of a Triangle}{}% 8
+\BOOKMARK [2][-]{subsection.7.1}{Homework 1}{section.7}% 9
+\BOOKMARK [2][-]{subsection.7.2}{Midpoint Algorithm \(Besenham\) Pseudocode}{section.7}% 10
+\BOOKMARK [2][-]{subsection.7.3}{Naming Conventions}{section.7}% 11
+\BOOKMARK [2][-]{subsection.7.4}{Line Scan Pseudocode}{section.7}% 12
+\BOOKMARK [2][-]{subsection.7.5}{Special Cases}{section.7}% 13
+\BOOKMARK [2][-]{subsection.7.6}{Calculating xL and xR Incrementally}{section.7}% 14
+\BOOKMARK [2][-]{subsection.7.7}{Color}{section.7}% 15
+\BOOKMARK [1][-]{section.8}{Running OpenGL on a Mac}{}% 16
+\BOOKMARK [2][-]{subsection.8.1}{Installing OpenGL}{section.8}% 17
+\BOOKMARK [2][-]{subsection.8.2}{Visual Studio}{section.8}% 18
+\BOOKMARK [2][-]{subsection.8.3}{How Brad Does It}{section.8}% 19
+\BOOKMARK [2][-]{subsection.8.4}{How Other People Do It}{section.8}% 20
+\BOOKMARK [1][-]{section.9}{Tuesday 4 September: Clipping}{}% 21
+\BOOKMARK [2][-]{subsection.9.1}{Cohen-Sutherland Line Clipper}{section.9}% 22
+\BOOKMARK [2][-]{subsection.9.2}{Clipping Polygons}{section.9}% 23
+\BOOKMARK [1][-]{section.10}{Thursday 6 September: Math Review}{}% 24
+\BOOKMARK [2][-]{subsection.10.1}{Matrix Notation and Matrix-Matrix Multiplication \(MMM\)}{section.10}% 25
+\BOOKMARK [2][-]{subsection.10.2}{Dot Product: Derivation and as a Projection}{section.10}% 26
+\BOOKMARK [3][-]{subsubsection.10.2.1}{Trig Review}{subsection.10.2}% 27
+\BOOKMARK [3][-]{subsubsection.10.2.2}{Derivation of \040 = || || cos}{subsection.10.2}% 28
+\BOOKMARK [3][-]{subsubsection.10.2.3}{Dot product as a projection}{subsection.10.2}% 29
+\BOOKMARK [2][-]{subsection.10.3}{Cross Product}{section.10}% 30
+\BOOKMARK [3][-]{subsubsection.10.3.1}{Finding the Cross Product using the Determinant}{subsection.10.3}% 31
+\BOOKMARK [3][-]{subsubsection.10.3.2}{Cross Product as the Area of the Parallelogram}{subsection.10.3}% 32
+\BOOKMARK [1][-]{section.11}{Monday 11 September: Color Models}{}% 33
+\BOOKMARK [2][-]{subsection.11.1}{Anti-Aliasing}{section.11}% 34
+\BOOKMARK [2][-]{subsection.11.2}{Character Generation}{section.11}% 35
+\BOOKMARK [2][-]{subsection.11.3}{Color Models}{section.11}% 36
+\BOOKMARK [3][-]{subsubsection.11.3.1}{RGB: ``Emitting Light''}{subsection.11.3}% 37
+\BOOKMARK [3][-]{subsubsection.11.3.2}{RGB Cube}{subsection.11.3}% 38
+\BOOKMARK [3][-]{subsubsection.11.3.3}{CMY: ``Absorbing Light.''}{subsection.11.3}% 39
+\BOOKMARK [3][-]{subsubsection.11.3.4}{HSV Model}{subsection.11.3}% 40
+\BOOKMARK [2][-]{subsection.11.4}{Modeling the World}{section.11}% 41
+\BOOKMARK [1][-]{section.12}{Wednesday 13 September: Triangle Mesh}{}% 42

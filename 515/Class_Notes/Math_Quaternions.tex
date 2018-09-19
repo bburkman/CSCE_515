@@ -1,0 +1,142 @@
+%%%%%%%%%
+\section{Math Review:  Quaternions}
+%%%%%%%%%%%
+
+Complex numbers, $a+bi$ where $a$ and $b$ are real numbers and $i = \sqrt{-1}$, are two-dimensional numbers.  Quaternions, $a + bi + cj + dk$, are four-dimensional numbers.  Just as you can think of complex numbers being two-dimensional vectors having the basis vectors $1 = \langle 1,0 \rangle$ and $i = \langle 0,1 \rangle$, you can think of quaternions as four-dimensional vectors having the basis vectors 
+$1 = \langle 1,0,0,0 \rangle$, 
+$i = \langle 0,1,0,0 \rangle$, 
+$j = \langle 0,0,1,0 \rangle$, 
+$k = \langle 0,0,0,1 \rangle$, 
+
+\
+
+While complex numbers have the basis elements 1 and $i$ with, $i^2 = -1$, quaternions have this multiplication scheme for their basis elements.  Note that $i^2 = j^2 = k^2 = ijk = -1$, but they are anti-commutative, with, for example, $ij = -ji$.
+
+\
+
+\hfil\begin{tabular}{*5{>{$}c<{$}|}}
+	\times & 1 & i & j & k \cr \hline
+	1 & 1 & i & j & k \cr \hline
+	i & i & -1 & k & -j \cr \hline
+	j & j & -k & -1 & i \cr \hline
+	k & k & j & -i & -1 \cr
+\end{tabular}
+\hfil
+\begin{tikzpicture}[x=10mm, y=10mm]
+%	\draw (0,0) circle (1.3);
+	\coordinate (I) at (0,1);
+	\coordinate (J) at ({cos(-30)},{sin(-30)});
+	\coordinate (K) at ({cos(210)},{sin(210)});
+	\draw (I) node {$i$};
+	\draw (J) node {$j$};
+	\draw (K) node {$k$};
+	\draw [triangle 60-] (1,0) arc (0:60:1);
+	\draw [triangle 60-] ({cos(120)},{sin(120)}) arc (120:180:1);
+	\draw [triangle 60-] ({cos(240)},{sin(240)}) arc (240:300:1);
+	\draw (0,0) node {$+$};
+
+\end{tikzpicture}
+\hfil
+\begin{tikzpicture}[x=10mm, y=10mm]
+%	\draw (0,0) circle (1.3);
+	\coordinate (I) at (0,1);
+	\coordinate (J) at ({cos(-30)},{sin(-30)});
+	\coordinate (K) at ({cos(210)},{sin(210)});
+	\draw (I) node {$i$};
+	\draw (J) node {$j$};
+	\draw (K) node {$k$};
+	\draw [-triangle 60] (1,0) arc (0:60:1);
+	\draw [-triangle 60] ({cos(120)},{sin(120)}) arc (120:180:1);
+	\draw [-triangle 60] ({cos(240)},{sin(240)}) arc (240:300:1);
+	\draw (0,0) node {$-$};
+
+\end{tikzpicture}
+\hfil
+
+\
+
+The inverse of a quaternion is given by:
+
+$$ (a + bi + cj + dk)^{-1} = \frac{a - bi - cj - dk}{a^2 + b^2 + c^2 + d^2}$$
+
+\
+
+{\bf Vector Form of Quaternions}
+
+Think of $a + bi + cj + dk$ as the pair, $(a, \langle b,c,d \rangle )$, with a scalar part and a vector part.  
+
+Then quaternion addition is \ $(r_1, \vec{v}_1) + (r_2, \vec{v}_2) = (r_1 + r_2, \vec{v}_1 + \vec{v}_2)$.
+
+Vector multiplication is $(r_1,\vec{v}_1) (r_2,\vec{v}_2) = (r_1r_2 - \vec{v}_1 \cdot \vec{v}_2, \ r_1\vec{v}_2 + r_2 \vec{v}_1 + \vec{v}_1 \times \vec{v}_2)$
+
+
+\subsection{Quaternions as Rotations}
+
+We start with a vector, $\vec{p} = (p_x, p_y, p_z)$, written as a quaternion with real coordinate zero, 
+$$p = p_x \mathbf{i} + p_y \mathbf{j} + p_z \mathbf{k}$$
+
+We want a rotation of $p$ through an angle of $\theta$ about the axis defined by a unit vector $$\vec{u} =  ( u_x, u_y, u_z ) = u_x \mathbf{i} + u_y \mathbf{j} + u_z \mathbf{k}$$ 
+
+In two dimensions, Euler's Formula,  $e^{i\theta} = \cos \theta + i \sin \theta$, gives a counterclockwise rotation of $\theta$.  We can extend it to three dimensions as
+$$q = e^{ 
+	\frac{\theta}{2}
+	( u_x \mathbf{i} + u_y \mathbf{j} + u_z \mathbf{k} )
+	}
+=
+	\cos \frac{\theta}{2} + ( u_x \mathbf{i} + u_y \mathbf{j} + u_z \mathbf{k} ) \sin \frac{\theta}{2}
+$$
+
+The rotation of $\vec{p}$ about $\vec{u}$ is given by 
+$$p' = q p q^{-1}$$
+
+Going back to using Euler's Formula for a rotation, let's look at the multiplicative inverse of $q$ and see that it's consistent with previous knowledge.  By a previous formula, 
+$$a^{-1} = (a_w + a_x \mathbf{i} + a_y \mathbf{j} + a_z \mathbf{k})^{-1} = 
+\frac{1}{a_w^2 + a_x^2 + a_y^2 + a_z^2} (a_w - a_x \mathbf{i} - a_y \mathbf{j} - a_z \mathbf{k} )$$
+
+The vector $\vec{u} = u_x \mathbf{i} + u_y \mathbf{j} + u_z \mathbf{k}$ is a unit vector with real part zero, so the denominator is 1.  
+$$(\vec{u})^{-1} = (u_x \mathbf{i} + u_y \mathbf{j} + u_z \mathbf{k})^{-1} = -u_x \mathbf{i} - u_y \mathbf{j} - u_z \mathbf{k} = -\vec{u}$$
+
+Applying the extension of Euler's Formula, 
+$$q = e^{ 
+	\frac{\theta}{2}
+	( u_x \mathbf{i} + u_y \mathbf{j} + u_z \mathbf{k} )
+	}
+=
+	\cos \frac{\theta}{2} + ( u_x \mathbf{i} + u_y \mathbf{j} + u_z \mathbf{k} ) \sin \frac{\theta}{2}
+$$
+
+and the inverse formula
+
+$$a^{-1} = (a_w + a_x \mathbf{i} + a_y \mathbf{j} + a_z \mathbf{k})^{-1} = 
+\frac{1}{a_w^2 + a_x^2 + a_y^2 + a_z^2} (a_w - a_x \mathbf{i} - a_y \mathbf{j} - a_z \mathbf{k} )$$
+
+we get
+
+$$q^{-1} = \frac{1}{
+	\cos^2 \frac{\theta}{2}
+	 + u_x^2 \sin ^2 \frac{\theta}{2}
+	 + u_y^2 \sin ^2 \frac{\theta}{2}
+	 + u_z^2 \sin ^2 \frac{\theta}{2}
+	}
+	\left(\cos \frac{\theta}{2} - ( u_x \mathbf{i} + u_y \mathbf{j} + u_z \mathbf{k} ) \sin \frac{\theta}{2}\right)
+$$
+
+$$ = \frac{1}{
+	\cos^2 \frac{\theta}{2}
+	 + (u_x^2 
+	 + u_y^2 
+	 + u_z^2) \sin ^2 \frac{\theta}{2}
+	}
+	\left(\cos \left( - \frac{\theta}{2} \right) + ( u_x \mathbf{i} + u_y \mathbf{j} + u_z \mathbf{k} ) \sin \left(-\frac{\theta}{2}\right)\right)
+$$
+
+$$ = \frac{1}{
+	\cos^2 \frac{\theta}{2}
+	+ \sin ^2 \frac{\theta}{2}
+	}
+	\left(\cos \left( - \frac{\theta}{2} \right) + ( u_x \mathbf{i} + u_y \mathbf{j} + u_z \mathbf{k} ) \sin \left(-\frac{\theta}{2}\right)\right)
+$$
+
+$$ = e^{\frac{\theta}{2}(-u)} = \left(e^{\frac{\theta}{2}u}\right)^{-1}
+$$
+

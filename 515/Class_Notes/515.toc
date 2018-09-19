@@ -1,0 +1,42 @@
+\contentsline {section}{\numberline {1}Tuesday 21 August: Introduction}{2}{section.1}
+\contentsline {section}{\numberline {2}Math Review: Dot Product and Cross Product}{3}{section.2}
+\contentsline {section}{\numberline {3}Math Review: Algebra}{3}{section.3}
+\contentsline {section}{\numberline {4}Math Review: Quaternions}{4}{section.4}
+\contentsline {subsection}{\numberline {4.1}Quaternions as Rotations}{5}{subsection.4.1}
+\contentsline {section}{\numberline {5}Thursday 23 August: Raster Display v/s Vector Display}{6}{section.5}
+\contentsline {section}{\numberline {6}Tuesday 28 August: Scan Conversion of a Line Segment}{8}{section.6}
+\contentsline {section}{\numberline {7}Thursday 30 August: Scan Conversion of a Triangle}{11}{section.7}
+\contentsline {subsection}{\numberline {7.1}Homework 1}{11}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Midpoint Algorithm (Besenham) Pseudocode}{11}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}Naming Conventions}{12}{subsection.7.3}
+\contentsline {subsection}{\numberline {7.4}Line Scan Pseudocode}{13}{subsection.7.4}
+\contentsline {subsection}{\numberline {7.5}Special Cases}{14}{subsection.7.5}
+\contentsline {subsection}{\numberline {7.6}Calculating $x_L$ and $x_R$ Incrementally}{14}{subsection.7.6}
+\contentsline {subsection}{\numberline {7.7}Color}{14}{subsection.7.7}
+\contentsline {section}{\numberline {8}Running OpenGL on a Mac}{15}{section.8}
+\contentsline {subsection}{\numberline {8.1}Installing OpenGL}{15}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Visual Studio}{15}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}How Brad Does It}{15}{subsection.8.3}
+\contentsline {subsection}{\numberline {8.4}How Other People Do It}{16}{subsection.8.4}
+\contentsline {section}{\numberline {9}Tuesday 4 September: Clipping}{16}{section.9}
+\contentsline {subsection}{\numberline {9.1}Cohen-Sutherland Line Clipper}{16}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}Clipping Polygons}{20}{subsection.9.2}
+\contentsline {section}{\numberline {10}Thursday 6 September: Math Review}{21}{section.10}
+\contentsline {subsection}{\numberline {10.1}Matrix Notation and Matrix-Matrix Multiplication (MMM)}{21}{subsection.10.1}
+\contentsline {subsection}{\numberline {10.2}Dot Product: Derivation and as a Projection}{23}{subsection.10.2}
+\contentsline {subsubsection}{\numberline {10.2.1}Trig Review}{23}{subsubsection.10.2.1}
+\contentsline {subsubsection}{\numberline {10.2.2}Derivation of $\mathaccentV {vec}17E{u} \cdot \mathaccentV {vec}17E{v} = |\mathaccentV {vec}17E{u}| |\mathaccentV {vec}17E{v}| \qopname \relax o{cos}\theta $}{23}{subsubsection.10.2.2}
+\contentsline {subsubsection}{\numberline {10.2.3}Dot product as a projection}{24}{subsubsection.10.2.3}
+\contentsline {subsection}{\numberline {10.3}Cross Product}{24}{subsection.10.3}
+\contentsline {subsubsection}{\numberline {10.3.1}Finding the Cross Product using the Determinant}{24}{subsubsection.10.3.1}
+\contentsline {subsubsection}{\numberline {10.3.2}Cross Product as the Area of the Parallelogram}{25}{subsubsection.10.3.2}
+\contentsline {section}{\numberline {11}Monday 11 September: Color Models}{25}{section.11}
+\contentsline {subsection}{\numberline {11.1}Anti-Aliasing}{25}{subsection.11.1}
+\contentsline {subsection}{\numberline {11.2}Character Generation}{26}{subsection.11.2}
+\contentsline {subsection}{\numberline {11.3}Color Models}{26}{subsection.11.3}
+\contentsline {subsubsection}{\numberline {11.3.1}RGB: ``Emitting Light''}{26}{subsubsection.11.3.1}
+\contentsline {subsubsection}{\numberline {11.3.2}RGB Cube}{27}{subsubsection.11.3.2}
+\contentsline {subsubsection}{\numberline {11.3.3}CMY: ``Absorbing Light.''}{27}{subsubsection.11.3.3}
+\contentsline {subsubsection}{\numberline {11.3.4}HSV Model}{27}{subsubsection.11.3.4}
+\contentsline {subsection}{\numberline {11.4}Modeling the World}{27}{subsection.11.4}
+\contentsline {section}{\numberline {12}Wednesday 13 September: Triangle Mesh}{28}{section.12}

@@ -1,0 +1,121 @@
+%%%%%%%%%%%%%%%%
+\section{Thursday 23 August:  Raster Display v/s Vector Display}
+%%%%%%%%%%%%%%%%%
+
+\
+
+{\bf Ray Tracing}:  Which objects intersect the line?
+
+\
+
+{\bf Polygon Projection (Polygon Rendering)}
+
+Triangles on the screen
+
+Vertex coordinates
+
+Multiply by matrices to convert to screen's coordinate system
+
+\
+
+Modeling Coordinates 
+
+\qquad $\to$ World Coordinates
+
+\qquad $\to$ Viewing and Projection Coordinates (Camera View)
+
+\qquad $\to$ Normalized Coordinates
+
+\qquad $\to$ Device Coordinates
+
+\
+
+\begin{tabular}{m{0.3in}m{.2in}*4{m{1.0in}m{.2in}}}
+	$\left[ \begin{matrix} x \cr y \cr z \cr w \cr \end{matrix}\right]$
+	&
+	$\to$
+	&
+	Model \par Martrix
+	&
+	$\to$
+	&
+	Projection \par Matrix \par (Camera View)
+	&
+	$\to$
+	&
+	Perspective \par Division
+	&
+	$\to$
+	&
+	Viewpoint \par Transformation
+	\cr
+\end{tabular}
+
+\
+
+{\bf 2D Scan Conversion}:  Converts 2D object description to pixel values. 
+
+{\it ``Pixel''}  Picture Element
+
+Visible Surface Determination:  Occlusion
+
+\
+
+Direct Illumination v/s Global Illumination:  Shadows not completely dark
+
+Curves and surfaces give a smooth alternative to polygonal representation of objects.  
+
+\
+
+Lots of student projects have dealt with {\bf Particle Dynamics}
+
+\
+
+{\bf Early Video Games}  Nimatron (1940)  First ``video'' game used an oscilloscope as its screen.  
+
+\
+
+{\bf Raster Display} - Image broken into pixels
+
+{\bf Vector Display} - Smooth curves, like moving lasers or electron beam.  
+
+\
+
+Black \& white {\bf bitmap} has one bit per pixel
+
+\
+
+{\bf Raster Displays}
+
+More computationally expensive
+
+Requires more memory
+
+Constant refresh rate
+
+Supports area fills
+
+Won over vector after memory got cheap.  
+
+\
+
+Frame buffers are getting more complex.  
+
+\qquad Double buffering so screen doesn't refresh in the middle of a memory move
+
+\qquad Left and right buffers for stereoscopic rendering
+
+\qquad Depth buffer for occlusion
+
+\
+
+{\bf Know from Today's Lesson}
+
+Pixel, raster, bitmap, frame buffer, {\it aliasing}
+
+Know the difference between raster and vector.  
+
+\
+
+{\bf Aliasing} - in computer graphics, the jagged, or saw-toothed appearance of curved or diagonal lines on a low-resolution monitor.
+

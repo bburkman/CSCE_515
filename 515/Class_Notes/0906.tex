@@ -1,0 +1,392 @@
+%%%%%%%%%%%
+\section{Thursday 6 September:  Math Review}
+%%%%%%%%%%%
+
+Here I'm going to put things that Dr. Borst talked about that weren't in Jason's excellent talk, plus some thoughts that came to my mind.    
+
+\
+
+\subsection{Matrix Notation and Matrix-Matrix Multiplication (MMM)}
+
+\
+
+Let $\displaystyle
+B = 
+\left[
+\begin{tabular}{rrr}
+	1 & 2  \cr
+	3 & 4 \cr
+	5 & 6 \cr
+\end{tabular}
+\right]
+$
+and
+$\displaystyle
+C = \left[
+\begin{tabular}{rrrr}
+	7 & 8 & 9 & 10 \cr
+	11 & 12 & 13 & 14 \cr
+\end{tabular}
+\right]
+$
+
+\
+
+$B$ is a ``three by two'' matrix, and $C$ is a ``two by four''matrix.  The first number is the number of rows, and the second the columns.  
+
+\
+
+$B_{i,j}$ is the {\it element} of $B$ in the $i^{\text{th}}$ row and the $j^{\text{th}}$ column, so $B_{2,3} = 6$.  Note that we're counting the rows and columns starting at 1, not 0.  
+
+\
+
+To multiply the matrices, $A = B \times C$, we're using the dot product.  The value of $A_{i,j}$ is the dot product of row $i$ of $B$ and column $j$ of $C$.  Note that this multiplication can't happen if the number of columns of $B$ doesn't match the number of rows of $C$.  
+
+\
+
+$\displaystyle 
+A_{2,3} = [3,4] \cdot
+\left[ 
+\begin{tabular}{rrr}
+	9 \cr
+	13 \cr
+\end{tabular}
+\right]
+= 3 \cdot 9 + 4 \cdot 13 = 27 + 52 = 79
+$
+
+\
+$\displaystyle
+A = B \times C = 
+\left[
+\begin{tabular}{rrr}
+	1 & 2  \cr
+	3 & 4 \cr
+	5 & 6 \cr
+\end{tabular}
+\right]
+\cdot
+\left[
+\begin{tabular}{rrrr}
+	7 & 8 & 9 & 10 \cr
+	11 & 12 & 13 & 14 \cr
+\end{tabular}
+\right]
+$
+
+\
+
+$\displaystyle = 
+\left[
+\begin{tabular}{*4{>{$}r<{$}}}
+	1 \cdot 7 + 2 \cdot 11 & 
+	1 \cdot 8 + 2 \cdot 12 &
+	1 \cdot 9 + 2 \cdot 13 &
+	1 \cdot 10 + 2 \cdot 14 \cr
+	3 \cdot  7 + 4 \cdot 11 &
+	3 \cdot  8 + 4 \cdot 12 &
+	3 \cdot  9 + 4 \cdot 13 &
+	3 \cdot  10 + 4 \cdot 14 \cr
+	5 \cdot  7 + 6 \cdot 11  &
+	5 \cdot  8 + 6 \cdot 12  &
+	5 \cdot  9 + 6 \cdot 13  &
+	5 \cdot  10 + 6 \cdot 14  \cr
+\end{tabular}
+\right]
+=\left[
+\begin{tabular}{*4{>{$}r<{$}}}
+	29 & 32 & 35 & 38 \cr
+	65 & 72 & 79 & 86 \cr
+	101 & 112 & 123 & 134 \cr
+\end{tabular}
+\right]
+$
+
+\
+
+In mathic notation, $\displaystyle A_{i,j} = \sum_{k=1}^2 B_{i,k} \times C_{k,j}$
+
+\
+
+In {\tt C++},
+
+\
+
+\begin{lstlisting}[language=C++, caption={Matrix-Matrix Multiplication}]
+int function()
+{
+	A[3][4] = {};
+	B[3][2] = {{1,2},{3,4},{5,6}};
+	C[2][3] = {{7,8,9,10},{11,12,13,14}};
+	for (i=0; i<3; i++)
+	{
+		for (j=0; j<4; j++)
+		{
+			for (k=0; k<2; k++)
+			{
+				A[i][j] = A[i][j] + B[i][k] * C[k][j];
+			}
+		}
+	}
+}
+\end{lstlisting}
+
+\subsection{Dot Product: Derivation and as a Projection}
+
+\subsubsection{Trig Review}
+
+First, a Trig review.  The triangle on the right gives a right-triangle definition of sine and cosine.  The triangle in the center is a similar triangle adaptation.  The triangle on the left is for the Law of Cosines.  
+
+\
+
+\begin{tikzpicture}[x=10mm, y=10mm]
+	\coordinate (A) at (0,0);
+	\coordinate (B) at (3,0);
+	\coordinate (C) at (3,2);
+	\draw (A) -- (B) -- (C) -- (A);
+	\draw (B) rectangle ($(B)+(-.2,.2)$);
+	\path ($(A)+(.9,.3)$) node [] {$\theta$};
+	\path (A) -- (B) node [midway, below] {$\cos\theta$};
+	\path (B) -- (C) node [midway, right] {$\sin\theta$};
+	\path (A) -- (C) node [midway, above left] {1};
+\end{tikzpicture}
+\qquad
+\begin{tikzpicture}[x=15mm, y=15mm]
+	\coordinate (A) at (0,0);
+	\coordinate (B) at (3,0);
+	\coordinate (C) at (3,2);
+	\draw (A) -- (B) -- (C) -- (A);
+	\draw (B) rectangle ($(B)+(-.2,.2)$);
+	\path ($(A)+(.9,.3)$) node [] {$\theta$};
+	\path (A) -- (B) node [midway, below] {$c\cos\theta$};
+	\path (B) -- (C) node [midway, right] {$c\sin\theta$};
+	\path (A) -- (C) node [midway, above left] {$c$};
+\end{tikzpicture}
+\ 
+\begin{tikzpicture}[x=15mm, y=15mm]
+	\coordinate (A) at (0,0);
+	\coordinate (B) at (4,0);
+	\coordinate (C) at (3,2);
+	\draw (A) -- (B) -- (C) -- (A);
+	\path ($(A)+(.9,.3)$) node [] {$\alpha$};
+	\path (A) -- (B) node [midway, below] {$c$};
+	\path (B) -- (C) node [midway, above right] {$a$};
+	\path (A) -- (C) node [midway, above left] {$b$};
+	\node at (A) [below left] {$A$};
+	\node at (B) [below right] {$B$};
+	\node at (C) [above] {$C$};
+\end{tikzpicture}
+
+\
+
+The Law of Cosines says that $a^2 = b^2 + c^2 - 2bc \cos \alpha$.
+
+\
+
+\subsubsection{Derivation of $\vec{u} \cdot \vec{v} = |\vec{u}| |\vec{v}| \cos \theta$}
+
+\
+
+\hfil\begin{tikzpicture}[x=15mm, y=15mm]
+	\coordinate (A) at (0,0);
+	\coordinate (B) at (4,0);
+	\coordinate (C) at (3,2);
+	\draw [-triangle 60] (A) -- (B);
+	\draw [-triangle 60] (A) -- (C);
+	\path ($(A)+(.9,.3)$) node [] {$\theta$};
+	\path (A) -- (B) node [midway, below] {$\vec{u} = (a,b,c)$};
+	\path (A) -- (C) node [midway, sloped, above] {$\vec{v} = (d,e,f)$};
+	\node at (A) [below left] {$(0,0)$};
+\end{tikzpicture}
+
+\
+
+Make it a triangle and apply the Law of Cosines.  
+
+\
+
+\hfil\begin{tikzpicture}[x=15mm, y=15mm]
+	\coordinate (A) at (0,0);
+	\coordinate (B) at (4,0);
+	\coordinate (C) at (3,2);
+	\draw (A) -- (B) -- (C) -- (A);
+	\path ($(A)+(.9,.3)$) node [] {$\theta$};
+	\path (A) -- (B) node [midway, below] {$\vec{u} = (a,b,c)$};
+	\path (A) -- (C) node [midway, sloped, above] {$\vec{v} = (d,e,f)$};
+	\path (B) -- (C) node [midway, right] {$\vec{w} = \vec{u} - \vec{v} = (a-d,b-e,c-f)$};
+	\node at (A) [below left] {$(0,0)$};
+\end{tikzpicture}
+
+\
+
+\begin{tabular}{>{$}r<{$}>{$}c<{$}>{$}l<{$\vrule width 0pt height 12pt depth 12pt}}
+|\vec{w}|^2 &=& |\vec{u}|^2 + |\vec{v}|^2 - 2 |\vec{u}| |\vec{v}| \cos \theta \cr
+(a-d)^2 + (b-e)^2 + (c-f)^2 &=& (a^2 + b^2 + c^2) + (d^2 + e^2 + f^2)   - 2 |\vec{u}| |\vec{v}| \cos \theta \cr
+a^2 - 2ad + d^2 + b^2 - 2be + e^2 + c^2 - 2cf + f^2  &=& (a^2 + b^2 + c^2) + (d^2 + e^2 + f^2)   - 2 |\vec{u}| |\vec{v}| \cos \theta \cr
+- 2ad - 2be - 2cf &=&   - 2 |\vec{u}| |\vec{v}| \cos \theta \cr
+ad + be  + cf &=&    |\vec{u}| |\vec{v}| \cos \theta \cr
+\vec{u} \cdot \vec{v} &=&    |\vec{u}| |\vec{v}| \cos \theta \qquad Q.E.D. \cr
+\end{tabular}
+
+\
+
+\subsubsection{Dot product as a projection}
+
+\
+
+\begin{tikzpicture}[x=5mm, y=5mm]
+	\coordinate (A) at (0,0);
+	\coordinate (B) at (8,4);
+	\coordinate (C) at (6,12);
+	\coordinate (P) at (12,0);
+	\coordinate (Q) at (0,8);
+	\draw [-triangle 60] (A) -- (B);
+	\draw [-triangle 60] (A) -- (C);
+	\coordinate (D) at (intersection of A--B and C--P);
+	\coordinate (E) at (intersection of A--C and B--Q);
+	\path ($1.1*(B)$) node {$\vec{u}$};
+	\path ($1.1*(C)$) node {$\vec{v}$};
+	\path (A) -- (B) node [midway, below right] {$|\vec{u}|$};
+	\path (A) -- (C) node [midway, above left] {$|\vec{v}|$};
+	\path (2,2) node {$\theta$};
+%	\fill (D) circle (2pt);
+%	\fill (E) circle (2pt);
+\end{tikzpicture}
+\qquad
+\begin{tikzpicture}[x=5mm, y=5mm]
+	\coordinate (A) at (0,0);
+	\coordinate (B) at (8,4);
+	\coordinate (C) at (6,12);
+	\coordinate (P) at (12,0);
+	\coordinate (Q) at (0,8);
+	\draw [-triangle 60] (A) -- (B);
+	\draw [-triangle 60] (A) -- (C);
+	\coordinate (D) at (intersection of A--B and C--P);
+	\coordinate (E) at (intersection of A--C and B--Q);
+%	\path ($1.1*(B)$) node {$\vec{u}$};
+%	\path ($1.1*(C)$) node {$\vec{v}$};
+	\path (A) -- (B) node [midway, below right] {$|\vec{u}|$};
+%	\path (A) -- (C) node [midway, above left] {$|\vec{v}|$};
+	\path (2,2) node {$\theta$};
+	\draw (A) -- (E) -- (B);
+	\draw [rotate={atan(-1/2)}] (E) rectangle ($(E)+(1,-1)$);
+	\draw [ultra thick, red] (A) -- (E) node [midway, sloped, above] {$|\vec{u}| \cos \theta$};
+%	\fill (D) circle (2pt);
+%	\fill (E) circle (2pt);
+\end{tikzpicture}
+\qquad
+\begin{tikzpicture}[x=5mm, y=5mm]
+	\coordinate (A) at (0,0);
+	\coordinate (B) at (8,4);
+	\coordinate (C) at (6,12);
+	\coordinate (P) at (12,0);
+	\coordinate (Q) at (0,8);
+	\draw [-triangle 60] (A) -- (B);
+	\draw [-triangle 60] (A) -- (C);
+	\coordinate (D) at (intersection of A--B and C--P);
+	\coordinate (E) at (intersection of A--C and B--Q);
+%	\path ($1.1*(B)$) node {$\vec{u}$};
+%	\path ($1.1*(C)$) node {$\vec{v}$};
+%	\path (A) -- (B) node [midway, below right] {$|\vec{u}|$};
+	\path (A) -- (C) node [midway, above left] {$|\vec{v}|$};
+	\path (2,2) node {$\theta$};
+	\draw (A) -- (D) -- (C);
+	\draw [rotate={atan(-2)}] (D) rectangle ($(D)+(-1,-1)$);
+	\draw [ultra thick, red] (A) -- (D) node [midway, sloped, below] {$|\vec{v}| \cos \theta$};
+%	\fill (D) circle (2pt);
+%	\fill (E) circle (2pt);
+\end{tikzpicture}
+
+\
+
+The segment of length $|\vec{u}| \cos \theta$ is the {\it projection} of $\vec{u}$ onto $\vec{v}$.
+
+The segment of length $|\vec{v}| \cos \theta$ is the {\it projection} of $\vec{v}$ onto $\vec{u}$.
+
+\
+
+In the middle triangle, you can visualize the dot product, $\vec{u} \cdot \vec{v} = |\vec{u}| |\vec{v}| \cos theta$, as the product of the length of the projection onto $\vec{v}$ and the length of $\vec{v}$.  Similarly in the left triangle, you can visualize the dot product as the product of the length of the projection onto $\vec{u}$ and the length of $\vec{u}$.  
+
+\subsection{Cross Product}
+
+\subsubsection{Finding the Cross Product using the Determinant}
+
+The {\it determinant} of a matrix is a scalar that embodies many mysterious properties of the matrix.  
+
+To find the cross product of $\vec{u} = (a,b,c)$ and $\vec{v} = (d,e,f)$, let $\vec{i} = (1,0,0)$, $\vec{j}=(0,1,0)$, and $\vec{k}=(0,0,1)$ be the unit vectors in the $x$, $y$ and $z$ directions.  
+
+$$\vec{u} \times \vec{v} = 
+\left|
+\begin{tabular}{*3{>{$}l<{$}}}
+	\vec{i} & \vec{j} & \vec{k} \cr
+	a & b & c \cr
+	d & e & f \cr
+\end{tabular}
+\right|
+= 
+\left| 
+\begin{tabular}{*2{>{$}l<{$}}}
+	b & c \cr
+	e & f \cr
+\end{tabular}
+\right|
+\vec{i}
+\ - \
+\left| 
+\begin{tabular}{*2{>{$}l<{$}}}
+	a & c \cr
+	d & f \cr
+\end{tabular}
+\right|
+\vec{j}
+\ + \ 
+\left| 
+\begin{tabular}{*2{>{$}l<{$}}}
+	a & b \cr
+	d & e\cr
+\end{tabular}
+\right|
+\vec{k}
+$$
+
+$$ = (bf-ce)\vec{i} - (af-cd) \vec{j} + (ae-bd)\vec{k} = 
+\left[
+\begin{tabular}{*3{>{$}l<{$}}}
+	bf-ce \cr
+	cd-af \cr
+	ae-bd
+\end{tabular}
+\right]
+$$
+
+\
+
+The derivation of the identity that the magnitude of the cross product is the product of the magnitudes of the vectors and the sine of the angle between them is to long to fit in the margin of this paper.  
+
+\
+
+I believe it comes from $\displaystyle \cos \theta = \frac{\vec{u} \cdot \vec{v}}{|\vec{u}| |\vec{v}|}$ and $\sin^2 \theta = 1 - \cos^2 \theta$.  
+
+\
+
+\subsubsection{Cross Product as the Area of the Parallelogram}
+
+The area of a parallelogram is base $\times$ height, where the height is perpendicular to the base.  The area of this parallelogram is $|\vec{u}| |\vec{v}| \sin \theta$, which is the magnitude of the cross product.  
+
+\
+
+\hfil\begin{tikzpicture}[x=15mm, y=15mm]
+	\coordinate (A) at (0,0);
+	\coordinate (B) at (3,0);
+	\coordinate (C) at (1,2);
+	\coordinate (D) at (4,2);
+	\coordinate (E) at (1,0);
+	\draw (A) -- (B) -- (D) -- (C) -- (A);
+	\draw [-triangle 60] (A) -- (B);
+	\draw [-triangle 60] (A) -- (C);
+	\draw [red] (C) -- (E) node [midway, right] {$|\vec{v}|\sin\theta$};
+	\draw [red] (E) rectangle (0.8,0.2);
+	\path (A) -- (B) node [midway, below] {$\vec{u}$};
+	\path (A) -- (C) node [midway, above left] {$\vec{v}$};
+\end{tikzpicture}
+
