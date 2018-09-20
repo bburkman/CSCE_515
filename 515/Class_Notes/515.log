@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  19 SEP 2018 22:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  20 SEP 2018 10:37
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -556,10 +556,16 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip48
 )
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks33
+\verbatim@line=\toks34
+\verbatim@in@stream=\read2
+)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count130
 \lst@gtempboxa=\box39
-\lst@token=\toks33
+\lst@token=\toks35
 \lst@length=\count131
 \lst@currlwidth=\dimen167
 \lst@column=\count132
@@ -584,20 +590,20 @@ Package: listings 2015/06/04 1.6 (Carsten Heinz)
 (./515.aux)
 \openout1 = `515.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
  ABD: EveryShipout initializing macros
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -606,12 +612,12 @@ LaTeX Font Info:    ... okay on input line 41.
 \scratchbox=\box41
 \nofMPsegments=\count139
 \nofMParguments=\count140
-\everyMPshowfont=\toks34
+\everyMPshowfont=\toks36
 \MPscratchCnt=\count141
 \MPscratchDim=\dimen172
 \MPnumerator=\count142
 \makeMPintoPDFobject=\count143
-\everyMPtoPDFconversion=\toks35
+\everyMPtoPDFconversion=\toks37
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -628,7 +634,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box42
-Package hyperref Info: Link coloring OFF on input line 41.
+Package hyperref Info: Link coloring OFF on input line 42.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -638,9 +644,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count144
 )
-LaTeX Info: Redefining \ref on input line 41.
-LaTeX Info: Redefining \pageref on input line 41.
-LaTeX Info: Redefining \nameref on input line 41.
+LaTeX Info: Redefining \ref on input line 42.
+LaTeX Info: Redefining \pageref on input line 42.
+LaTeX Info: Redefining \nameref on input line 42.
 
 (./515.out) (./515.out)
 \@outlinefile=\write4
@@ -653,8 +659,8 @@ LaTeX Info: Redefining \nameref on input line 41.
 \tf@toc=\write5
 \openout5 = `515.toc'.
 
- (./0821.tex) (./Math_Dot_Cross.tex [2])
-(./Math_Algebra.tex [3]) (./Math_Quaternions.tex [4] [5]) (./0823.tex
+ (./0821.tex [2]) (./Math_Dot_Cross.tex)
+(./Math_Algebra.tex [3]) (./Math_Quaternions.tex [4] [5]) (./0823.tex [6]
 Overfull \hbox (3.04094pt too wide) in paragraph at lines 34--35
 []|$[]$| 
  []
@@ -674,7 +680,7 @@ Overfull \hbox (6.82124pt too wide) in paragraph at lines 33--53
 [][] 
  []
 
-[6]) (./0828.tex [7]
+[7]) (./0828.tex
 Overfull \hbox (18.28061pt too wide) in paragraph at lines 11--12
 []\OT1/cmr/m/n/12 Line seg-ment de-scribed by two in-te-ger end-points (end-poi
 nts fall ex-actly on pix-els) $(\OML/cmm/m/it/12 x[]; y[]\OT1/cmr/m/n/12 )\OML/
@@ -827,34 +833,65 @@ Overfull \hbox (33.74866pt too wide) in paragraph at lines 222--230
 [][] 
  []
 
-[23] [24]) (./0911.tex [25] [26]) [27]
-Overfull \hbox (6.08885pt too wide) in paragraph at lines 170--171
+[23] [24]) (./0911.tex [25] [26]) (./0913.tex [27]
+Overfull \hbox (42.39436pt too wide) in paragraph at lines 96--97
 [][] 
  []
 
 [28]
-Overfull \hbox (24.62265pt too wide) in paragraph at lines 191--192
+Overfull \hbox (42.39436pt too wide) in paragraph at lines 118--119
 [][] 
  []
 
-[29] [30] [31]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 257.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 257.
+
+Overfull \hbox (27.4661pt too wide) in paragraph at lines 137--155
+[][]  [] 
+ []
+
+[29]
+Overfull \hbox (44.24403pt too wide) in paragraph at lines 242--243
+[][] 
+ []
+
+[30] [31]) (./0918.tex [32] [33] [34]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 383.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\theta' on input line 383.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 383.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 383.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 383.
+
+[35]) [36]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 90.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 90.
  (./515.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 257.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 257.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 90.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 90.
 Package rerunfilecheck Info: File `515.out' has not changed.
-(rerunfilecheck)             Checksum: 31FD963515FF9F4650C673A9E9AD85D2;3156.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 257.
+(rerunfilecheck)             Checksum: AD3F53B0D3A3565B5E2790CAE30A2544;4075.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 90.
  ) 
 Here is how much of TeX's memory you used:
- 19254 strings out of 493014
- 362905 string characters out of 6133351
- 444072 words of memory out of 5000000
- 22359 multiletter control sequences out of 15000+600000
+ 19448 strings out of 493014
+ 366312 string characters out of 6133351
+ 459699 words of memory out of 5000000
+ 22528 multiletter control sequences out of 15000+600000
  11389 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 66i,16n,376p,444b,1383s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,16n,376p,444b,1383s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><
 /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
@@ -869,10 +906,10 @@ ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
 ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive
 /2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/
 2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on 515.pdf (31 pages, 230471 bytes).
+Output written on 515.pdf (36 pages, 250945 bytes).
 PDF statistics:
- 460 PDF objects out of 1000 (max. 8388607)
- 408 compressed objects within 5 object streams
- 96 named destinations out of 1000 (max. 500000)
- 349 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 544 PDF objects out of 1000 (max. 8388607)
+ 487 compressed objects within 5 object streams
+ 113 named destinations out of 1000 (max. 500000)
+ 445 words of extra memory for PDF output out of 10000 (max. 10000000)
 
