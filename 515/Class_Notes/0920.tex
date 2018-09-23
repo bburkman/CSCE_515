@@ -1,0 +1,408 @@
+\section{Thursday 20 September:  OpenGL Architecture}
+
+\subsection{More Homogeneous Transformation Matrices}
+
+\subsubsection{Rotation about the $z$ axis }
+
+(Derived in {\tt 0918.tex} notes)
+
+Rotation in the $xy$ plane, taking points on the positive $x$-axis towards the positive $y$-axis.
+
+\tdplotsetmaincoords{70}{110}
+\hfil\begin{tikzpicture}[scale=1,tdplot_main_coords]
+
+%set up some coordinates 
+%-----------------------
+\coordinate (O) at (0,0,0);
+\coordinate (p1) at (0,1,0);
+\coordinate (p2) at (4,1,0);
+\coordinate (p3) at (4,2,0);
+\coordinate (p4) at (6,0,0);
+\draw [black, ultra thick] (O) -- (p1) -- (p2) -- (p3) -- (p4);
+
+\draw[thick,->] (O) -- (8,0,0) node[anchor=north east]{$x$};
+\draw[thick,->] (O) -- (0,3,0) node[anchor=north west]{$y$};
+\draw[thick,->] (O) -- (0,0,1) node[anchor=east]{$z$};
+
+	\tdplotsetrotatedcoords{0}{0}{30}
+	\coordinate (Shift) at (0,0,0);
+	\tdplotsetrotatedcoordsorigin{(Shift)}
+	\draw[thick,color=blue,tdplot_rotated_coords,->] (0,0,0) --
+        (8,0,0) node[anchor=north east]{$x'$};
+	\draw[thick,color=blue,tdplot_rotated_coords,->] (0,0,0) --
+        (0,3,0) node[anchor=west]{$y'$};
+	\draw[thick,color=blue,tdplot_rotated_coords,->] (0,0,0) --
+        (0,0,.5) node[anchor=east]{$z'$};
+	\draw [thick, color=blue, -triangle 60] (1.5,0,0) arc (0:30:1.5) node [midway, below] {$\theta$};
+	\draw [blue, ultra thick, tdplot_rotated_coords] (0,0,0) -- (0,1,0) -- (4,1,0) -- (4,2,0) -- (6,0,0);
+\end{tikzpicture}
+
+
+$$
+\left[ 
+	\begin{array}{cccc}
+		\cos \theta & -\sin \theta\cr
+		\sin \theta & \cos \theta  \cr
+	\end{array}
+\right]
+$$
+
+3D version:
+
+$$
+\left[ 
+	\begin{array}{cccc}
+		\cos \theta & -\sin \theta & 0 & 0 \cr
+		\sin \theta & \cos \theta & 0 & 0 \cr
+		0 & 0 & 1 & 0 \cr
+		0 & 0 & 0 & 1 \cr
+	\end{array}
+\right]
+$$
+
+\subsubsection{Rotation about the $y$-axis}
+
+Note that this transformation makes points on the positive $z$-axis rotate towards the positive $x$-axis.
+
+\tdplotsetmaincoords{60}{120}%\pgfmathsetmacro{\rvec}{6}\pgfmathsetmacro{\thetavec}{60}\pgfmathsetmacro{\phivec}{0}%\hfil\begin{tikzpicture}[scale=1,tdplot_main_coords]	\coordinate (O) at (0,0,0);	\draw[thick,->] (0,0,0) -- (7,0,0) node[anchor=north east]{$x$};	\draw[thick,->] (0,0,0) -- (0,4,0) node[anchor=north west]{$y$};
+	\draw[thick,->] (0,0,0) -- (0,0,4) node[anchor=south]{$z$};
+
+	\draw [black, ultra thick] (0,0,0) -- (0,1,0) -- (4,1,0) -- (4,2,0) -- (6,0,0);
+
+	\tdplotsetthetaplanecoords{\phivec}	\tdplotdrawarc[tdplot_rotated_coords,blue,-triangle 60]{(0,0,0)}{3}{0}{\thetavec}{anchor=south east}{$\theta$}
+	\tdplotdrawarc[tdplot_rotated_coords,dashed]{(0,0,0)}{6}{90}{150}{}{}
+
+	\coordinate (Shift) at (0,1,0);
+	\tdplotsetrotatedcoordsorigin{(Shift)}
+	\tdplotdrawarc[tdplot_rotated_coords,dashed]{(0,0,0)}{4}{90}{150}{}{}
+
+	\coordinate (Shift2) at (0,2,0);
+	\tdplotsetrotatedcoordsorigin{(Shift2)}
+	\tdplotdrawarc[tdplot_rotated_coords,dashed]{(0,0,0)}{4}{90}{150}{}{}
+
+	\coordinate (Shift3) at (0,0,0);
+	\tdplotsetrotatedcoordsorigin{(Shift3)}
+	\tdplotsetrotatedcoords{0}{60}{0}
+	\draw [blue, ultra thick, tdplot_rotated_coords] (0,0,0) -- (0,1,0) -- (4,1,0) -- (4,2,0) -- (6,0,0);
+
+	\draw[thick,color=blue,tdplot_rotated_coords,->] (0,0,0) --
+        (7,0,0) node[anchor=north east]{$x'$};
+	\draw[thick,color=blue,tdplot_rotated_coords,->] (0,0,0) --
+        (0,3,0) node[anchor=south]{$y'$};
+	\draw[thick,color=blue,tdplot_rotated_coords,->] (0,0,0) --
+        (0,0,4) node[anchor=east]{$z'$};
+
+\end{tikzpicture}
+
+Take this rotation for the 2D $zx$ plane:
+
+$$
+\left[ 
+	\begin{array}{cccc}
+		\cos \theta & -\sin \theta\cr
+		\sin \theta & \cos \theta  \cr
+	\end{array}
+\right]
+$$
+
+Think of the first column and first row of the 2D array as the $z$ things, and the second column and second row as the $x$ things, and put them in the corresponding places in the 3D array.  
+
+$$
+\left[ 
+	\begin{array}{cccc}
+		\cos \theta & 0 & \sin \theta & 0 \cr
+		0 & 1 & 0 & 0 \cr
+		-\sin \theta & 0 & \cos \theta & 0 \cr
+		0 & 0 & 0 & 1 \cr
+	\end{array}
+\right]
+$$
+
+\subsubsection{Rotation about the $x$-axis (Brad's Guess)}
+
+Note that this transformation makes points on the positive $z$-axis rotate towards the positive $x$-axis.
+
+\tdplotsetmaincoords{60}{120}%\pgfmathsetmacro{\rvec}{6}\pgfmathsetmacro{\thetavec}{60}\pgfmathsetmacro{\phivec}{90}%\hfil\begin{tikzpicture}[scale=1,tdplot_main_coords]	\coordinate (O) at (0,0,0);	\draw[thick,->] (0,0,0) -- (7,0,0) node[anchor=south]{$x$};	\draw[thick,->] (0,0,0) -- (0,4,0) node[anchor=north west]{$y$};
+	\draw[thick,->] (0,0,0) -- (0,0,5) node[anchor=south]{$z$};
+
+	\draw [black, ultra thick] (0,0,0) -- (0,1,0) -- (4,1,0) -- (4,2,0) -- (6,0,0);
+
+%	\tdplotsetthetaplanecoords{\phivec}%	\tdplotdrawarc[tdplot_rotated_coords,blue,-triangle 60]{(0,0,0)}{3}{0}{\thetavec}{anchor=south east}{$\theta$}
+%	\tdplotdrawarc[tdplot_rotated_coords,dashed]{(0,0,0)}{6}{90}{150}{}{}
+
+%	\coordinate (Shift) at (0,1,0);
+%	\tdplotsetrotatedcoordsorigin{(Shift)}
+%	\tdplotdrawarc[tdplot_rotated_coords,dashed]{(0,0,0)}{4}{90}{150}{}{}
+
+%	\coordinate (Shift2) at (0,2,0);
+%	\tdplotsetrotatedcoordsorigin{(Shift2)}
+%	\tdplotdrawarc[tdplot_rotated_coords,dashed]{(0,0,0)}{4}{90}{150}{}{}
+
+%	\coordinate (Shift3) at (0,0,0);
+%	\tdplotsetrotatedcoordsorigin{(Shift3)}
+
+	\tdplotsetrotatedcoords{90}{{360-80}}{270}
+	\draw [blue, ultra thick, tdplot_rotated_coords] (0,0,0) -- (0,1,0) -- (4,1,0) -- (4,2,0) -- (6,0,0);
+	\draw[thick,color=blue,tdplot_rotated_coords,->] (0,0,0) -- (8,0,0) node[anchor=south]{$x'$};
+	\draw[thick,color=blue,tdplot_rotated_coords,->] (0,0,0) -- (0,3,0) node[anchor=south]{$y'$};
+	\draw[thick,color=blue,tdplot_rotated_coords,->] (0,0,0) -- (0,0,4) node[anchor=east]{$z'$};
+
+
+\end{tikzpicture}
+
+
+
+Take this rotation in the 2D $yz$ plane:
+
+$$
+\left[ 
+	\begin{array}{cccc}
+		\cos \theta & -\sin \theta\cr
+		\sin \theta & \cos \theta  \cr
+	\end{array}
+\right]
+$$
+
+Think of the first column and first row of the 2D array as the $y$ things, and the second column and second row as the $z$ things, and put them in the corresponding places in the 3D array.  
+
+$$
+\left[ 
+	\begin{array}{cccc}
+		1 & 0 & 0 & 0 \cr
+		0 & \cos \theta & -\sin \theta & 0 \cr
+		0 & \sin \theta & \cos \theta & 0 \cr
+		0 & 0 & 0 & 1 \cr
+	\end{array}
+\right]
+$$
+
+\subsubsection{Shear Example}
+
+Notation:  $sh_x$ is ``shear factor.''
+
+\
+
+$$
+\left[
+	\begin{array}{cccc}
+		x' \cr y' \cr z' \cr 1 \cr
+	\end{array}
+\right]
+=
+\left[
+	\begin{array}{cccc}
+		1 & sh_x & 0 & 0 \cr
+		0 & 1 & 0 & 0 \cr
+		0 & sh_z & 1 & 0 \cr
+		0 & 0 & 0 & 1 \cr
+	\end{array}
+\right]
+\left[
+	\begin{array}{cccc}
+		x \cr y \cr z \cr 1 \cr
+	\end{array}
+\right]
+=
+\left[
+	\begin{array}{cccc}
+		x + sh_x  y\cr
+		y \cr
+		z + sh_z y  \cr
+		1 \cr
+	\end{array}
+\right]
+$$
+
+\
+
+
+\begin{figure}
+\centering
+
+\tdplotsetmaincoords{60}{120}%\pgfmathsetmacro{\rvec}{6}\pgfmathsetmacro{\thetavec}{60}\pgfmathsetmacro{\phivec}{90}%\hfil\begin{tikzpicture}[scale=5,tdplot_main_coords]	\coordinate (O) at (0,0,0);	\draw[thick,->] (0,0,0) -- (1.5,0,0) node[anchor=south]{$x$};	\draw[thick,->] (0,0,0) -- (0,1.5,0) node[anchor=north west]{$y$};
+	\draw[thick,->] (0,0,0) -- (0,0,1.5) node[anchor=south]{$z$};
+
+	\draw [black, ultra thick] (0,0,0) -- (0,1,0) -- (0,1,1) -- (0,0,1) -- (0,0,0);
+	\draw [black, ultra thick] (1,0,0) -- (1,1,0) -- (1,1,1) -- (1,0,1) -- (1,0,0);
+	\draw [black, ultra thick] (0,0,0) -- (1,0,0);
+	\draw [black, ultra thick] (0,0,1) -- (1,0,1);
+	\draw [black, ultra thick] (0,1,0) -- (1,1,0);
+	\draw [black, ultra thick] (0,1,1) -- (1,1,1);
+
+%	\draw [blue, ultra thick] (0,0,0) -- (0,1,0) -- (0,1,1) -- (0,0,1) -- (0,0,0);
+%	\draw [blue, ultra thick] (1,0,0) -- (1,1,0) -- (1,1,1) -- (1,0,1) -- (1,0,0);
+%	\draw [blue, ultra thick] (0,0,0) -- (1,0,0);
+%	\draw [blue, ultra thick] (0,0,1) -- (1,0,1);
+%	\draw [blue, ultra thick] (0,1,0) -- (1,1,0);
+%	\draw [blue, ultra thick] (0,1,1) -- (1,1,1);
+
+	\draw [blue, ultra thick] (0,0,0) -- (0.5,1,-0.5) -- (0.5,1,0.5) -- (0,0,1) -- (0,0,0);
+	\draw [blue, ultra thick] (1,0,0) -- (1.5,1,-0.5) -- (1.5,1,0.5) -- (1,0,1) -- (1,0,0);
+	\draw [blue, ultra thick] (0,0,0) -- (1,0,0);
+	\draw [blue, ultra thick] (0,0,1) -- (1,0,1);
+	\draw [blue, ultra thick] (0.5,1,-0.5) -- (1.5,1,-0.5);
+	\draw [blue, ultra thick] (0.5,1,0.5) -- (1.5,1,0.5);
+
+
+
+\end{tikzpicture}
+\caption{Shear with $sh_x = 0.5$ and $sh_z = -0.5$.} \label{fig:M1}
+\end{figure}
+
+
+
+\subsubsection{Composition Example}
+
+Rotate by $\theta$  about $z$-direction vector through a pivot point, $P$.   
+
+1.  Translate by $\displaystyle -P \ = 
+\left[ 
+	\begin{array}{c}
+		-p_x \cr
+		-p_y \cr
+		-p_z \cr
+		1 \cr
+	\end{array}
+\right]
+$.
+
+2.  Rotate about $z$-axis.
+
+3.  Translate back by $P$.  
+
+\
+
+$$
+	\left[
+		\begin{array}{cccc}
+			x' \cr y' \cr z' \cr 1 \cr
+		\end{array}
+	\right]
+=
+	\left[
+		\begin{array}{cccc}
+			1 & 0 & 0 & p_x \cr
+			0 & 1 & 0 & p_y \cr
+			0 & 0 & 1 & p_z \cr
+			0 & 0 & 0 & 1 \cr
+		\end{array}
+	\right]
+	\left[
+		\begin{array}{cccc}
+			\cos \theta & -\sin \theta & 0 & 0 \cr
+			\sin \theta & \cos \theta & 0 & 0 \cr
+			0 & 0 & 1 & 0 \cr
+			0 & 0 & 0 & 1 \cr
+		\end{array}
+	\right]
+	\left[
+		\begin{array}{cccc}
+			1 & 0 & 0 & -p_x \cr
+			0 & 1 & 0 & -p_y \cr
+			0 & 0 & 1 & -p_z \cr
+			0 & 0 & 0 & 1 \cr
+		\end{array}
+	\right]
+	\left[
+		\begin{array}{cccc}
+			x  \cr
+			y \cr
+			z \cr
+			1
+		\end{array}
+	\right]
+$$
+
+
+\subsection{OpenGL Architecture}
+
+Simplified OpenGL Architecture
+
+\
+
+{\it Vertex Array Object} is the mesh data, storage
+
+\qquad $\Downarrow$
+
+{\it Vertex Shader} transforms the vertices, sets up attributes for interpolation
+
+
+\qquad $\Downarrow$
+
+[Other Shaders]
+
+\qquad $\Downarrow$
+
+
+{\it Rasterizer} does scan conversion with interpolated attributes
+
+\qquad $\Downarrow$
+
+
+{\it Fragment Shader} Assigns colors, typically based on lighting equation.  
+A {\it fragment} is a pixel with additional information.
+
+\qquad $\Downarrow$
+
+
+{\it Frame Buffer}
+
+\
+
+Note that, by default, OpenGL has coordinates in $[-1,1]$.
+
+\
+
+Read OpenGL book about {\it primitive restart}.
+
+
+
+\section{Euler Angles, Euler Rotations}
+
+Euler angles (rotations) are expressed in Ti\textit{k}Z-3dplot as $(\alpha, \beta, \gamma)$.   
+
+The black coordinate system (world) is rotated about the $z$-axis by $\alpha$ to become the blue coordinate system.  
+
+Then the blue coordinate system is rotated about the new $y$-axis by $\beta$ to become the red coordinate system.
+
+Then the red coordinate system is rotated about the new $z$-axis by $\gamma$ become the purple coordinate system.
+
+
+\tdplotsetmaincoords{60}{120}%\pgfmathsetmacro{\rvec}{6}\pgfmathsetmacro{\thetavec}{60}\pgfmathsetmacro{\phivec}{90}%\begin{tikzpicture}[scale=1,tdplot_main_coords]	\coordinate (O) at (0,0,0);	\draw[thick,->] (0,0,0) -- (7,0,0) node[anchor=north east]{$x$};	\draw[thick,->] (0,0,0) -- (0,4,0) node[anchor=north west]{$y$};
+	\draw[thick,->] (0,0,0) -- (0,0,5) node[anchor=south]{$z$};
+
+	\draw [black, ultra thick] (0,0,0) -- (0,1,0) -- (4,1,0) -- (4,2,0) -- (6,0,0);
+
+%	\tdplotsetthetaplanecoords{\phivec}%	\tdplotdrawarc[tdplot_rotated_coords,blue,-triangle 60]{(0,0,0)}{3}{0}{\thetavec}{anchor=south east}{$\theta$}
+%	\tdplotdrawarc[tdplot_rotated_coords,dashed]{(0,0,0)}{6}{90}{150}{}{}
+
+%	\coordinate (Shift) at (0,1,0);
+%	\tdplotsetrotatedcoordsorigin{(Shift)}
+%	\tdplotdrawarc[tdplot_rotated_coords,dashed]{(0,0,0)}{4}{90}{150}{}{}
+
+%	\coordinate (Shift2) at (0,2,0);
+%	\tdplotsetrotatedcoordsorigin{(Shift2)}
+%	\tdplotdrawarc[tdplot_rotated_coords,dashed]{(0,0,0)}{4}{90}{150}{}{}
+
+%	\coordinate (Shift3) at (0,0,0);
+%	\tdplotsetrotatedcoordsorigin{(Shift3)}
+	\tdplotsetrotatedcoords{10}{0}{0}
+	\draw [blue, ultra thick, tdplot_rotated_coords] (0,0,0) -- (0,1,0) -- (4,1,0) -- (4,2,0) -- (6,0,0);
+	\draw[thick,color=blue,tdplot_rotated_coords,->] (0,0,0) -- (7,0,0) node[anchor=north east]{$x'$};
+	\draw[thick,color=blue,tdplot_rotated_coords,->] (0,0,0) -- (0,3,0) node[anchor=south]{$y'$};
+	\draw[thick,color=blue,tdplot_rotated_coords,->] (0,0,0) -- (0,0,4) node[anchor=east]{$z'$};
+
+	\tdplotsetrotatedcoords{10}{20}{0}
+	\draw [red, ultra thick, tdplot_rotated_coords] (0,0,0) -- (0,1,0) -- (4,1,0) -- (4,2,0) -- (6,0,0);
+	\draw[thick,color=red,tdplot_rotated_coords,->] (0,0,0) -- (7,0,0) node[anchor=north east]{$x''$};
+	\draw[thick,color=red,tdplot_rotated_coords,->] (0,0,0) -- (0,2,0) node[anchor=south]{$y''$};
+	\draw[thick,color=red,tdplot_rotated_coords,->] (0,0,0) -- (0,0,4) node[anchor=east]{$z''$};
+
+	\tdplotsetrotatedcoords{10}{20}{20}
+	\draw [violet, ultra thick, tdplot_rotated_coords] (0,0,0) -- (0,1,0) -- (4,1,0) -- (4,2,0) -- (6,0,0);
+	\draw[thick,color=violet,tdplot_rotated_coords,->] (0,0,0) -- (7,0,0) node[anchor=north east]{$x'''$};
+	\draw[thick,color=violet,tdplot_rotated_coords,->] (0,0,0) -- (0,2,0) node[anchor=south]{$y'''$};
+	\draw[thick,color=violet,tdplot_rotated_coords,->] (0,0,0) -- (0,0,3) node[anchor=east]{$z'''$};
+
+\end{tikzpicture}
+

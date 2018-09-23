@@ -52,3 +52,12 @@
 \BOOKMARK [3][-]{subsubsection.13.6.2}{Rotation of \040about the z-axis}{subsection.13.6}% 52
 \BOOKMARK [3][-]{subsubsection.13.6.3}{Scale}{subsection.13.6}% 53
 \BOOKMARK [2][-]{subsection.13.7}{World v/s Local Translations}{section.13}% 54
+\BOOKMARK [1][-]{section.14}{Thursday 20 September: OpenGL Architecture}{}% 55
+\BOOKMARK [2][-]{subsection.14.1}{More Homogeneous Transformation Matrices}{section.14}% 56
+\BOOKMARK [3][-]{subsubsection.14.1.1}{Rotation about the z axis }{subsection.14.1}% 57
+\BOOKMARK [3][-]{subsubsection.14.1.2}{Rotation about the y-axis}{subsection.14.1}% 58
+\BOOKMARK [3][-]{subsubsection.14.1.3}{Rotation about the x-axis \(Brad's Guess\)}{subsection.14.1}% 59
+\BOOKMARK [3][-]{subsubsection.14.1.4}{Shear Example}{subsection.14.1}% 60
+\BOOKMARK [3][-]{subsubsection.14.1.5}{Composition Example}{subsection.14.1}% 61
+\BOOKMARK [2][-]{subsection.14.2}{OpenGL Architecture}{section.14}% 62
+\BOOKMARK [1][-]{section.15}{Euler Angles, Euler Rotations}{}% 63

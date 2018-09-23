@@ -1,54 +1,63 @@
 \contentsline {section}{\numberline {1}Tuesday 21 August: Introduction}{3}{section.1}
 \contentsline {section}{\numberline {2}Math Review: Dot Product and Cross Product}{3}{section.2}
 \contentsline {section}{\numberline {3}Math Review: Algebra}{4}{section.3}
-\contentsline {section}{\numberline {4}Math Review: Quaternions}{4}{section.4}
-\contentsline {subsection}{\numberline {4.1}Quaternions as Rotations}{5}{subsection.4.1}
-\contentsline {section}{\numberline {5}Thursday 23 August: Raster Display v/s Vector Display}{6}{section.5}
+\contentsline {section}{\numberline {4}Math Review: Quaternions}{5}{section.4}
+\contentsline {subsection}{\numberline {4.1}Quaternions as Rotations}{6}{subsection.4.1}
+\contentsline {section}{\numberline {5}Thursday 23 August: Raster Display v/s Vector Display}{7}{section.5}
 \contentsline {section}{\numberline {6}Tuesday 28 August: Scan Conversion of a Line Segment}{8}{section.6}
 \contentsline {section}{\numberline {7}Thursday 30 August: Scan Conversion of a Triangle}{11}{section.7}
 \contentsline {subsection}{\numberline {7.1}Homework 1}{11}{subsection.7.1}
 \contentsline {subsection}{\numberline {7.2}Midpoint Algorithm (Besenham) Pseudocode}{11}{subsection.7.2}
 \contentsline {subsection}{\numberline {7.3}Naming Conventions}{12}{subsection.7.3}
-\contentsline {subsection}{\numberline {7.4}Line Scan Pseudocode}{13}{subsection.7.4}
+\contentsline {subsection}{\numberline {7.4}Line Scan Pseudocode}{14}{subsection.7.4}
 \contentsline {subsection}{\numberline {7.5}Special Cases}{14}{subsection.7.5}
-\contentsline {subsection}{\numberline {7.6}Calculating $x_L$ and $x_R$ Incrementally}{14}{subsection.7.6}
-\contentsline {subsection}{\numberline {7.7}Color}{14}{subsection.7.7}
-\contentsline {section}{\numberline {8}Running OpenGL on a Mac}{15}{section.8}
-\contentsline {subsection}{\numberline {8.1}Installing OpenGL}{15}{subsection.8.1}
-\contentsline {subsection}{\numberline {8.2}Visual Studio}{15}{subsection.8.2}
-\contentsline {subsection}{\numberline {8.3}How Brad Does It}{15}{subsection.8.3}
-\contentsline {subsection}{\numberline {8.4}How Other People Do It}{16}{subsection.8.4}
-\contentsline {section}{\numberline {9}Tuesday 4 September: Clipping}{16}{section.9}
-\contentsline {subsection}{\numberline {9.1}Cohen-Sutherland Line Clipper}{16}{subsection.9.1}
+\contentsline {subsection}{\numberline {7.6}Calculating $x_L$ and $x_R$ Incrementally}{15}{subsection.7.6}
+\contentsline {subsection}{\numberline {7.7}Color}{15}{subsection.7.7}
+\contentsline {section}{\numberline {8}Running OpenGL on a Mac}{16}{section.8}
+\contentsline {subsection}{\numberline {8.1}Installing OpenGL}{16}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Visual Studio}{16}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}How Brad Does It}{16}{subsection.8.3}
+\contentsline {subsection}{\numberline {8.4}How Other People Do It}{17}{subsection.8.4}
+\contentsline {section}{\numberline {9}Tuesday 4 September: Clipping}{17}{section.9}
+\contentsline {subsection}{\numberline {9.1}Cohen-Sutherland Line Clipper}{17}{subsection.9.1}
 \contentsline {subsection}{\numberline {9.2}Clipping Polygons}{20}{subsection.9.2}
-\contentsline {section}{\numberline {10}Thursday 6 September: Math Review}{21}{section.10}
-\contentsline {subsection}{\numberline {10.1}Matrix Notation and Matrix-Matrix Multiplication (MMM)}{21}{subsection.10.1}
+\contentsline {section}{\numberline {10}Thursday 6 September: Math Review}{22}{section.10}
+\contentsline {subsection}{\numberline {10.1}Matrix Notation and Matrix-Matrix Multiplication (MMM)}{22}{subsection.10.1}
 \contentsline {subsection}{\numberline {10.2}Dot Product: Derivation and as a Projection}{23}{subsection.10.2}
 \contentsline {subsubsection}{\numberline {10.2.1}Trig Review}{23}{subsubsection.10.2.1}
-\contentsline {subsubsection}{\numberline {10.2.2}Derivation of $\mathaccentV {vec}17E{u} \cdot \mathaccentV {vec}17E{v} = |\mathaccentV {vec}17E{u}| |\mathaccentV {vec}17E{v}| \qopname \relax o{cos}\theta $}{23}{subsubsection.10.2.2}
+\contentsline {subsubsection}{\numberline {10.2.2}Derivation of $\mathaccentV {vec}17E{u} \cdot \mathaccentV {vec}17E{v} = |\mathaccentV {vec}17E{u}| |\mathaccentV {vec}17E{v}| \qopname \relax o{cos}\theta $}{24}{subsubsection.10.2.2}
 \contentsline {subsubsection}{\numberline {10.2.3}Dot product as a projection}{24}{subsubsection.10.2.3}
-\contentsline {subsection}{\numberline {10.3}Cross Product}{24}{subsection.10.3}
-\contentsline {subsubsection}{\numberline {10.3.1}Finding the Cross Product using the Determinant}{24}{subsubsection.10.3.1}
-\contentsline {subsubsection}{\numberline {10.3.2}Cross Product as the Area of the Parallelogram}{25}{subsubsection.10.3.2}
-\contentsline {section}{\numberline {11}Tuesday 11 September: Color Models}{25}{section.11}
-\contentsline {subsection}{\numberline {11.1}Anti-Aliasing}{25}{subsection.11.1}
+\contentsline {subsection}{\numberline {10.3}Cross Product}{25}{subsection.10.3}
+\contentsline {subsubsection}{\numberline {10.3.1}Finding the Cross Product using the Determinant}{25}{subsubsection.10.3.1}
+\contentsline {subsubsection}{\numberline {10.3.2}Cross Product as the Area of the Parallelogram}{26}{subsubsection.10.3.2}
+\contentsline {section}{\numberline {11}Tuesday 11 September: Color Models}{26}{section.11}
+\contentsline {subsection}{\numberline {11.1}Anti-Aliasing}{26}{subsection.11.1}
 \contentsline {subsection}{\numberline {11.2}Character Generation}{26}{subsection.11.2}
 \contentsline {subsection}{\numberline {11.3}Color Models}{26}{subsection.11.3}
-\contentsline {subsubsection}{\numberline {11.3.1}RGB: ``Emitting Light''}{26}{subsubsection.11.3.1}
-\contentsline {subsubsection}{\numberline {11.3.2}RGB Cube}{27}{subsubsection.11.3.2}
-\contentsline {subsubsection}{\numberline {11.3.3}CMY: ``Absorbing Light.''}{27}{subsubsection.11.3.3}
-\contentsline {subsubsection}{\numberline {11.3.4}HSV Model}{27}{subsubsection.11.3.4}
-\contentsline {subsection}{\numberline {11.4}Modeling the World}{27}{subsection.11.4}
-\contentsline {section}{\numberline {12}Thursday 13 September: Triangle Mesh}{28}{section.12}
-\contentsline {subsection}{\numberline {12.1}Array of a Rotated Surface}{30}{subsection.12.1}
-\contentsline {section}{\numberline {13}Tuesday 18 September: Translations}{32}{section.13}
-\contentsline {subsection}{\numberline {13.1}Introduction}{32}{subsection.13.1}
-\contentsline {subsection}{\numberline {13.2}Conventions}{32}{subsection.13.2}
-\contentsline {subsection}{\numberline {13.3}Translation: Change in Position}{33}{subsection.13.3}
-\contentsline {subsection}{\numberline {13.4}Scale: Change in size}{33}{subsection.13.4}
-\contentsline {subsection}{\numberline {13.5}Rotation: Change in Orientation}{34}{subsection.13.5}
-\contentsline {subsection}{\numberline {13.6}Homogeneous Coordinates and Transforms}{35}{subsection.13.6}
-\contentsline {subsubsection}{\numberline {13.6.1}Translation}{35}{subsubsection.13.6.1}
-\contentsline {subsubsection}{\numberline {13.6.2}Rotation of $\theta $ about the $z$-axis}{35}{subsubsection.13.6.2}
-\contentsline {subsubsection}{\numberline {13.6.3}Scale}{36}{subsubsection.13.6.3}
-\contentsline {subsection}{\numberline {13.7}World v/s Local Translations}{36}{subsection.13.7}
+\contentsline {subsubsection}{\numberline {11.3.1}RGB: ``Emitting Light''}{27}{subsubsection.11.3.1}
+\contentsline {subsubsection}{\numberline {11.3.2}RGB Cube}{28}{subsubsection.11.3.2}
+\contentsline {subsubsection}{\numberline {11.3.3}CMY: ``Absorbing Light.''}{28}{subsubsection.11.3.3}
+\contentsline {subsubsection}{\numberline {11.3.4}HSV Model}{28}{subsubsection.11.3.4}
+\contentsline {subsection}{\numberline {11.4}Modeling the World}{28}{subsection.11.4}
+\contentsline {section}{\numberline {12}Thursday 13 September: Triangle Mesh}{29}{section.12}
+\contentsline {subsection}{\numberline {12.1}Array of a Rotated Surface}{31}{subsection.12.1}
+\contentsline {section}{\numberline {13}Tuesday 18 September: Translations}{33}{section.13}
+\contentsline {subsection}{\numberline {13.1}Introduction}{33}{subsection.13.1}
+\contentsline {subsection}{\numberline {13.2}Conventions}{33}{subsection.13.2}
+\contentsline {subsection}{\numberline {13.3}Translation: Change in Position}{34}{subsection.13.3}
+\contentsline {subsection}{\numberline {13.4}Scale: Change in size}{34}{subsection.13.4}
+\contentsline {subsection}{\numberline {13.5}Rotation: Change in Orientation}{35}{subsection.13.5}
+\contentsline {subsection}{\numberline {13.6}Homogeneous Coordinates and Transforms}{36}{subsection.13.6}
+\contentsline {subsubsection}{\numberline {13.6.1}Translation}{36}{subsubsection.13.6.1}
+\contentsline {subsubsection}{\numberline {13.6.2}Rotation of $\theta $ about the $z$-axis}{36}{subsubsection.13.6.2}
+\contentsline {subsubsection}{\numberline {13.6.3}Scale}{37}{subsubsection.13.6.3}
+\contentsline {subsection}{\numberline {13.7}World v/s Local Translations}{37}{subsection.13.7}
+\contentsline {section}{\numberline {14}Thursday 20 September: OpenGL Architecture}{37}{section.14}
+\contentsline {subsection}{\numberline {14.1}More Homogeneous Transformation Matrices}{37}{subsection.14.1}
+\contentsline {subsubsection}{\numberline {14.1.1}Rotation about the $z$ axis }{37}{subsubsection.14.1.1}
+\contentsline {subsubsection}{\numberline {14.1.2}Rotation about the $y$-axis}{38}{subsubsection.14.1.2}
+\contentsline {subsubsection}{\numberline {14.1.3}Rotation about the $x$-axis (Brad's Guess)}{39}{subsubsection.14.1.3}
+\contentsline {subsubsection}{\numberline {14.1.4}Shear Example}{40}{subsubsection.14.1.4}
+\contentsline {subsubsection}{\numberline {14.1.5}Composition Example}{42}{subsubsection.14.1.5}
+\contentsline {subsection}{\numberline {14.2}OpenGL Architecture}{42}{subsection.14.2}
+\contentsline {section}{\numberline {15}Euler Angles, Euler Rotations}{43}{section.15}
