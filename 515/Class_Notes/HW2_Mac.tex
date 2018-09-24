@@ -1,0 +1,71 @@
+\section{Assignment \#2 on  a Mac/Linux Box}
+
+1.  Put the {\tt gmtl} folder in your {\tt /usr/local/include} directory.  
+
+\
+
+2.  Somehow, some of the {\tt \#include} statements repeat.  I don't know if that's a problem, but take the repetition out.  
+
+\begin{verbatim}
+#include <stdlib.h>
+#include <stdio.h>
+
+
+#include <gmtl\gmtl.h>
+#include <stdlib.h>
+#include <stdio.h>
+\end{verbatim}
+
+3.  Line 9:  Change 
+
+\begin{verbatim}#include <GL/glew.h>\end{verbatim} 
+
+to  
+
+\begin{verbatim}#include <GL\glew.h>\end{verbatim}
+
+4.  In line 24, the {\tt fopen\_s} will give you trouble.  
+
+\begin{verbatim}
+	fopen_s(&fptr, file, "rb");	
+\end{verbatim}
+
+
+All of the {\tt *\_s} stuff is new to the C11 standard, which is not widely supported.  Since it only appears once, you could rewrite that line as:
+
+\begin{verbatim}
+	fptr = fopen ( file, "rb");
+\end{verbatim}
+
+If some function like this occurs a lot, you could redefine it near the top of your file:
+
+\begin{verbatim}
+#ifdef __APPLE__
+    #define fopen_s(pFile,filename,mode) ((*(pFile))=fopen((filename),(mode)))==NULL
+#endif
+\end{verbatim}
+
+
+\
+
+5.  As we did in the very first assignment, uncomment/add these lines at line 58:
+
+\begin{verbatim}
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+\end{verbatim}
+
+\
+
+6.  As Lou mentioned in her forum post, in the {\tt OpenGL\_Example.frag} file, the {\tt gl\_FragColor} should be a dummy variable, but actually means something.  In lines 3 and 7, change both of them to the same thing.  I called them ``Fred.''
+
+\
+
+7.  I compiled with these flags and libraries.  
+
+\begin{verbatim}
+$ g++ C00412257_Assignment_02.cpp -framework OpenGL -lGLEW -lGLFW -w
+\end{verbatim}
+
