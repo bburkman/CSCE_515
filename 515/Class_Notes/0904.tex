@@ -352,9 +352,15 @@ Generalizes to 3D.
 
 \
 
+{\color{red} Dr. Borst's comment:  I think of it as building a new description of a polygon, not modifying (e.g., discarding) in the original description. Then the choices are copying a vertex to the new description, ignoring the vertex and moving on, adding a new computed intersection coord to the output list, or adding an intersection coord plus a copied vertex.}
+
+\
+
 The math is a little more tedious, but not much.  
 
 Window must be convex.
+
+Formal mathematical definition of {\it convex polygon}:  A polygon is convex iff, given any two points in the interior, all of the points on the segment connecting the points are in the interior.  
 
 Convex casual definition:  If a bug walking around the perimeter only turns one way, it's convex.  
 

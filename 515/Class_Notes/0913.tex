@@ -43,8 +43,12 @@ Primitive called OpenGL Triangle Strip
 	\draw [-triangle 60] ($(C)+({0.2*cos(240)},{0.2*sin(240)})$) arc (240:0:0.2);
 	\path (C) node [below right, align=center] {Winding \\ order};
 	\coordinate (D) at (${sqrt(2)/(2+sqrt(2))}*(v5)+{1/(2+sqrt(2))}*(v1)+{1/(2+sqrt(2))}*(v4)$);
-	\draw [triangle 60-] ($(D)+({0.2*cos(60)},{0.2*sin(60)})$) arc (60:-210:0.2);
+%	\draw [triangle 60-] ($(D)+({0.2*cos(60)},{0.2*sin(60)})$) arc (60:-210:0.2);
 \end{tikzpicture}
+
+\
+
+Dr. Borst's Annotation:  Note about winding order: it is the first triangle in the strip that determines the winding order for all triangles in the strip. so, here we see everything as clockwise. The default is that we want counterclockwise order when viewing the front (or outside) surface. The way I set up the description has us looking at the other side (back/inside) in the ``unwrapped'' mesh diagrams.
 
 \
 
@@ -160,13 +164,13 @@ Positive rotation is counter-clockwise when the axis is pointing towards you.
 
 \
 
-Let $np$ be the number of points to be rotated, and $nm$ be the number of steps of the rotation.
+Let $np$ be the number of points to be rotated, and $nm$ be the number of steps of the rotation.  Note that there will be $nm+1$ copies of the profile, with the last one being at $\theta = 2\pi$, duplicating the vertices at $\theta = 0$, closing the loop.  
 
 \
 
 Vertex list:  
 
-\qquad $(x_{ij}, y_{ij}, z_{ij}) = (x_{i0}, \cos \theta y_{i0}, \sin\theta y_{i0})$ with $\displaystyle\theta = \frac{2\pi}{nm} j$ for $0 \le i \le np$ and  $0 \le j \le nm$.
+\qquad $(x_{ij}, y_{ij}, z_{ij}) = (x_{i0}, \cos \theta y_{i0}, \sin\theta y_{i0})$ with $\displaystyle\theta = \frac{2\pi}{nm} j$ for $0 \le i < np$ and  $0 \le j \le nm$.
 
 
 \
@@ -175,7 +179,7 @@ Vertex list:
 
 The bottom and top rows are the same.  
 
-Vertical lines represent different $x$ values
+Vertical lines represent different $x$ values.  More strictly speaking, vertical lines correspond to different $i$ values, but could actually repeat $x$ (not necessarily different x values) as in the first two points of the drawn arrow.
 
 Horizontal lines represent different values of $\theta$.  
 
@@ -218,23 +222,23 @@ Horizontal lines represent different values of $\theta$.
 		\path (0,1) node [left] {$np$};
 		\path (0,2) node [left] {$2np$};
 		\path (0,3) node [left] {$3np$};
-		\path (0,5) node [left] {$(mn-3)np$};
-		\path (0,6) node [left] {$(mn-2)np$};
-		\path (0,7) node [left] {$(mn-1)np$};
-		\path (0,8) node [above left] {$(mn)np$};
+		\path (0,5) node [left] {$(nm-3)np$};
+		\path (0,6) node [left] {$(nm-2)np$};
+		\path (0,7) node [left] {$(nm-1)np$};
+		\path (0,8) node [above left] {$(nm)np$};
 		\path (8,1) node [right] {$2np-1$};
 		\path (8,2) node [right] {$3np-1$};
 		\path (8,3) node [right] {$4np-1$};
-		\path (8,5) node [right] {$(mn-2)np - 1$};
-		\path (8,6) node [right] {$(mn-1)np - 1$};
-		\path (8,7) node [right] {$(mn)np - 1$};
-		\path (8,8) node [above right, align=left] {$(mn)np + np - 1$ \\ $= \ (mn+1)np - 1$};
-		\path (1,8) node [rotate=45, right] {$(mn)np + 1$};
-		\path (2,8) node [rotate=45, right] {$(mn)np + 2$};
-		\path (3,8) node [rotate=45, right] {$(mn)np + 3$};
-		\path (5,8) node [rotate=45, right] {$(mn)np + np-4$};
-		\path (6,8) node [rotate=45, right] {$(mn)np + np-3$};
-		\path (7,8) node [rotate=45, right] {$(mn)np + np-2$};
+		\path (8,5) node [right] {$(nm-2)np - 1$};
+		\path (8,6) node [right] {$(nm-1)np - 1$};
+		\path (8,7) node [right] {$(nm)np - 1$};
+		\path (8,8) node [above right, align=left] {$(nm)np + np - 1$ \\ $= \ (nm+1)np - 1$};
+		\path (1,8) node [rotate=45, right] {$(nm)np + 1$};
+		\path (2,8) node [rotate=45, right] {$(nm)np + 2$};
+		\path (3,8) node [rotate=45, right] {$(nm)np + 3$};
+		\path (5,8) node [rotate=45, right] {$(nm)np + np-4$};
+		\path (6,8) node [rotate=45, right] {$(nm)np + np-3$};
+		\path (7,8) node [rotate=45, right] {$(nm)np + np-2$};
 %		\path (,8) node [above, rotate=45] {$$};
 %		\path (0,) node [left] {$$};
 	}
@@ -257,9 +261,9 @@ Vertex List
 
 \
 
-{\tt for theta in range (mn+1):}
+{\tt for theta in range (nm+1):}
 
-\qquad {\tt for x in range (np):}
+\qquad {\tt for i in range (np):}
 
 \qquad \qquad {\tt x(x,theta), y(x,theta), z(x,theta)}
 
@@ -288,7 +292,7 @@ $
 $
 
 \qquad \qquad $
-	\dots, x_{np-1,mn}, y_{np-1,mn}, z_{np-1,mn},
+	\dots, x_{np-1,nm}, y_{np-1,nm}, z_{np-1,nm},
 \}$
 
 \
@@ -301,7 +305,7 @@ $np, 2np, np+1, 2np+1, \dots, 2np-2, 3np-2, 2np-2, 3np-1,$ restart,
 
 $\vdots$
 
-$(mn-1)np, (mn)np, (mn-1)np + 1, (mn)np+1, \dots, (mn)np-1, (mn+1)np - 1$, restart $\}$
+$(nm-1)np, (nm)np, (nm-1)np + 1, (nm)np+1, \dots, (nm)np-1, (nm+1)np - 1$, restart $\}$
 
 
 

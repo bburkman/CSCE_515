@@ -64,12 +64,22 @@ $$
 
 Note that this transformation makes points on the positive $z$-axis rotate towards the positive $x$-axis.
 
-\tdplotsetmaincoords{60}{120}%\pgfmathsetmacro{\rvec}{6}\pgfmathsetmacro{\thetavec}{60}\pgfmathsetmacro{\phivec}{0}%\hfil\begin{tikzpicture}[scale=1,tdplot_main_coords]	\coordinate (O) at (0,0,0);	\draw[thick,->] (0,0,0) -- (7,0,0) node[anchor=north east]{$x$};	\draw[thick,->] (0,0,0) -- (0,4,0) node[anchor=north west]{$y$};
+\tdplotsetmaincoords{60}{120}
+%
+\pgfmathsetmacro{\rvec}{6}
+\pgfmathsetmacro{\thetavec}{60}
+\pgfmathsetmacro{\phivec}{0}
+%
+\hfil\begin{tikzpicture}[scale=1,tdplot_main_coords]
+	\coordinate (O) at (0,0,0);
+	\draw[thick,->] (0,0,0) -- (7,0,0) node[anchor=north east]{$x$};
+	\draw[thick,->] (0,0,0) -- (0,4,0) node[anchor=north west]{$y$};
 	\draw[thick,->] (0,0,0) -- (0,0,4) node[anchor=south]{$z$};
 
 	\draw [black, ultra thick] (0,0,0) -- (0,1,0) -- (4,1,0) -- (4,2,0) -- (6,0,0);
 
-	\tdplotsetthetaplanecoords{\phivec}	\tdplotdrawarc[tdplot_rotated_coords,blue,-triangle 60]{(0,0,0)}{3}{0}{\thetavec}{anchor=south east}{$\theta$}
+	\tdplotsetthetaplanecoords{\phivec}
+	\tdplotdrawarc[tdplot_rotated_coords,blue,-triangle 60]{(0,0,0)}{3}{0}{\thetavec}{anchor=south east}{$\theta$}
 	\tdplotdrawarc[tdplot_rotated_coords,dashed]{(0,0,0)}{6}{90}{150}{}{}
 
 	\coordinate (Shift) at (0,1,0);
@@ -83,7 +93,8 @@ Note that this transformation makes points on the positive $z$-axis rotate towar
 	\coordinate (Shift3) at (0,0,0);
 	\tdplotsetrotatedcoordsorigin{(Shift3)}
 	\tdplotsetrotatedcoords{0}{60}{0}
-	\draw [blue, ultra thick, tdplot_rotated_coords] (0,0,0) -- (0,1,0) -- (4,1,0) -- (4,2,0) -- (6,0,0);
+
+	\draw [blue, ultra thick, tdplot_rotated_coords] (0,0,0) -- (0,1,0) -- (4,1,0) -- (4,2,0) -- (6,0,0);
 
 	\draw[thick,color=blue,tdplot_rotated_coords,->] (0,0,0) --
         (7,0,0) node[anchor=north east]{$x'$};
@@ -120,14 +131,24 @@ $$
 
 \subsubsection{Rotation about the $x$-axis (Brad's Guess)}
 
-Note that this transformation makes points on the positive $z$-axis rotate towards the positive $x$-axis.
+Note that this transformation makes points on the positive $y$-axis rotate towards the positive $z$-axis.
 
-\tdplotsetmaincoords{60}{120}%\pgfmathsetmacro{\rvec}{6}\pgfmathsetmacro{\thetavec}{60}\pgfmathsetmacro{\phivec}{90}%\hfil\begin{tikzpicture}[scale=1,tdplot_main_coords]	\coordinate (O) at (0,0,0);	\draw[thick,->] (0,0,0) -- (7,0,0) node[anchor=south]{$x$};	\draw[thick,->] (0,0,0) -- (0,4,0) node[anchor=north west]{$y$};
+\tdplotsetmaincoords{60}{120}
+%
+\pgfmathsetmacro{\rvec}{6}
+\pgfmathsetmacro{\thetavec}{60}
+\pgfmathsetmacro{\phivec}{90}
+%
+\hfil\begin{tikzpicture}[scale=1,tdplot_main_coords]
+	\coordinate (O) at (0,0,0);
+	\draw[thick,->] (0,0,0) -- (7,0,0) node[anchor=south]{$x$};
+	\draw[thick,->] (0,0,0) -- (0,4,0) node[anchor=north west]{$y$};
 	\draw[thick,->] (0,0,0) -- (0,0,5) node[anchor=south]{$z$};
 
 	\draw [black, ultra thick] (0,0,0) -- (0,1,0) -- (4,1,0) -- (4,2,0) -- (6,0,0);
 
-%	\tdplotsetthetaplanecoords{\phivec}%	\tdplotdrawarc[tdplot_rotated_coords,blue,-triangle 60]{(0,0,0)}{3}{0}{\thetavec}{anchor=south east}{$\theta$}
+%	\tdplotsetthetaplanecoords{\phivec}
+%	\tdplotdrawarc[tdplot_rotated_coords,blue,-triangle 60]{(0,0,0)}{3}{0}{\thetavec}{anchor=south east}{$\theta$}
 %	\tdplotdrawarc[tdplot_rotated_coords,dashed]{(0,0,0)}{6}{90}{150}{}{}
 
 %	\coordinate (Shift) at (0,1,0);
@@ -219,7 +240,16 @@ $$
 \begin{figure}
 \centering
 
-\tdplotsetmaincoords{60}{120}%\pgfmathsetmacro{\rvec}{6}\pgfmathsetmacro{\thetavec}{60}\pgfmathsetmacro{\phivec}{90}%\hfil\begin{tikzpicture}[scale=5,tdplot_main_coords]	\coordinate (O) at (0,0,0);	\draw[thick,->] (0,0,0) -- (1.5,0,0) node[anchor=south]{$x$};	\draw[thick,->] (0,0,0) -- (0,1.5,0) node[anchor=north west]{$y$};
+\tdplotsetmaincoords{60}{120}
+%
+\pgfmathsetmacro{\rvec}{6}
+\pgfmathsetmacro{\thetavec}{60}
+\pgfmathsetmacro{\phivec}{90}
+%
+\hfil\begin{tikzpicture}[scale=5,tdplot_main_coords]
+	\coordinate (O) at (0,0,0);
+	\draw[thick,->] (0,0,0) -- (1.5,0,0) node[anchor=south]{$x$};
+	\draw[thick,->] (0,0,0) -- (0,1.5,0) node[anchor=north west]{$y$};
 	\draw[thick,->] (0,0,0) -- (0,0,1.5) node[anchor=south]{$z$};
 
 	\draw [black, ultra thick] (0,0,0) -- (0,1,0) -- (0,1,1) -- (0,0,1) -- (0,0,0);
@@ -368,12 +398,22 @@ Then the blue coordinate system is rotated about the new $y$-axis by $\beta$ to 
 Then the red coordinate system is rotated about the new $z$-axis by $\gamma$ become the purple coordinate system.
 
 
-\tdplotsetmaincoords{60}{120}%\pgfmathsetmacro{\rvec}{6}\pgfmathsetmacro{\thetavec}{60}\pgfmathsetmacro{\phivec}{90}%\begin{tikzpicture}[scale=1,tdplot_main_coords]	\coordinate (O) at (0,0,0);	\draw[thick,->] (0,0,0) -- (7,0,0) node[anchor=north east]{$x$};	\draw[thick,->] (0,0,0) -- (0,4,0) node[anchor=north west]{$y$};
+\tdplotsetmaincoords{60}{120}
+%
+\pgfmathsetmacro{\rvec}{6}
+\pgfmathsetmacro{\thetavec}{60}
+\pgfmathsetmacro{\phivec}{90}
+%
+\begin{tikzpicture}[scale=1,tdplot_main_coords]
+	\coordinate (O) at (0,0,0);
+	\draw[thick,->] (0,0,0) -- (7,0,0) node[anchor=north east]{$x$};
+	\draw[thick,->] (0,0,0) -- (0,4,0) node[anchor=north west]{$y$};
 	\draw[thick,->] (0,0,0) -- (0,0,5) node[anchor=south]{$z$};
 
 	\draw [black, ultra thick] (0,0,0) -- (0,1,0) -- (4,1,0) -- (4,2,0) -- (6,0,0);
 
-%	\tdplotsetthetaplanecoords{\phivec}%	\tdplotdrawarc[tdplot_rotated_coords,blue,-triangle 60]{(0,0,0)}{3}{0}{\thetavec}{anchor=south east}{$\theta$}
+%	\tdplotsetthetaplanecoords{\phivec}
+%	\tdplotdrawarc[tdplot_rotated_coords,blue,-triangle 60]{(0,0,0)}{3}{0}{\thetavec}{anchor=south east}{$\theta$}
 %	\tdplotdrawarc[tdplot_rotated_coords,dashed]{(0,0,0)}{6}{90}{150}{}{}
 
 %	\coordinate (Shift) at (0,1,0);
