@@ -62,3 +62,5 @@
 \contentsline {subsection}{\numberline {14.2}OpenGL Architecture}{43}{subsection.14.2}
 \contentsline {section}{\numberline {15}Euler Angles, Euler Rotations}{44}{section.15}
 \contentsline {section}{\numberline {16}Assignment \#2 on a Mac/Linux Box}{44}{section.16}
+\contentsline {section}{\numberline {17}Tuesday 2 October: Homework \#3 Intro}{46}{section.17}
+\contentsline {subsection}{\numberline {17.1}Scene Graph}{46}{subsection.17.1}

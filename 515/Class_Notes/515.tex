@@ -6,7 +6,7 @@
 
 \documentclass[12pt]{article}
 \usepackage{tikz}
-\usetikzlibrary{arrows, intersections, calc}
+\usetikzlibrary{arrows, intersections, calc, shapes}
 \usepackage{pgfmath}
 \usepackage{tikz-3dplot}
 \usepackage{setspace}
@@ -37,6 +37,12 @@
     keywordstyle=\color{blue}, % keyword color
     stringstyle=\color{red} % string color
 }
+
+\newcommand\mytikzmark[3][]{%
+  \tikz[remember picture,baseline=(#2.base)]{\node(#2)[outer sep=0pt,#1]{#3};}%
+}
+
+
 
 \pagestyle{empty}
 \begin{document}
@@ -80,6 +86,7 @@ Grader:  Jason Woodworth, \url{downtothelastpixel@gmail.com}
 \input{0918}
 \input{0920}
 \input{HW2_Mac}
+\input{1002}
 
 
 
