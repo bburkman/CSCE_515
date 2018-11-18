@@ -36,7 +36,24 @@
 %%%%%%%%%%%%%%%%%
 
 \subsection{Question 1}
-1.  Both raster and vector displays use a refresh buffer.  What is the differencwe between the two in terms of refresh buffer contents?
+1.  Both raster and vector displays use a refresh buffer.  What is the difference between the two in terms of refresh buffer contents?
+
+\subsection{First Punt, Brad Burkman, 11/17 7:41pm}
+
+I have no idea.  I do not have a vector display refresh buffer in my notes, and I can't find it online.  
+
+\
+
+Here's what I do know.  
+
+\
+
+Raster displays have a bitmap of the color and intensity of each pixel.  Their refresh buffer holds the next screen to be displayed.  It may have two layers so that the swap between the displays doesn't happen in the middle of an update.  If it's a CRT monitor, it paints the pixels in rows, not following the contours of each object.  Raster displays have a constant refresh rate.  
+
+\
+
+Vector displays, like an oscilloscope, move a laser or electron beam over the screen following the contours of each object, drawing it smoothly.  It starts redrawing the screen after it has finished drawing the screen.  
+
 
 
 \subsection{Question 2}
@@ -45,8 +62,122 @@
 \subsubsection{First guess, Brad Burkman, 11/14 7:44pm}
 The floating point operations were multiplied by [something like] the number of pixels that each integer represented, then rounded, because we don't care about being between two pixels; we have to pick one.  
 
+\subsubsection{Second Atttempt, informed by notes, Brad Burkman, 11/14 7:58pm}
+Since this sample question is about a small piece of the Besenham algorithm, I presume the actual exam question could be anything about it.  
+
+\
+
+Looking at the notes from 28 August, here's how the midpoint (Besenham) algorithm works.
+
+\subsubsection{Midpoint Line (Besenham) Algorithm}
+
+\begin{tikzpicture}[x=40mm, y=40mm]
+	\draw (0,0) -- (4,1.6);
+	\draw (0,0) circle (5pt);
+	\draw (1,0) circle (5pt);
+	\draw (2,1) circle (5pt);
+	\draw (3,1) circle (5pt);
+	\fill (0,0) circle (2pt) node [below] {$(x_0,y_0)$};
+	\fill (1,0) circle (2pt) node [below] {$(x_{1},y_0)$};
+	\path (1,-0.2) node [below] {$=(x_{0}+1,y_{0})$};
+	\path (1,-0.4) node [below] {$=(x_{1},y_{1})$};
+	\fill (1,1) circle (2pt) node [above] {$(x_{1},y_1)$};
+	\fill (1,0.4) circle (2pt) node [left] {$(x_{1}, y_0+m) \ $};
+	\fill (1,0.5) circle (2pt) node [above left] {$(x_{1}, y_0+0.5) \ $};
+	\fill (2,0) circle (2pt) node [below] {$(x_{2},y_{1})$};
+	\fill (2,0.4) circle (2pt) node [below right] {$(x_{2},y_{0}+m)$};
+	\fill (2,0.5) circle (2pt) node [above right] {$(x_{2}, y_0+0.5)$};
+	\fill (2,0.8) circle (2pt) node [right] {$(x_{2},y_{0}+2m)$};
+	\fill (2,1) circle (2pt) node [above] {$(x_{2},y_{0}+1)$};
+	\path (2,1.2) node [above] {$=(x_{2},y_{2})$};
+	\fill (3,1) circle (2pt) node [below right] {$(x_3,y_2)= (x_0+3,y_0+1)$};
+	\fill (3,1.2) circle (2pt) node [right] {$(x_0+3,y_0+3m)$};
+	\fill (3,1.5) circle (2pt) node [right] {$(x_0+3,y_0+1.5)$};
+	\fill (3,2) circle (2pt) node [right] {$(x_0+3,y_0+2)$};
+\end{tikzpicture}  
+
+Initialize $d$ at $m - 0.5$.  
+
+Since in this case $d$ is negative, choose to move E rather than NE.  
+
+At the second step, because we moved E, $d = d+m$, so $d = 2m - 0.5$.  
+
+Since $d$ is positive, move NE.  
+
+Now since we moved NE, $d = d+m-1 = (2m-0.5) + m - 1 = 3m - 1.5$
+
+Since $d = 3m-1.5$ is negative, move E.
+
+\subsubsection{Making it Faster}
+
+\begin{tikzpicture}[x=10mm,y=10mm]
+	\draw (0,0) -- (2,1) -- (2,0) -- (0,0);
+	\fill (0,0) circle (2pt) node [below left] {$(x_s,y_s)$};
+	\fill (2,1) circle(2pt) node [above right] {$(x_e,y_e)$};
+	\path (1,0) node [below] {$x_e-x_s$};
+	\path (2,0.5) node [right] {$y_e - y_s$};
+	\path (4,0.5) node [right] {$\displaystyle m = \frac{y_e - y_s}{x_e - x_s} = \frac{\Delta y}{\Delta x}$};
+	\path (8,0.5) node [right] {$d = m-0.5$};
+\end{tikzpicture}
+
+Scale everything by $2 \Delta x$, so that $m = 2\Delta y$ and $d = 2\Delta y - \Delta x$.
+
+\
+
+Same example as above:
+
+\begin{tikzpicture}[x=10mm,y=10mm]
+	\draw (0,0) -- (5,2) -- (5,0) -- (0,0);
+	\fill (0,0) circle (2pt) node [below left] {$(0,0)$};
+	\fill (5,2) circle(2pt) node [above right] {$(5,2)$};
+	\path (2.5,0) node [below] {$5$};
+	\path (5,1) node [right] {$2$};
+	\path (7,1) node [right] {$\displaystyle m = \frac{2}{5} = \frac{\Delta y}{\Delta x}$};
+	\path (10,1) node [right] {$d = m-0.5$};
+	\foreach \i in {0,1,2,3,4,5}{
+		\draw [ultra thin, dashed] (\i,-1) -- (\i,3);
+	}
+\end{tikzpicture}
+
+\
+
+\begin{tikzpicture}[x=10mm,y=10mm]
+	\draw (0,0) -- (5,2) -- (5,0) -- (0,0);
+	\fill (0,0) circle (2pt) node [below left] {$(0,0)$};
+	\fill (5,2) circle(2pt) node [above right] {$(50,20)$};
+	\path (2.5,0) node [below] {$50$};
+	\path (5,1) node [right] {$20$};
+	\path (7,1) node [right] {$\displaystyle 2m\Delta x = 4 = \Delta y$};
+	\path (7,0) node [right] {$d = 4-5 = -1$};
+	\foreach \i in {0,1,2,3,4,5}{
+		\draw [ultra thin, dashed] (\i,-1) -- (\i,3);
+	}
+\end{tikzpicture}
+
+Initialize $d$ at $2\Delta y - \Delta x = 4-5 = -1$  
+
+Since in this case $d$ is negative, choose to move E rather than NE.  
+
+At the second step, because we moved E, $d = d+2\Delta y$, so $d = -1 + 4 = 3$.  
+
+Since $d$ is positive, move NE.  
+
+Now since we moved NE, $d = d+2 \Delta y - 10 = 3 + 2(2) - 10 = -3$
+
+Since $d = -3$ is negative, move E.
+
+
+
 \subsection{Question 3}
 3.  What is meant by each of the three terms geometry, topology, and attributes for a polygonal surface model?
+
+\subsubsection{Information from Class Notes, Brad Burkman, 17 November 10:11pm}
+
+\begin{itemize}
+	\item Vertex list gives the geometry, the shape.  
+	\item Index list gives the topology, the relationships between neighbors.  
+	\item Attributes are colors and normal vectors, perhaps the texture?
+\end{itemize}
 
 \subsection{Question 4}
 

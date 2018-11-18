@@ -1,31 +1,36 @@
-\contentsline {section}{\numberline {1}Study Guide Questions}{2}{section.1}
-\contentsline {subsection}{\numberline {1.1}Question 1}{2}{subsection.1.1}
-\contentsline {subsection}{\numberline {1.2}Question 2}{2}{subsection.1.2}
-\contentsline {subsubsection}{\numberline {1.2.1}First guess, Brad Burkman, 11/14 7:44pm}{2}{subsubsection.1.2.1}
-\contentsline {subsection}{\numberline {1.3}Question 3}{2}{subsection.1.3}
-\contentsline {subsection}{\numberline {1.4}Question 4}{2}{subsection.1.4}
-\contentsline {subsection}{\numberline {1.5}Question 5}{2}{subsection.1.5}
-\contentsline {subsubsection}{\numberline {1.5.1}Rotation Matrices}{3}{subsubsection.1.5.1}
-\contentsline {subsection}{\numberline {1.6}Questions 6 and 7}{3}{subsection.1.6}
-\contentsline {subsection}{\numberline {1.7}Question 8}{3}{subsection.1.7}
-\contentsline {subsubsection}{\numberline {1.7.1}First guess for \#8, Brad Burkman, 7:58pm, 11 November}{3}{subsubsection.1.7.1}
-\contentsline {subsubsection}{\numberline {1.7.2}Dr. Borst's Discussion}{3}{subsubsection.1.7.2}
-\contentsline {subsection}{\numberline {1.8}Question 9}{4}{subsection.1.8}
-\contentsline {subsection}{\numberline {1.9}Question 10}{4}{subsection.1.9}
-\contentsline {subsubsection}{\numberline {1.9.1}Dr. Borst's Answer}{4}{subsubsection.1.9.1}
-\contentsline {subsection}{\numberline {1.10}Question 11}{4}{subsection.1.10}
-\contentsline {subsubsection}{\numberline {1.10.1}First Guess, Brad Burkman, 8:26pm 14 November}{4}{subsubsection.1.10.1}
-\contentsline {subsection}{\numberline {1.11}Question 12}{4}{subsection.1.11}
-\contentsline {subsubsection}{\numberline {1.11.1}Dr. Borst's Answer}{5}{subsubsection.1.11.1}
-\contentsline {subsection}{\numberline {1.12}Question 13}{5}{subsection.1.12}
-\contentsline {subsection}{\numberline {1.13}Question 14}{5}{subsection.1.13}
-\contentsline {subsubsection}{\numberline {1.13.1}Dr. Borst's Answer}{5}{subsubsection.1.13.1}
-\contentsline {subsection}{\numberline {1.14}Question 15}{5}{subsection.1.14}
-\contentsline {subsection}{\numberline {1.15}Question 16}{5}{subsection.1.15}
-\contentsline {subsubsection}{\numberline {1.15.1}First Guess, Brad Burkman, 9:03pm 14 November}{5}{subsubsection.1.15.1}
-\contentsline {subsection}{\numberline {1.16}Question 17}{5}{subsection.1.16}
-\contentsline {subsection}{\numberline {1.17}Question 18}{6}{subsection.1.17}
-\contentsline {subsection}{\numberline {1.18}Question 19}{6}{subsection.1.18}
-\contentsline {subsection}{\numberline {1.19}Question 20}{6}{subsection.1.19}
-\contentsline {subsubsection}{\numberline {1.19.1}First Guess, Brad Burkman, 9:23pm 14 November}{6}{subsubsection.1.19.1}
-\contentsline {subsubsection}{\numberline {1.19.2}Dr. Borst's Discussion}{7}{subsubsection.1.19.2}
+\contentsline {section}{\numberline {1}Study Guide Questions}{1}{section.1}
+\contentsline {subsection}{\numberline {1.1}Question 1}{1}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}First Punt, Brad Burkman, 11/17 7:41pm}{1}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Question 2}{1}{subsection.1.3}
+\contentsline {subsubsection}{\numberline {1.3.1}First guess, Brad Burkman, 11/14 7:44pm}{2}{subsubsection.1.3.1}
+\contentsline {subsubsection}{\numberline {1.3.2}Second Atttempt, informed by notes, Brad Burkman, 11/14 7:58pm}{2}{subsubsection.1.3.2}
+\contentsline {subsubsection}{\numberline {1.3.3}Midpoint Line (Besenham) Algorithm}{2}{subsubsection.1.3.3}
+\contentsline {subsubsection}{\numberline {1.3.4}Making it Faster}{3}{subsubsection.1.3.4}
+\contentsline {subsection}{\numberline {1.4}Question 3}{3}{subsection.1.4}
+\contentsline {subsubsection}{\numberline {1.4.1}Information from Class Notes, Brad Burkman, 17 November 10:11pm}{3}{subsubsection.1.4.1}
+\contentsline {subsection}{\numberline {1.5}Question 4}{4}{subsection.1.5}
+\contentsline {subsection}{\numberline {1.6}Question 5}{4}{subsection.1.6}
+\contentsline {subsubsection}{\numberline {1.6.1}Rotation Matrices}{4}{subsubsection.1.6.1}
+\contentsline {subsection}{\numberline {1.7}Questions 6 and 7}{4}{subsection.1.7}
+\contentsline {subsection}{\numberline {1.8}Question 8}{5}{subsection.1.8}
+\contentsline {subsubsection}{\numberline {1.8.1}First guess for \#8, Brad Burkman, 7:58pm, 11 November}{5}{subsubsection.1.8.1}
+\contentsline {subsubsection}{\numberline {1.8.2}Dr. Borst's Discussion}{5}{subsubsection.1.8.2}
+\contentsline {subsection}{\numberline {1.9}Question 9}{5}{subsection.1.9}
+\contentsline {subsection}{\numberline {1.10}Question 10}{5}{subsection.1.10}
+\contentsline {subsubsection}{\numberline {1.10.1}Dr. Borst's Answer}{6}{subsubsection.1.10.1}
+\contentsline {subsection}{\numberline {1.11}Question 11}{6}{subsection.1.11}
+\contentsline {subsubsection}{\numberline {1.11.1}First Guess, Brad Burkman, 8:26pm 14 November}{6}{subsubsection.1.11.1}
+\contentsline {subsection}{\numberline {1.12}Question 12}{6}{subsection.1.12}
+\contentsline {subsubsection}{\numberline {1.12.1}Dr. Borst's Answer}{6}{subsubsection.1.12.1}
+\contentsline {subsection}{\numberline {1.13}Question 13}{6}{subsection.1.13}
+\contentsline {subsection}{\numberline {1.14}Question 14}{6}{subsection.1.14}
+\contentsline {subsubsection}{\numberline {1.14.1}Dr. Borst's Answer}{6}{subsubsection.1.14.1}
+\contentsline {subsection}{\numberline {1.15}Question 15}{6}{subsection.1.15}
+\contentsline {subsection}{\numberline {1.16}Question 16}{7}{subsection.1.16}
+\contentsline {subsubsection}{\numberline {1.16.1}First Guess, Brad Burkman, 9:03pm 14 November}{7}{subsubsection.1.16.1}
+\contentsline {subsection}{\numberline {1.17}Question 17}{7}{subsection.1.17}
+\contentsline {subsection}{\numberline {1.18}Question 18}{7}{subsection.1.18}
+\contentsline {subsection}{\numberline {1.19}Question 19}{7}{subsection.1.19}
+\contentsline {subsection}{\numberline {1.20}Question 20}{7}{subsection.1.20}
+\contentsline {subsubsection}{\numberline {1.20.1}First Guess, Brad Burkman, 9:23pm 14 November}{8}{subsubsection.1.20.1}
+\contentsline {subsubsection}{\numberline {1.20.2}Dr. Borst's Discussion}{9}{subsubsection.1.20.2}
