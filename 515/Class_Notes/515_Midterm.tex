@@ -187,16 +187,34 @@ Replace with:
 
 Triangle Strips Question
 
-\subsection{Question 5}
+\subsubsection{What kind of question could it be?}
+
+\begin{itemize}
+	\item Primitive restart index
+	\item Vertices 0,1,2 define first triangle, 1,2,3 define second. 
+	\item First triangle in the strip determines winding order.  Default is counterclockwise for the exterior, clockwise for the interior.  
+	\item Given a rotated surface with $np$ number of points to be rotated and $nm$ steps of rotation, how many vertices, cells, triangles, triangles, triangle strips, elements in the vertex list, elements in the index list ... are there?
+\end{itemize}
+
+
+\subsection{Question 5, with Brad's answers from 11/18 6:15am}
 5.  Answer true or false for each item below.  
 
 For transforms as discussed in class:
 
 \begin{itemize}
 	\item Any two rotations are commutative.
+	
+	False.  See example below. 
 	\item Any two translations are commutative.
+	
+	True.
 	\item The inverse of a rotation matrix is its transpose.  
+	
+	True
 	\item The inverse of a translation matrix is its transpose.  
+	
+	False
 	\item For any composite sequence of translations and rotations, there exists a single rotation and translation pair that would have the same net effect.  [Dr. Borst says it's true.]
 \end{itemize}
 
@@ -210,6 +228,103 @@ What do we know about rotation matrices?
 	\item They are orthogonal; {\tt i.e.} $R^{-1} = R^T$.
 \end{itemize}
 
+\subsubsection{$Z$-rotation matrix}
+
+$$
+\left[
+\begin{array}{cccc}
+	\cos \theta & - \sin \theta & 0 & 0 \cr
+	\sin \theta & \cos \theta & 0 & 0 \cr
+	0 & 0 & 1 & 0 \cr
+	0 & 0 & 0 & 1 \cr
+\end{array}
+\right]
+$$
+
+\subsubsection{$Y$-rotation matrix}
+
+$$
+\left[
+\begin{array}{cccc}
+	\cos \theta & 0 & \sin \theta & 0 \cr
+	0 & 1 & 0 & 0 \cr
+	-\sin \theta & 0  & \cos \theta & 0 \cr
+	0 & 0 & 0 & 1 \cr
+\end{array}
+\right]
+$$
+
+\subsubsection{$X$-rotation matrix}
+
+$$
+\left[
+\begin{array}{cccc}
+	1 & 0 & 0 & 0 \cr
+	0 & \cos \theta & -\sin \theta & 0 \cr
+	0 & \sin \theta & \cos \theta & 0 \cr
+	0 & 0 & 0 & 1 \cr
+\end{array}
+\right]
+$$
+
+Let's multiply two of them together and see whether it's commutative.  
+
+$$YX = 
+\left[
+\begin{array}{cccc}
+	\cos \beta & 0 & \sin \beta & 0 \cr
+	0 & 1 & 0 & 0 \cr
+	-\sin \beta & 0  & \cos \beta & 0 \cr
+	0 & 0 & 0 & 1 \cr
+\end{array}
+\right]
+\left[
+\begin{array}{cccc}
+	1 & 0 & 0 & 0 \cr
+	0 & \cos \alpha & -\sin \alpha & 0 \cr
+	0 & \sin \alpha & \cos \alpha & 0 \cr
+	0 & 0 & 0 & 1 \cr
+\end{array}
+\right]
+=\left[
+\begin{array}{cccc}
+	\cos \beta & \sin \alpha \sin \beta & \cos \alpha \sin \beta & 0 \cr
+	0 & \cos \alpha & -\sin \alpha & 0 \cr
+	-\sin \beta & \sin \alpha \cos \beta & \cos \alpha \cos \beta & 0 \cr
+	0 & 0 & 0 & 1 \cr
+\end{array}
+\right]
+$$
+
+$$XY = 
+\left[
+\begin{array}{cccc}
+	1 & 0 & 0 & 0 \cr
+	0 & \cos \alpha & -\sin \alpha & 0 \cr
+	0 & \sin \alpha & \cos \alpha & 0 \cr
+	0 & 0 & 0 & 1 \cr
+\end{array}
+\right]
+\left[
+\begin{array}{cccc}
+	\cos \beta & 0 & \sin \beta & 0 \cr
+	0 & 1 & 0 & 0 \cr
+	-\sin \beta & 0  & \cos \beta & 0 \cr
+	0 & 0 & 0 & 1 \cr
+\end{array}
+\right]
+=\left[
+\begin{array}{cccc}
+	\cos \beta & 0 & \sin \beta & 0 \cr
+	\sin \alpha \sin \beta & \cos \alpha & -\sin \alpha \cos \beta & 0 \cr
+	-\cos \alpha \sin \beta & \sin \alpha & \cos \alpha \cos \beta & 0 \cr
+	0 & 0 & 0 & 1 \cr
+\end{array}
+\right]
+$$
+
+
+
 \subsection{Questions 6 and 7}
 6,7.  Given a $4 \times 4$ homogeneous transform (sixteen numbers) for describing an object's local coordinate system with respect to the world coordinate system such that:
 
@@ -220,6 +335,147 @@ What do we know about rotation matrices?
 \end{itemize}
 
 Give the inverse of the transform.  
+
+\subsubsection{Brad's answer, 18 November 6:44 am}
+
+A $-90^{\circ}$ rotation in the $Y$ gives the correct orientation. 
+
+Do the rotation, then the translation.  
+
+$$A = T_{(4,0,2)} Y_{-90} = 
+\left[
+\begin{array}{cccc}
+	1 & 0 & 0 & 4 \cr
+	0 & 1 & 0 & 0 \cr
+	0 & 0 & 1 & 2 \cr
+	0 & 0 & 0 & 1 \cr
+\end{array}
+\right]
+\left[
+	\begin{array}{cccc}
+		\cos (-90) & 0 & \sin (-90) & 0 \cr
+		0 & 1 & 0 & 0 \cr
+		-\sin(-90) & 0 & \cos (-90) & 0 \cr
+		0 & 0 & 0 & 1 \cr
+	\end{array}
+\right]
+$$
+
+$$= 
+\left[
+\begin{array}{cccc}
+	1 & 0 & 0 & 4 \cr
+	0 & 1 & 0 & 0 \cr
+	0 & 0 & 1 & 2 \cr
+	0 & 0 & 0 & 1 \cr
+\end{array}
+\right]
+\left[
+	\begin{array}{cccc}
+		0 & 0 & -1 & 0 \cr
+		0 & 1 & 0 & 0 \cr
+		1 & 0 & 0 & 0 \cr
+		0 & 0 & 0 & 1 \cr
+	\end{array}
+\right]
+$$
+
+$$= 
+\left[
+	\begin{array}{cccc}
+		0 & 0 & -1 & 4 \cr
+		0 & 1 & 0 & 0 \cr
+		1 & 0 & 0 & 2 \cr
+		0 & 0 & 0 & 1 \cr
+	\end{array}
+\right]
+$$
+
+$$A^{-1}= \left(T_{(4,0,2)} Y_{-90}\right)^{-1} = 
+\left( Y_{-90} \right)^{-1}\left( T_{(4,0,2)}\right)^{-1} = 
+Y_{90} T_{(-4,0,-2)}
+$$
+
+$$
+\left[
+	\begin{array}{cccc}
+		\cos (90) & 0 & \sin (90) & 0 \cr
+		0 & 1 & 0 & 0 \cr
+		-\sin(90) & 0 & \cos (90) & 0 \cr
+		0 & 0 & 0 & 1 \cr
+	\end{array}
+\right]
+\left[
+\begin{array}{cccc}
+	1 & 0 & 0 & -4 \cr
+	0 & 1 & 0 & 0 \cr
+	0 & 0 & 1 & -2 \cr
+	0 & 0 & 0 & 1 \cr
+\end{array}
+\right]
+$$
+
+$$= 
+\left[
+	\begin{array}{cccc}
+		0 & 0 & 1 & 0 \cr
+		0 & 1 & 0 & 0 \cr
+		-1 & 0 & 0 & 0 \cr
+		0 & 0 & 0 & 1 \cr
+	\end{array}
+\right]
+\left[
+\begin{array}{cccc}
+	1 & 0 & 0 & -4 \cr
+	0 & 1 & 0 & 0 \cr
+	0 & 0 & 1 & -2 \cr
+	0 & 0 & 0 & 1 \cr
+\end{array}
+\right]
+$$
+
+$$= 
+\left[
+	\begin{array}{cccc}
+		0 & 0 & 1 & -2 \cr
+		0 & 1 & 0 & 0 \cr
+		-1 & 0 & 0 & 4 \cr
+		0 & 0 & 0 & 1 \cr
+	\end{array}
+\right]
+$$
+
+Check.  
+
+$$ A A^{-1} = \left[
+	\begin{array}{cccc}
+		0 & 0 & -1 & 4 \cr
+		0 & 1 & 0 & 0 \cr
+		1 & 0 & 0 & 2 \cr
+		0 & 0 & 0 & 1 \cr
+	\end{array}
+\right]
+\left[
+	\begin{array}{cccc}
+		0 & 0 & 1 & -2 \cr
+		0 & 1 & 0 & 0 \cr
+		-1 & 0 & 0 & 4 \cr
+		0 & 0 & 0 & 1 \cr
+	\end{array}
+\right]
+=
+\left[
+	\begin{array}{cccc}
+		1 & 0 & 0 & 0 \cr
+		0 & 1 & 0 & 0 \cr
+		0 & 0 & 1 & 0 \cr
+		0 & 0 & 0 & 1 \cr
+	\end{array}
+\right]
+\qquad \surd
+$$
+
+
 
 \subsection{Question 8}
 8.  The diagrams below show a house model.  Give $\hat{\mathbf{n}}$, the unit normal vector for the right side of the roof.  

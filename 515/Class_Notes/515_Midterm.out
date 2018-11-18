@@ -9,28 +9,33 @@
 \BOOKMARK [2][-]{subsection.1.4}{Question 3}{section.1}% 9
 \BOOKMARK [3][-]{subsubsection.1.4.1}{Information from Class Notes, Brad Burkman, 17 November 10:11pm}{subsection.1.4}% 10
 \BOOKMARK [2][-]{subsection.1.5}{Question 4}{section.1}% 11
-\BOOKMARK [2][-]{subsection.1.6}{Question 5}{section.1}% 12
-\BOOKMARK [3][-]{subsubsection.1.6.1}{Rotation Matrices}{subsection.1.6}% 13
-\BOOKMARK [2][-]{subsection.1.7}{Questions 6 and 7}{section.1}% 14
-\BOOKMARK [2][-]{subsection.1.8}{Question 8}{section.1}% 15
-\BOOKMARK [3][-]{subsubsection.1.8.1}{First guess for \0438, Brad Burkman, 7:58pm, 11 November}{subsection.1.8}% 16
-\BOOKMARK [3][-]{subsubsection.1.8.2}{Dr. Borst's Discussion}{subsection.1.8}% 17
-\BOOKMARK [2][-]{subsection.1.9}{Question 9}{section.1}% 18
-\BOOKMARK [2][-]{subsection.1.10}{Question 10}{section.1}% 19
-\BOOKMARK [3][-]{subsubsection.1.10.1}{Dr. Borst's Answer}{subsection.1.10}% 20
-\BOOKMARK [2][-]{subsection.1.11}{Question 11}{section.1}% 21
-\BOOKMARK [3][-]{subsubsection.1.11.1}{First Guess, Brad Burkman, 8:26pm 14 November}{subsection.1.11}% 22
-\BOOKMARK [2][-]{subsection.1.12}{Question 12}{section.1}% 23
-\BOOKMARK [3][-]{subsubsection.1.12.1}{Dr. Borst's Answer}{subsection.1.12}% 24
-\BOOKMARK [2][-]{subsection.1.13}{Question 13}{section.1}% 25
-\BOOKMARK [2][-]{subsection.1.14}{Question 14}{section.1}% 26
-\BOOKMARK [3][-]{subsubsection.1.14.1}{Dr. Borst's Answer}{subsection.1.14}% 27
-\BOOKMARK [2][-]{subsection.1.15}{Question 15}{section.1}% 28
-\BOOKMARK [2][-]{subsection.1.16}{Question 16}{section.1}% 29
-\BOOKMARK [3][-]{subsubsection.1.16.1}{First Guess, Brad Burkman, 9:03pm 14 November}{subsection.1.16}% 30
-\BOOKMARK [2][-]{subsection.1.17}{Question 17}{section.1}% 31
-\BOOKMARK [2][-]{subsection.1.18}{Question 18}{section.1}% 32
-\BOOKMARK [2][-]{subsection.1.19}{Question 19}{section.1}% 33
-\BOOKMARK [2][-]{subsection.1.20}{Question 20}{section.1}% 34
-\BOOKMARK [3][-]{subsubsection.1.20.1}{First Guess, Brad Burkman, 9:23pm 14 November}{subsection.1.20}% 35
-\BOOKMARK [3][-]{subsubsection.1.20.2}{Dr. Borst's Discussion}{subsection.1.20}% 36
+\BOOKMARK [3][-]{subsubsection.1.5.1}{What kind of question could it be?}{subsection.1.5}% 12
+\BOOKMARK [2][-]{subsection.1.6}{Question 5, with Brad's answers from 11/18 6:15am}{section.1}% 13
+\BOOKMARK [3][-]{subsubsection.1.6.1}{Rotation Matrices}{subsection.1.6}% 14
+\BOOKMARK [3][-]{subsubsection.1.6.2}{Z-rotation matrix}{subsection.1.6}% 15
+\BOOKMARK [3][-]{subsubsection.1.6.3}{Y-rotation matrix}{subsection.1.6}% 16
+\BOOKMARK [3][-]{subsubsection.1.6.4}{X-rotation matrix}{subsection.1.6}% 17
+\BOOKMARK [2][-]{subsection.1.7}{Questions 6 and 7}{section.1}% 18
+\BOOKMARK [3][-]{subsubsection.1.7.1}{Brad's answer, 18 November 6:44 am}{subsection.1.7}% 19
+\BOOKMARK [2][-]{subsection.1.8}{Question 8}{section.1}% 20
+\BOOKMARK [3][-]{subsubsection.1.8.1}{First guess for \0438, Brad Burkman, 7:58pm, 11 November}{subsection.1.8}% 21
+\BOOKMARK [3][-]{subsubsection.1.8.2}{Dr. Borst's Discussion}{subsection.1.8}% 22
+\BOOKMARK [2][-]{subsection.1.9}{Question 9}{section.1}% 23
+\BOOKMARK [2][-]{subsection.1.10}{Question 10}{section.1}% 24
+\BOOKMARK [3][-]{subsubsection.1.10.1}{Dr. Borst's Answer}{subsection.1.10}% 25
+\BOOKMARK [2][-]{subsection.1.11}{Question 11}{section.1}% 26
+\BOOKMARK [3][-]{subsubsection.1.11.1}{First Guess, Brad Burkman, 8:26pm 14 November}{subsection.1.11}% 27
+\BOOKMARK [2][-]{subsection.1.12}{Question 12}{section.1}% 28
+\BOOKMARK [3][-]{subsubsection.1.12.1}{Dr. Borst's Answer}{subsection.1.12}% 29
+\BOOKMARK [2][-]{subsection.1.13}{Question 13}{section.1}% 30
+\BOOKMARK [2][-]{subsection.1.14}{Question 14}{section.1}% 31
+\BOOKMARK [3][-]{subsubsection.1.14.1}{Dr. Borst's Answer}{subsection.1.14}% 32
+\BOOKMARK [2][-]{subsection.1.15}{Question 15}{section.1}% 33
+\BOOKMARK [2][-]{subsection.1.16}{Question 16}{section.1}% 34
+\BOOKMARK [3][-]{subsubsection.1.16.1}{First Guess, Brad Burkman, 9:03pm 14 November}{subsection.1.16}% 35
+\BOOKMARK [2][-]{subsection.1.17}{Question 17}{section.1}% 36
+\BOOKMARK [2][-]{subsection.1.18}{Question 18}{section.1}% 37
+\BOOKMARK [2][-]{subsection.1.19}{Question 19}{section.1}% 38
+\BOOKMARK [2][-]{subsection.1.20}{Question 20}{section.1}% 39
+\BOOKMARK [3][-]{subsubsection.1.20.1}{First Guess, Brad Burkman, 9:23pm 14 November}{subsection.1.20}% 40
+\BOOKMARK [3][-]{subsubsection.1.20.2}{Dr. Borst's Discussion}{subsection.1.20}% 41
