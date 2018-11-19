@@ -71,7 +71,14 @@ Raster displays have a bitmap of the color and intensity of each pixel.  Their r
 
 Vector displays, like an oscilloscope, move a laser or electron beam over the screen following the contours of each object, drawing it smoothly.  It starts redrawing the screen after it has finished drawing the screen.  
 
+\subsubsection{Marcus Shannon's Answer}
 
+Q1: According to my class notes
+
+\begin{itemize}
+    \item Vector Display Refresh Buffers contain a series of commands directing how the electron gun is controlled by the deflection plates, organizing an effective way to draw lines onto the display.
+    \item Raster Display Refresh Buffers contain a 2-dimensional bitmap/pixmap which is then used to render per-pixel data via the video controller onto the display.
+\end{itemize}
 
 \subsection{Question 2:  Done}
 2.  For the midpoint line algorithm, how were floating point operations converted to integer operations for the main loop?  (Be as specific as possible.)
@@ -573,6 +580,18 @@ $
 	NOTA
 \end{enumerate}
 
+
+\subsubsection{Marcus Shannon's Answer}
+Q9: According to my class notes
+
+\begin{itemize}
+	\item Fixed - Axis Angles are guaranteed a single world rotation and a single local rotation. Everything else is considered questionable.
+
+      For example: for the fixed axis angle set X, Z, Y ; X would be the world rotation and Y would be the local rotation. Z is considered questionable and no guarantees can be made about it's axis of rotation in relation to what coordinate system.
+    \item Fixed Axis Angle rotations are calculated right to left, for XZY you'll get Y * Z * X.
+    \item Euler Angle rotations are calculated left to right, for XYZ you'll get X * Y * Z.
+\end{itemize}
+
 \subsection{Question 10:  Review}
 10.  How could we convert an orientation expressed in a 3-angle set convention above to a single quaternion representing the same orientation?  Give a concise but accurate conceptual description.
 
@@ -582,7 +601,27 @@ $
 
 $X-Z-Y$ fixed axis set is multiplied as $R_YR_ZR_X$.
 
+\subsubsection{Marcus Shannon's Answer}
+Q10: From deduction and expanding on Dr. Borst explanation of  "Convert each of the three components into a quaternion, and multiply them":
 
+\begin{itemize}
+    \item To start, we have a fixed axis angle set of XZY.
+    \item Take each rotation and convert it into three separate Angle-Axis rotations:
+    
+        $ X \to x_\theta, ux^t = [1, 0, 0]$
+        
+        $Z \to z_\theta, uz^t = [0, 1, 0]$
+        
+        $Y \to y_\theta, uy^t = [0, 0, 1]$
+        
+        Note: $^t$ means transpose.
+    	\item We then compute these using the conversion formula provided in class for converting Angle Axis form into Quaternion form:
+        $$q = \cos(\theta/2) + (i)(u_x)(\sin(\theta/2)) + (j)(u_y)(\sin(\theta/2)) + (k)(u_z)(\sin(\theta/2))$$
+    \item Composing these 3 quaternions, we now have a single quaternion composed of all rotations.
+        $$q_{final} = qx * qz * qy$$
+    \item Note: I don't claim for this to be the full expansion or correct, this is merely logical meandering based on what I currently understand.
+    \end{itemize}
+    
 \subsection{Question 11:  Done}
 11.  The graph below represents the relationships between coordinate systems (objects, if you prefer) using notation from lecture.  Suppose $\{D\}$ is the camera's local frame in an OpenGL application.  When rendering an object having vertices described in frame $\{E\}$, what would the value of the modelview matrix be?
 
@@ -738,6 +777,9 @@ ModelView Matrix is the composition of all of the transformations from the camer
 \ 
 
 Answer:  Camera View
+\subsubsection{Note from Marcus Shannon for \#15 and \#16}
+Q15 \& Q16: This is a trivial point to make but the Camera View, from my understanding, is equivalent to the Eye Coordinate System.
+
 \subsection{Question 16:  Done}
 16.  The six common parameters (near, far, left, $\dots$) of a perspective frustum description are coordinates describing the viewing volume with respect to which coordinate system?
 
@@ -765,8 +807,31 @@ Eye (camera) coordinate system.
 
 \end{enumerate}
 
+\subsubsection{Marcus Shannon's Answer}
+
+Q17: This is simply about looking at the Phong Illumination Equation and identifying what vectors come into play with what parts.
+\begin{itemize}
+    \item Ambient light only considers: Reflection Coefficient (Ka), Ambient Light Intensity (Ia), \& RGB of Object (Od).  
+      \item Therefore 1) is None.
+    \item Diffuse considers: Diffuse Coefficient (Kd), Diffuse Light Intensity (Id), Normalized Light Normal (N with hat), \& Normalized Light Direction (L with hat).
+      \item Therefore 2) is Direction to light \& Surface Normal.
+    \item Specular considers: Specular Coefficient (Ks), Specular Object (Os), Specular Exponent (n), Normalized Reflection (R with hat), \& Direction to Viewer (V with hat).
+      \item Initially, it looks as though the answer is the same as 2) however R (with hat) expands into using N (with hat) \& L (with hat).
+      \item Therefore 3) is Direction to light, Surface Normal, \& Direction to Viewer.
+\end{itemize}
+
 \subsection{Question 18: To Do}
 18.  Describe why a triangle may look different with Phong shading than with Gouraud shading, and include a sketch of shaded triangles that illustrate the difference you discuss. 
+
+\subsubsection{Marcus Shannon's Solution}
+
+Q18: Pulled from the slides (paraphrased):
+\begin{itemize}
+    \item Gourand shading will evaluate at polygon vertices \& interpolate resulting color across the polygon.
+    \item Phong shading will interpolate surface normals from vertices \& then apply lighting equation per-pixel.
+    \item For triangle shading, review the second set of slides provided on moodle and scroll down a bit.
+\end{itemize}
+
 
 \subsection{Question 19:  Not on Exam}
 \sout{19.  Sketch a scene with two or three polygons for which the painter's algorithm would be insufficient for visible surface determination.  }
@@ -802,9 +867,9 @@ Since we're going up one pixel, $\Delta y = 1$, so we're interested in $\Delta x
 
 $$\Delta x = \frac{x_2 - x_0}{y_2 - y_0}$$
 
-and we're going to round it down, because we're talking about pixel values, which are integers.  
+and we're going to round it up (on the left, down on the right), because we're talking about pixel values, which are integers.  
 
-$$\Delta x = \left\lfloor\frac{x_2 - x_0}{y_2 - y_0}\right\rfloor$$
+$$\Delta x = \left\lceil\frac{x_2 - x_0}{y_2 - y_0}\right\rceil$$
 
 Change in colors works the same way.  
 
@@ -819,9 +884,21 @@ G_0 + \frac{G_2 - G_0}{y_2 - y_0},
 B_0 + \frac{B_2 - B_0}{y_2 - y_0}
 \right)$$
 
-\subsubsection{Dr. Borst's Discussion}
+\subsubsection{Changes based on Dr. Borst's Discussion}
 
 I realize I had forgotten about the offset between the line and the pixel.  
+
+\subsubsection{Marcus Shannon's Reply to Brad's Solution}
+
+Q20: Almost got the same answer, I pulled slightly different equations from my notes:
+\begin{itemize}
+    \item To give an example to show the deviation in our solution:
+      \item I defined R for the second pixel colored to be
+          $$R = R0 + \frac{R1 - R0}{y1 - y0}$$
+    \item Almost all instances where you used a subscript of 2, I used a subscript of 1 (for the scope of this solution).
+    \item Which of us is correct, I honestly couldn't say.
+\end{itemize}
+
 
 \end{spacing}
 \end{document}

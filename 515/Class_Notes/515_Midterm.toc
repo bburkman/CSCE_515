@@ -3,45 +3,52 @@
 \contentsline {section}{\numberline {3}Study Guide Questions}{3}{section.3}
 \contentsline {subsection}{\numberline {3.1}Question 1: Confused}{3}{subsection.3.1}
 \contentsline {subsubsection}{\numberline {3.1.1}First Punt, Brad Burkman, 11/17 7:41pm}{3}{subsubsection.3.1.1}
+\contentsline {subsubsection}{\numberline {3.1.2}Marcus Shannon's Answer}{3}{subsubsection.3.1.2}
 \contentsline {subsection}{\numberline {3.2}Question 2: Done}{3}{subsection.3.2}
-\contentsline {subsubsection}{\numberline {3.2.1}First guess, Brad Burkman, 11/14 7:44pm}{3}{subsubsection.3.2.1}
-\contentsline {subsubsection}{\numberline {3.2.2}Second Atttempt, informed by notes, Brad Burkman, 11/14 7:58pm}{3}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.1}First guess, Brad Burkman, 11/14 7:44pm}{4}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}Second Atttempt, informed by notes, Brad Burkman, 11/14 7:58pm}{4}{subsubsection.3.2.2}
 \contentsline {subsubsection}{\numberline {3.2.3}Midpoint Line (Besenham) Algorithm}{4}{subsubsection.3.2.3}
-\contentsline {subsubsection}{\numberline {3.2.4}Making it Faster}{4}{subsubsection.3.2.4}
+\contentsline {subsubsection}{\numberline {3.2.4}Making it Faster}{5}{subsubsection.3.2.4}
 \contentsline {subsection}{\numberline {3.3}Question 3: Unsure}{5}{subsection.3.3}
 \contentsline {subsubsection}{\numberline {3.3.1}Information from Class Notes, Brad Burkman, 17 November 10:11pm}{5}{subsubsection.3.3.1}
-\contentsline {subsection}{\numberline {3.4}Question 4: Done}{5}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.4}Question 4: Done}{6}{subsection.3.4}
 \contentsline {subsubsection}{\numberline {3.4.1}What kind of question could it be?}{6}{subsubsection.3.4.1}
 \contentsline {subsection}{\numberline {3.5}Question 5: Done}{6}{subsection.3.5}
-\contentsline {subsubsection}{\numberline {3.5.1}Rotation Matrices}{6}{subsubsection.3.5.1}
+\contentsline {subsubsection}{\numberline {3.5.1}Rotation Matrices}{7}{subsubsection.3.5.1}
 \contentsline {subsubsection}{\numberline {3.5.2}$Z$-rotation matrix}{7}{subsubsection.3.5.2}
 \contentsline {subsubsection}{\numberline {3.5.3}$Y$-rotation matrix}{7}{subsubsection.3.5.3}
 \contentsline {subsubsection}{\numberline {3.5.4}$X$-rotation matrix}{7}{subsubsection.3.5.4}
-\contentsline {subsection}{\numberline {3.6}Question 6: Done}{7}{subsection.3.6}
+\contentsline {subsection}{\numberline {3.6}Question 6: Done}{8}{subsection.3.6}
 \contentsline {subsubsection}{\numberline {3.6.1}Brad's answer, 18 November 6:44 am}{8}{subsubsection.3.6.1}
 \contentsline {subsection}{\numberline {3.7}Question 7: Done}{8}{subsection.3.7}
 \contentsline {subsection}{\numberline {3.8}Question 8: Done}{9}{subsection.3.8}
 \contentsline {subsubsection}{\numberline {3.8.1}First guess for \#8, Brad Burkman, 7:58pm, 11 November}{9}{subsubsection.3.8.1}
 \contentsline {subsubsection}{\numberline {3.8.2}Dr. Borst's Discussion}{9}{subsubsection.3.8.2}
-\contentsline {subsection}{\numberline {3.9}Question 9: To Do}{9}{subsection.3.9}
+\contentsline {subsection}{\numberline {3.9}Question 9: To Do}{10}{subsection.3.9}
+\contentsline {subsubsection}{\numberline {3.9.1}Marcus Shannon's Answer}{10}{subsubsection.3.9.1}
 \contentsline {subsection}{\numberline {3.10}Question 10: Review}{10}{subsection.3.10}
-\contentsline {subsubsection}{\numberline {3.10.1}Dr. Borst's Answer}{10}{subsubsection.3.10.1}
-\contentsline {subsection}{\numberline {3.11}Question 11: Done}{10}{subsection.3.11}
-\contentsline {subsubsection}{\numberline {3.11.1}First Guess, Brad Burkman, 8:26pm 14 November}{10}{subsubsection.3.11.1}
-\contentsline {subsection}{\numberline {3.12}Question 12: Done}{10}{subsection.3.12}
-\contentsline {subsubsection}{\numberline {3.12.1}Dr. Borst's Answer}{10}{subsubsection.3.12.1}
-\contentsline {subsection}{\numberline {3.13}Question 13: Expand and Review}{11}{subsection.3.13}
-\contentsline {subsubsection}{\numberline {3.13.1}Orthographic Projection from Simple Example}{11}{subsubsection.3.13.1}
-\contentsline {subsubsection}{\numberline {3.13.2}Extended Orthographic Projection Matrix}{11}{subsubsection.3.13.2}
-\contentsline {subsubsection}{\numberline {3.13.3}Perspective Matrix}{11}{subsubsection.3.13.3}
-\contentsline {subsection}{\numberline {3.14}Question 14: Done}{11}{subsection.3.14}
-\contentsline {subsubsection}{\numberline {3.14.1}Dr. Borst's Answer}{12}{subsubsection.3.14.1}
-\contentsline {subsection}{\numberline {3.15}Question 15: Done}{12}{subsection.3.15}
-\contentsline {subsection}{\numberline {3.16}Question 16: Done}{12}{subsection.3.16}
-\contentsline {subsubsection}{\numberline {3.16.1}First Guess, Brad Burkman, 9:03pm 14 November}{12}{subsubsection.3.16.1}
-\contentsline {subsection}{\numberline {3.17}Question 17: To Do}{12}{subsection.3.17}
-\contentsline {subsection}{\numberline {3.18}Question 18: To Do}{12}{subsection.3.18}
-\contentsline {subsection}{\numberline {3.19}Question 19: Not on Exam}{13}{subsection.3.19}
-\contentsline {subsection}{\numberline {3.20}Question 20: To Fix}{13}{subsection.3.20}
-\contentsline {subsubsection}{\numberline {3.20.1}First Guess, Brad Burkman, 9:23pm 14 November}{13}{subsubsection.3.20.1}
-\contentsline {subsubsection}{\numberline {3.20.2}Dr. Borst's Discussion}{14}{subsubsection.3.20.2}
+\contentsline {subsubsection}{\numberline {3.10.1}Dr. Borst's Answer}{11}{subsubsection.3.10.1}
+\contentsline {subsubsection}{\numberline {3.10.2}Marcus Shannon's Answer}{11}{subsubsection.3.10.2}
+\contentsline {subsection}{\numberline {3.11}Question 11: Done}{11}{subsection.3.11}
+\contentsline {subsubsection}{\numberline {3.11.1}First Guess, Brad Burkman, 8:26pm 14 November}{11}{subsubsection.3.11.1}
+\contentsline {subsection}{\numberline {3.12}Question 12: Done}{12}{subsection.3.12}
+\contentsline {subsubsection}{\numberline {3.12.1}Dr. Borst's Answer}{12}{subsubsection.3.12.1}
+\contentsline {subsection}{\numberline {3.13}Question 13: Expand and Review}{12}{subsection.3.13}
+\contentsline {subsubsection}{\numberline {3.13.1}Orthographic Projection from Simple Example}{12}{subsubsection.3.13.1}
+\contentsline {subsubsection}{\numberline {3.13.2}Extended Orthographic Projection Matrix}{12}{subsubsection.3.13.2}
+\contentsline {subsubsection}{\numberline {3.13.3}Perspective Matrix}{12}{subsubsection.3.13.3}
+\contentsline {subsection}{\numberline {3.14}Question 14: Done}{13}{subsection.3.14}
+\contentsline {subsubsection}{\numberline {3.14.1}Dr. Borst's Answer}{13}{subsubsection.3.14.1}
+\contentsline {subsection}{\numberline {3.15}Question 15: Done}{13}{subsection.3.15}
+\contentsline {subsubsection}{\numberline {3.15.1}Note from Marcus Shannon for \#15 and \#16}{13}{subsubsection.3.15.1}
+\contentsline {subsection}{\numberline {3.16}Question 16: Done}{13}{subsection.3.16}
+\contentsline {subsubsection}{\numberline {3.16.1}First Guess, Brad Burkman, 9:03pm 14 November}{13}{subsubsection.3.16.1}
+\contentsline {subsection}{\numberline {3.17}Question 17: To Do}{13}{subsection.3.17}
+\contentsline {subsubsection}{\numberline {3.17.1}Marcus Shannon's Answer}{14}{subsubsection.3.17.1}
+\contentsline {subsection}{\numberline {3.18}Question 18: To Do}{14}{subsection.3.18}
+\contentsline {subsubsection}{\numberline {3.18.1}Marcus Shannon's Solution}{14}{subsubsection.3.18.1}
+\contentsline {subsection}{\numberline {3.19}Question 19: Not on Exam}{15}{subsection.3.19}
+\contentsline {subsection}{\numberline {3.20}Question 20: To Fix}{15}{subsection.3.20}
+\contentsline {subsubsection}{\numberline {3.20.1}First Guess, Brad Burkman, 9:23pm 14 November}{15}{subsubsection.3.20.1}
+\contentsline {subsubsection}{\numberline {3.20.2}Changes based on Dr. Borst's Discussion}{16}{subsubsection.3.20.2}
+\contentsline {subsubsection}{\numberline {3.20.3}Marcus Shannon's Reply to Brad's Solution}{16}{subsubsection.3.20.3}

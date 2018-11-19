@@ -3,45 +3,52 @@
 \BOOKMARK [1][-]{section.3}{Study Guide Questions}{}% 3
 \BOOKMARK [2][-]{subsection.3.1}{Question 1: Confused}{section.3}% 4
 \BOOKMARK [3][-]{subsubsection.3.1.1}{First Punt, Brad Burkman, 11/17 7:41pm}{subsection.3.1}% 5
-\BOOKMARK [2][-]{subsection.3.2}{Question 2: Done}{section.3}% 6
-\BOOKMARK [3][-]{subsubsection.3.2.1}{First guess, Brad Burkman, 11/14 7:44pm}{subsection.3.2}% 7
-\BOOKMARK [3][-]{subsubsection.3.2.2}{Second Atttempt, informed by notes, Brad Burkman, 11/14 7:58pm}{subsection.3.2}% 8
-\BOOKMARK [3][-]{subsubsection.3.2.3}{Midpoint Line \(Besenham\) Algorithm}{subsection.3.2}% 9
-\BOOKMARK [3][-]{subsubsection.3.2.4}{Making it Faster}{subsection.3.2}% 10
-\BOOKMARK [2][-]{subsection.3.3}{Question 3: Unsure}{section.3}% 11
-\BOOKMARK [3][-]{subsubsection.3.3.1}{Information from Class Notes, Brad Burkman, 17 November 10:11pm}{subsection.3.3}% 12
-\BOOKMARK [2][-]{subsection.3.4}{Question 4: Done}{section.3}% 13
-\BOOKMARK [3][-]{subsubsection.3.4.1}{What kind of question could it be?}{subsection.3.4}% 14
-\BOOKMARK [2][-]{subsection.3.5}{Question 5: Done}{section.3}% 15
-\BOOKMARK [3][-]{subsubsection.3.5.1}{Rotation Matrices}{subsection.3.5}% 16
-\BOOKMARK [3][-]{subsubsection.3.5.2}{Z-rotation matrix}{subsection.3.5}% 17
-\BOOKMARK [3][-]{subsubsection.3.5.3}{Y-rotation matrix}{subsection.3.5}% 18
-\BOOKMARK [3][-]{subsubsection.3.5.4}{X-rotation matrix}{subsection.3.5}% 19
-\BOOKMARK [2][-]{subsection.3.6}{Question 6: Done}{section.3}% 20
-\BOOKMARK [3][-]{subsubsection.3.6.1}{Brad's answer, 18 November 6:44 am}{subsection.3.6}% 21
-\BOOKMARK [2][-]{subsection.3.7}{Question 7: Done}{section.3}% 22
-\BOOKMARK [2][-]{subsection.3.8}{Question 8: Done}{section.3}% 23
-\BOOKMARK [3][-]{subsubsection.3.8.1}{First guess for \0438, Brad Burkman, 7:58pm, 11 November}{subsection.3.8}% 24
-\BOOKMARK [3][-]{subsubsection.3.8.2}{Dr. Borst's Discussion}{subsection.3.8}% 25
-\BOOKMARK [2][-]{subsection.3.9}{Question 9: To Do}{section.3}% 26
-\BOOKMARK [2][-]{subsection.3.10}{Question 10: Review}{section.3}% 27
-\BOOKMARK [3][-]{subsubsection.3.10.1}{Dr. Borst's Answer}{subsection.3.10}% 28
-\BOOKMARK [2][-]{subsection.3.11}{Question 11: Done}{section.3}% 29
-\BOOKMARK [3][-]{subsubsection.3.11.1}{First Guess, Brad Burkman, 8:26pm 14 November}{subsection.3.11}% 30
-\BOOKMARK [2][-]{subsection.3.12}{Question 12: Done}{section.3}% 31
-\BOOKMARK [3][-]{subsubsection.3.12.1}{Dr. Borst's Answer}{subsection.3.12}% 32
-\BOOKMARK [2][-]{subsection.3.13}{Question 13: Expand and Review}{section.3}% 33
-\BOOKMARK [3][-]{subsubsection.3.13.1}{Orthographic Projection from Simple Example}{subsection.3.13}% 34
-\BOOKMARK [3][-]{subsubsection.3.13.2}{Extended Orthographic Projection Matrix}{subsection.3.13}% 35
-\BOOKMARK [3][-]{subsubsection.3.13.3}{Perspective Matrix}{subsection.3.13}% 36
-\BOOKMARK [2][-]{subsection.3.14}{Question 14: Done}{section.3}% 37
-\BOOKMARK [3][-]{subsubsection.3.14.1}{Dr. Borst's Answer}{subsection.3.14}% 38
-\BOOKMARK [2][-]{subsection.3.15}{Question 15: Done}{section.3}% 39
-\BOOKMARK [2][-]{subsection.3.16}{Question 16: Done}{section.3}% 40
-\BOOKMARK [3][-]{subsubsection.3.16.1}{First Guess, Brad Burkman, 9:03pm 14 November}{subsection.3.16}% 41
-\BOOKMARK [2][-]{subsection.3.17}{Question 17: To Do}{section.3}% 42
-\BOOKMARK [2][-]{subsection.3.18}{Question 18: To Do}{section.3}% 43
-\BOOKMARK [2][-]{subsection.3.19}{Question 19: Not on Exam}{section.3}% 44
-\BOOKMARK [2][-]{subsection.3.20}{Question 20: To Fix}{section.3}% 45
-\BOOKMARK [3][-]{subsubsection.3.20.1}{First Guess, Brad Burkman, 9:23pm 14 November}{subsection.3.20}% 46
-\BOOKMARK [3][-]{subsubsection.3.20.2}{Dr. Borst's Discussion}{subsection.3.20}% 47
+\BOOKMARK [3][-]{subsubsection.3.1.2}{Marcus Shannon's Answer}{subsection.3.1}% 6
+\BOOKMARK [2][-]{subsection.3.2}{Question 2: Done}{section.3}% 7
+\BOOKMARK [3][-]{subsubsection.3.2.1}{First guess, Brad Burkman, 11/14 7:44pm}{subsection.3.2}% 8
+\BOOKMARK [3][-]{subsubsection.3.2.2}{Second Atttempt, informed by notes, Brad Burkman, 11/14 7:58pm}{subsection.3.2}% 9
+\BOOKMARK [3][-]{subsubsection.3.2.3}{Midpoint Line \(Besenham\) Algorithm}{subsection.3.2}% 10
+\BOOKMARK [3][-]{subsubsection.3.2.4}{Making it Faster}{subsection.3.2}% 11
+\BOOKMARK [2][-]{subsection.3.3}{Question 3: Unsure}{section.3}% 12
+\BOOKMARK [3][-]{subsubsection.3.3.1}{Information from Class Notes, Brad Burkman, 17 November 10:11pm}{subsection.3.3}% 13
+\BOOKMARK [2][-]{subsection.3.4}{Question 4: Done}{section.3}% 14
+\BOOKMARK [3][-]{subsubsection.3.4.1}{What kind of question could it be?}{subsection.3.4}% 15
+\BOOKMARK [2][-]{subsection.3.5}{Question 5: Done}{section.3}% 16
+\BOOKMARK [3][-]{subsubsection.3.5.1}{Rotation Matrices}{subsection.3.5}% 17
+\BOOKMARK [3][-]{subsubsection.3.5.2}{Z-rotation matrix}{subsection.3.5}% 18
+\BOOKMARK [3][-]{subsubsection.3.5.3}{Y-rotation matrix}{subsection.3.5}% 19
+\BOOKMARK [3][-]{subsubsection.3.5.4}{X-rotation matrix}{subsection.3.5}% 20
+\BOOKMARK [2][-]{subsection.3.6}{Question 6: Done}{section.3}% 21
+\BOOKMARK [3][-]{subsubsection.3.6.1}{Brad's answer, 18 November 6:44 am}{subsection.3.6}% 22
+\BOOKMARK [2][-]{subsection.3.7}{Question 7: Done}{section.3}% 23
+\BOOKMARK [2][-]{subsection.3.8}{Question 8: Done}{section.3}% 24
+\BOOKMARK [3][-]{subsubsection.3.8.1}{First guess for \0438, Brad Burkman, 7:58pm, 11 November}{subsection.3.8}% 25
+\BOOKMARK [3][-]{subsubsection.3.8.2}{Dr. Borst's Discussion}{subsection.3.8}% 26
+\BOOKMARK [2][-]{subsection.3.9}{Question 9: To Do}{section.3}% 27
+\BOOKMARK [3][-]{subsubsection.3.9.1}{Marcus Shannon's Answer}{subsection.3.9}% 28
+\BOOKMARK [2][-]{subsection.3.10}{Question 10: Review}{section.3}% 29
+\BOOKMARK [3][-]{subsubsection.3.10.1}{Dr. Borst's Answer}{subsection.3.10}% 30
+\BOOKMARK [3][-]{subsubsection.3.10.2}{Marcus Shannon's Answer}{subsection.3.10}% 31
+\BOOKMARK [2][-]{subsection.3.11}{Question 11: Done}{section.3}% 32
+\BOOKMARK [3][-]{subsubsection.3.11.1}{First Guess, Brad Burkman, 8:26pm 14 November}{subsection.3.11}% 33
+\BOOKMARK [2][-]{subsection.3.12}{Question 12: Done}{section.3}% 34
+\BOOKMARK [3][-]{subsubsection.3.12.1}{Dr. Borst's Answer}{subsection.3.12}% 35
+\BOOKMARK [2][-]{subsection.3.13}{Question 13: Expand and Review}{section.3}% 36
+\BOOKMARK [3][-]{subsubsection.3.13.1}{Orthographic Projection from Simple Example}{subsection.3.13}% 37
+\BOOKMARK [3][-]{subsubsection.3.13.2}{Extended Orthographic Projection Matrix}{subsection.3.13}% 38
+\BOOKMARK [3][-]{subsubsection.3.13.3}{Perspective Matrix}{subsection.3.13}% 39
+\BOOKMARK [2][-]{subsection.3.14}{Question 14: Done}{section.3}% 40
+\BOOKMARK [3][-]{subsubsection.3.14.1}{Dr. Borst's Answer}{subsection.3.14}% 41
+\BOOKMARK [2][-]{subsection.3.15}{Question 15: Done}{section.3}% 42
+\BOOKMARK [3][-]{subsubsection.3.15.1}{Note from Marcus Shannon for \04315 and \04316}{subsection.3.15}% 43
+\BOOKMARK [2][-]{subsection.3.16}{Question 16: Done}{section.3}% 44
+\BOOKMARK [3][-]{subsubsection.3.16.1}{First Guess, Brad Burkman, 9:03pm 14 November}{subsection.3.16}% 45
+\BOOKMARK [2][-]{subsection.3.17}{Question 17: To Do}{section.3}% 46
+\BOOKMARK [3][-]{subsubsection.3.17.1}{Marcus Shannon's Answer}{subsection.3.17}% 47
+\BOOKMARK [2][-]{subsection.3.18}{Question 18: To Do}{section.3}% 48
+\BOOKMARK [3][-]{subsubsection.3.18.1}{Marcus Shannon's Solution}{subsection.3.18}% 49
+\BOOKMARK [2][-]{subsection.3.19}{Question 19: Not on Exam}{section.3}% 50
+\BOOKMARK [2][-]{subsection.3.20}{Question 20: To Fix}{section.3}% 51
+\BOOKMARK [3][-]{subsubsection.3.20.1}{First Guess, Brad Burkman, 9:23pm 14 November}{subsection.3.20}% 52
+\BOOKMARK [3][-]{subsubsection.3.20.2}{Changes based on Dr. Borst's Discussion}{subsection.3.20}% 53
+\BOOKMARK [3][-]{subsubsection.3.20.3}{Marcus Shannon's Reply to Brad's Solution}{subsection.3.20}% 54
