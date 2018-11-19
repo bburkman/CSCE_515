@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  19 NOV 2018 07:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  19 NOV 2018 07:03
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -624,20 +624,18 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 35.
 
+(./515_Midterm.toc [1
 
-Package hyperref Warning: old toc file detected, not used; run LaTeX again.
-
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
 \tf@toc=\write5
 \openout5 = `515_Midterm.toc'.
 
-[1
-
-{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+ [2]
 Overfull \hbox (21.419pt too wide) in paragraph at lines 114--115
 [] 
  []
 
-[2] [3] [4]
+[3] [4] [5]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 248.
@@ -646,7 +644,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 248.
 
-[5]
+[6]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 261.
@@ -673,31 +671,24 @@ Overfull \hbox (22.00096pt too wide) detected at line 341
 \OML/cmm/m/it/10.95 XY \OT1/cmr/m/n/10.95 = [] [] = []
  []
 
-[6] [7] [8] [9] [10] [11] [12] [13]
+[7] [8] [9] [10] [11] [12] [13] [14]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 828.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 828.
  (./515_Midterm.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 828.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 828.
-
-
-Package rerunfilecheck Warning: File `515_Midterm.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `515_Midterm.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  7D6B3E5F797F302F64C992041AC100CD;3761.
+Package rerunfilecheck Info: File `515_Midterm.out' has not changed.
+(rerunfilecheck)             Checksum: 7D6B3E5F797F302F64C992041AC100CD;3761.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 828.
  ) 
 Here is how much of TeX's memory you used:
- 16066 strings out of 493014
- 302603 string characters out of 6133351
- 373752 words of memory out of 5000000
- 19273 multiletter control sequences out of 15000+600000
+ 16117 strings out of 493014
+ 303522 string characters out of 6133351
+ 373856 words of memory out of 5000000
+ 19321 multiletter control sequences out of 15000+600000
  10604 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,9n,54p,412b,583s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,9n,54p,412b,565s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
@@ -710,10 +701,10 @@ l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/t
 exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texl
 ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on 515_Midterm.pdf (13 pages, 178503 bytes).
+Output written on 515_Midterm.pdf (14 pages, 185041 bytes).
 PDF statistics:
- 187 PDF objects out of 1000 (max. 8388607)
- 158 compressed objects within 2 object streams
- 71 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 382 PDF objects out of 1000 (max. 8388607)
+ 350 compressed objects within 4 object streams
+ 72 named destinations out of 1000 (max. 500000)
+ 389 words of extra memory for PDF output out of 10000 (max. 10000000)
 
