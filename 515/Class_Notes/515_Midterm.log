@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  18 NOV 2018 07:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  19 NOV 2018 07:01
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -616,78 +616,88 @@ LaTeX Info: Redefining \nameref on input line 27.
 \@outlinefile=\write4
 \openout4 = `515_Midterm.out'.
 
- (./515_Midterm.toc [1
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 35.
 
-{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
-\tf@toc=\write5
-\openout5 = `515_Midterm.toc'.
-
- [2]
-Overfull \hbox (21.419pt too wide) in paragraph at lines 97--98
-[] 
- []
-
-[3]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 177.
-
- (/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 177.
- [4] [5]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 35.
+
+
+Package hyperref Warning: old toc file detected, not used; run LaTeX again.
+
+\tf@toc=\write5
+\openout5 = `515_Midterm.toc'.
+
+[1
+
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (21.419pt too wide) in paragraph at lines 114--115
+[] 
+ []
+
+[2] [3] [4]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 231.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 231.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 244.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 244.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 257.
+(hyperref)                removing `math shift' on input line 248.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 257.
+(hyperref)                removing `math shift' on input line 248.
+
+[5]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 261.
 
 
-Overfull \hbox (11.38556pt too wide) detected at line 297
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 261.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 274.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 274.
+
+
+Overfull \hbox (11.38556pt too wide) detected at line 314
 \OML/cmm/m/it/10.95 YX \OT1/cmr/m/n/10.95 = [] [] = []
  []
 
 
-Overfull \hbox (22.00096pt too wide) detected at line 324
+Overfull \hbox (22.00096pt too wide) detected at line 341
 \OML/cmm/m/it/10.95 XY \OT1/cmr/m/n/10.95 = [] [] = []
  []
 
-[6] [7] [8] [9] [10] [11] [12]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 650.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 650.
+[6] [7] [8] [9] [10] [11] [12] [13]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 828.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 828.
  (./515_Midterm.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 650.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 650.
-Package rerunfilecheck Info: File `515_Midterm.out' has not changed.
-(rerunfilecheck)             Checksum: 9363726378C88ED2E080977D9A52B2E5;3199.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 650.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 828.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 828.
+
+
+Package rerunfilecheck Warning: File `515_Midterm.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `515_Midterm.out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  7D6B3E5F797F302F64C992041AC100CD;3761.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 828.
  ) 
 Here is how much of TeX's memory you used:
- 16103 strings out of 493014
- 303302 string characters out of 6133351
- 371856 words of memory out of 5000000
- 19315 multiletter control sequences out of 15000+600000
+ 16066 strings out of 493014
+ 302603 string characters out of 6133351
+ 373752 words of memory out of 5000000
+ 19273 multiletter control sequences out of 15000+600000
  10604 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,7n,54p,412b,560s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,9n,54p,412b,583s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
@@ -700,10 +710,10 @@ l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/t
 exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texl
 ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on 515_Midterm.pdf (12 pages, 174581 bytes).
+Output written on 515_Midterm.pdf (13 pages, 178503 bytes).
 PDF statistics:
- 342 PDF objects out of 1000 (max. 8388607)
- 312 compressed objects within 4 object streams
- 64 named destinations out of 1000 (max. 500000)
- 341 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 187 PDF objects out of 1000 (max. 8388607)
+ 158 compressed objects within 2 object streams
+ 71 named destinations out of 1000 (max. 500000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
