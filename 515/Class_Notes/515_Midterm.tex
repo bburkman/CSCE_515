@@ -625,13 +625,10 @@ Q10: From deduction and expanding on Dr. Borst explanation of  "Convert each of 
     \item To start, we have a fixed axis angle set of XZY.
     \item Take each rotation and convert it into three separate Angle-Axis rotations:
     
-        $ X \to x_\theta, ux^t = [1, 0, 0]$
+        $ X \to x_\theta, u_x =  \left[ \begin{array}{c} 1\cr 0\cr 0\cr\end{array} \right]$\qquad
+        $ Z \to z_\alpha, u_z =  \left[ \begin{array}{c} 0\cr 0\cr 1\cr\end{array} \right]$\qquad
+        $ Y \to y_\phi u_y =  \left[ \begin{array}{c} 0\cr 1\cr 0\cr\end{array} \right]$
         
-        $Z \to z_\theta, uz^t = [0, 1, 0]$
-        
-        $Y \to y_\theta, uy^t = [0, 0, 1]$
-        
-        Note: $^t$ means transpose.
     	\item We then compute these using the conversion formula provided in class for converting Angle Axis form into Quaternion form:
         $$q = \cos(\theta/2) + (i)(u_x)(\sin(\theta/2)) + (j)(u_y)(\sin(\theta/2)) + (k)(u_z)(\sin(\theta/2))$$
     \item Composing these 3 quaternions, we now have a single quaternion composed of all rotations.
@@ -1014,6 +1011,184 @@ Prove that the inverse of a rotation matrix is its transpose.
 \section{Path to View}
 
 Memory $\to$ Vertex Shader $\to$ Rasterizer $\to$ Fragment (pixel) Shader $\to$ Frame Buffer
+
+%%%%%%%%%%%%%
+\section{Brad's Sample Exercise on Quaternions}
+
+We have an $X-Y-Z$ fixed-axis set rotation of $x_{\theta} = 90^{\circ}$, $y_{\phi} = 180^{\circ}$ and $z_{\alpha} = 60^{\circ}$.  Express the three rotations as quaternions, multiply them, and then express as a single rotation about a unit vector.
+
+\
+
+\subsection{$X$ Rotation}
+
+Unit quaternion 
+$\displaystyle 
+\mathbf{u} = 
+\left[
+	\begin{array}{c}
+		u_x \cr u_y \cr u_z \cr
+	\end{array}
+\right]
+= 
+\left[
+	\begin{array}{c}
+		1 \cr 0 \cr 0 \cr
+	\end{array}
+\right]
+$
+and angle $\theta = 90^{\circ}$.
+
+$q_x
+ = (u_x \mathbf{i} + u_y \mathbf{j} + u_z \mathbf{k}) \sin \frac{\theta}{2} + \cos \frac{\theta}{2}
+ $
+ 
+ $ = (u_x \mathbf{i} + u_y \mathbf{j} + u_z \mathbf{k}) \sin \frac{90^{\circ}}{2} + \cos \frac{90^{\circ}}{2}$
+
+ $ = (u_x \mathbf{i} + u_y \mathbf{j} + u_z \mathbf{k}) \sin 45^{\circ} + \cos 45^{\circ}$
+
+ $ = (1 \mathbf{i} + 0\mathbf{j} + 0\mathbf{k}) \frac{\sqrt2}{2} + \frac{\sqrt2}{2}$
+
+ $ =  \frac{\sqrt2}{2}\mathbf{i} + 0\mathbf{j} + 0\mathbf{k}  + \frac{\sqrt2}{2}$
+
+    
+\subsection{$Y$ Rotation}
+
+Unit quaternion 
+$\displaystyle 
+\mathbf{u} = 
+\left[
+	\begin{array}{c}
+		u_x \cr u_y \cr u_z \cr
+	\end{array}
+\right]
+= 
+\left[
+	\begin{array}{c}
+		0 \cr 1 \cr 0 \cr
+	\end{array}
+\right]
+$
+and angle $\phi = 180^{\circ}$.
+
+$q_y
+ = (u_x \mathbf{i} + u_y \mathbf{j} + u_z \mathbf{k}) \sin \frac{\phi}{2} + \cos \frac{\phi}{2}
+ $
+ 
+ $ = (u_x \mathbf{i} + u_y \mathbf{j} + u_z \mathbf{k}) \sin \frac{180^{\circ}}{2} + \cos \frac{180^{\circ}}{2}$
+
+ $ = (u_x \mathbf{i} + u_y \mathbf{j} + u_z \mathbf{k}) \sin 90^{\circ} + \cos 90^{\circ}$
+
+ $ = (0 \mathbf{i} + 1\mathbf{j} + 0\mathbf{k}) 1 + 0$
+
+ $ = 0 \mathbf{i} + 1\mathbf{j} + 0\mathbf{k} + 0$
+
+\subsection{$Z$ Rotation}
+
+Unit quaternion 
+$\displaystyle 
+\mathbf{u} = 
+\left[
+	\begin{array}{c}
+		u_x \cr u_y \cr u_z \cr
+	\end{array}
+\right]
+= 
+\left[
+	\begin{array}{c}
+		0 \cr 0 \cr 1 \cr
+	\end{array}
+\right]
+$
+and angle $\alpha = 60^{\circ}$.
+
+$q_z
+ = (u_x \mathbf{i} + u_y \mathbf{j} + u_z \mathbf{k}) \sin \frac{\alpha}{2} + \cos \frac{\alpha}{2}
+ $
+ 
+ $ = (u_x \mathbf{i} + u_y \mathbf{j} + u_z \mathbf{k}) \sin \frac{60^{\circ}}{2} + \cos \frac{60^{\circ}}{2}$
+
+ $ = (u_x \mathbf{i} + u_y \mathbf{j} + u_z \mathbf{k}) \sin 30^{\circ} + \cos 30^{\circ}$
+
+ $ = (0 \mathbf{i} + 0\mathbf{j} + 1\mathbf{k}) \frac{1}{2} + \frac{\sqrt3}{2}$
+
+ $ = 0 \mathbf{i} + 0\mathbf{j} + \frac{1}{2}\mathbf{k} + \frac{\sqrt3}{2}$
+
+
+\subsection{Multiplication}
+
+Since we want an $X-Y-Z$ rotation, we first rotate by $X$, then by $Y$, then by $Z$, so the multiplication order for matrices would be $R_z R_y R_x$.  I'm presuming the multiplication order is the same for quaternions.  
+
+\
+
+$$q_z q_y q_x 
+=  
+\left(0 \mathbf{i} + 0\mathbf{j} + \frac{1}{2}\mathbf{k} + \frac{\sqrt3}{2}\right)
+\times
+\left(0 \mathbf{i} + 1\mathbf{j} + 0\mathbf{k} + 0\right)
+\times
+\left(\frac{\sqrt2}{2}\mathbf{i} + 0\mathbf{j} + 0\mathbf{k}  + \frac{\sqrt2}{2}\right)
+$$
+
+$$\left(0 \mathbf{i} + 0\mathbf{j} + \frac{1}{2}\mathbf{k} + \frac{\sqrt3}{2}\right)
+\times
+\left(0 \mathbf{i} + 1\mathbf{j} + 0\mathbf{k} + 0\right)
+ = \frac{1}{2} \mathbf{kj} + \frac{\sqrt3}{2}\mathbf{j}
+ = -\frac{1}{2} \mathbf{i} + \frac{\sqrt3}{2}\mathbf{j} + 0 \mathbf{k} + 0
+ $$
+
+$$q_z q_y q_x 
+=  
+\left(-\frac{1}{2} \mathbf{i} + \frac{\sqrt3}{2}\mathbf{j} + 0 \mathbf{k} + 0\right)
+\times
+\left(\frac{\sqrt2}{2}\mathbf{i} + 0\mathbf{j} + 0\mathbf{k}  + \frac{\sqrt2}{2}\right)
+$$
+
+$$
+\left(-\frac{1}{2} \mathbf{i} + \frac{\sqrt3}{2}\mathbf{j} + 0 \mathbf{k} + 0\right)
+\times
+\left(\frac{\sqrt2}{2}\mathbf{i} + 0\mathbf{j} + 0\mathbf{k}  + \frac{\sqrt2}{2}\right)
+= \left( -\frac{\sqrt2}{4}\right)\mathbf{i}
++ \left( \frac{\sqrt6}{4}  \right) \mathbf{j}
++ \left(- \frac{\sqrt6}{4} \right) \mathbf{k}
++ \left( \frac{\sqrt2}{4}\right)
+$$
+
+$$
+\left(u_x \mathbf{i} + u_y \mathbf{j} + u_z \mathbf{k} \right) \sin \frac{\beta}{2} + \cos \frac{\beta}{2} = 
+-\frac{\sqrt2}{4}\mathbf{i}
++ \frac{\sqrt6}{4}\mathbf{j}
+- \frac{\sqrt6}{4}\mathbf{k}
++ \frac{\sqrt2}{4}
+$$
+
+$$\cos \frac{\beta}{2} = \frac{\sqrt2}{4} \to \sin \frac{\beta}{2} = \frac{\sqrt{14}}{4}$$
+
+$$
+-\frac{\sqrt2}{4}\mathbf{i}
++ \frac{\sqrt6}{4}\mathbf{j}
+- \frac{\sqrt6}{4}\mathbf{k}
++ \frac{\sqrt2}{4} = 
+\left(
+	\frac{\sqrt2}{\sqrt{14}} \mathbf{i} + 
+	\frac{\sqrt6}{\sqrt{14}} \mathbf{j} -
+	\frac{\sqrt6}{\sqrt{14}} \mathbf{k}
+\right)
+\frac{\sqrt{14}}{4} + \frac{\sqrt2}{4}
+$$
+
+The composite $X-Y-Z$ rotation of $(\theta,\phi,\alpha) = (90^{\circ}, 180^{\circ}, 60^{\circ})$ can be represented as a single rotation of $\beta$ about the unit vector $\mathbf{u}$. 
+$$\beta = 2 \arccos\left( \frac{\sqrt2}{4} \right)
+\qquad
+\mathbf{u} = 
+\left[
+\begin{array}{c}
+	\sqrt7/7 \cr
+	\sqrt{21}/7\cr
+	-\sqrt{21}/7 \cr
+\end{array}
+\right]
+$$
+
 
 \end{spacing}
 \end{document}
