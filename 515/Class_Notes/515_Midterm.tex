@@ -1192,6 +1192,18 @@ $$\beta = 2 \arccos\left( \frac{\sqrt2}{4} \right)
 \right]
 $$
 
+\section{Cohen-Sutherland Line Clipper}
+
+Iterative algorithm.
+
+\begin{itemize}
+	\item Divide plane into nine regions, $\{$left, right, center$\} \times \{$above, below, center$\}$.
+	\item {\tt IF} the endpoints of the line are both in the center, then accept.  
+	\item {\tt ELIF} the endpoints are both on the outside of a line (left, right, above, below), then reject.  
+	\item {\tt ELSE} cut the line at a boundary, and consider the two separately.  One will get rejected.  
+	\item Lather, rinse, repeat.  
+\end{itemize}
+
 
 \end{spacing}
 \end{document}
