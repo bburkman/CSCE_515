@@ -56,7 +56,7 @@
 \BOOKMARK [3][-]{subsubsection.3.20.1}{First Guess, Brad Burkman, 9:23pm 14 November}{subsection.3.20}% 56
 \BOOKMARK [3][-]{subsubsection.3.20.2}{Changes based on Dr. Borst's Discussion}{subsection.3.20}% 57
 \BOOKMARK [3][-]{subsubsection.3.20.3}{Marcus Shannon's Reply to Brad's Solution}{subsection.3.20}% 58
-\BOOKMARK [1][-]{section.4}{Additional Exam Question}{}% 59
+\BOOKMARK [1][-]{section.4}{Questions Dr. Borst said would be on the exam}{}% 59
 \BOOKMARK [1][-]{section.5}{Path to View}{}% 60
 \BOOKMARK [1][-]{section.6}{Brad's Sample Exercise on Quaternions}{}% 61
 \BOOKMARK [2][-]{subsection.6.1}{X Rotation}{section.6}% 62
@@ -65,3 +65,7 @@
 \BOOKMARK [2][-]{subsection.6.4}{Multiplication}{section.6}% 65
 \BOOKMARK [2][-]{subsection.6.5}{Express as a Single Rotation about a Unit Vector}{section.6}% 66
 \BOOKMARK [1][-]{section.7}{Cohen-Sutherland Line Clipper}{}% 67
+\BOOKMARK [1][-]{section.8}{Deriving the Projection Matrix in HW \0435}{}% 68
+\BOOKMARK [2][-]{subsection.8.1}{Orthographic Normalization}{section.8}% 69
+\BOOKMARK [2][-]{subsection.8.2}{Perspective Matrix}{section.8}% 70
+\BOOKMARK [2][-]{subsection.8.3}{Put it All Together}{section.8}% 71

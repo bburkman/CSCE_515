@@ -1000,13 +1000,19 @@ Note from Brad about the subscripts:
 In our notes, the diagram had $(x_1,y_1,R_1,G_1,B_1)$ on the left.  In the sample exam, it's on the right.  
 
 %%%%%%%%%%%%%%%%%%
-\section{Additional Exam Question}
+\section{Questions Dr. Borst said would be on the exam}
 
-He said in class that this one would be on the test.  
+\begin{itemize}
+	\item Assignment \#4, Question \#10
 
-Assignment \#4, Question \#10
+	Prove that the inverse of a rotation matrix is its transpose.  
+	\item Identify a drawing as having Orthographic, Oblique, or Perspective projection		\begin{itemize}
+		\item Orthographic:  Projection plane perpendicular to the direction of projection
+		\item Oblique:  One side square to the projection screen
+		\item Perspective:  Lines converge, foreshortening
+	\end{itemize}
+\end{itemize}
 
-Prove that the inverse of a rotation matrix is its transpose.  
 
 %%%%%%%%%%%%%%%%%%%
 \section{Path to View}
@@ -1204,6 +1210,241 @@ Iterative algorithm.
 	\item Lather, rinse, repeat.  
 \end{itemize}
 
+\section{Deriving the Projection Matrix in HW \#5}
+
+Let $X = 
+\left[
+	\begin{array}{c}
+		x \cr y \cr z \cr 1 \cr
+	\end{array}
+\right]
+$
+be a point in the frustum.  
+
+\
+
+We have a frustum $[l,r] \times [b.t] \times [-n,-f]$ of dimensions $(r-l)\times (t-b) \times ((-f)-(-r))$.  
+
+We want to normalize it to $[-1,1] \times [-1,1] \times [-1,1]$.  
+
+\
+
+\subsection{Orthographic Normalization}
+
+First, move the center of the fustum to the origin.  
+
+$$
+Center = 
+\left[
+	\begin{array}{*4{>{\displaystyle\vrule width 0pt height 16pt depth 12pt}c}}
+		1 & 0 & 0 & -\frac{r+l}{2} \cr
+		0 & 1 & 0 & -\frac{t+b}{2} \cr
+		0 & 0 & 1 & \frac{n+f}{2} \cr
+		0 & 0 & 0 & 1 \cr
+	\end{array}
+\right]
+$$
+
+Check that this transformation moves $(r,t,-f)$ to $\left( \frac{r+l}{2}, \frac{t+b}{2}, \frac{-f-r}{2} \right)$
+
+$$
+\left[
+	\begin{array}{*4{>{\displaystyle\vrule width 0pt height 16pt depth 12pt}c}}
+		1 & 0 & 0 & -\frac{r+l}{2} \cr
+		0 & 1 & 0 & -\frac{t+b}{2} \cr
+		0 & 0 & 1 & \frac{f+n}{2} \cr
+		0 & 0 & 0 & 1 \cr
+	\end{array}
+\right]
+\left[
+	\begin{array}{>{\displaystyle\vrule width 0pt height 16pt depth 12pt}c}
+		r \cr t \cr -f \cr 1
+	\end{array}
+\right]
+=
+\left[
+	\begin{array}{*4{>{\displaystyle\vrule width 0pt height 16pt depth 12pt}c}}
+		r - \frac{r+l}{2} \cr
+		t - \frac{t+b}{2} \cr
+		-f +\frac{f+n}{2} \cr
+		1
+	\end{array}
+\right]
+=
+\left[
+	\begin{array}{*4{>{\displaystyle\vrule width 0pt height 16pt depth 12pt}c}}
+		\frac{r-l}{2} \cr
+		\frac{t-b}{2} \cr
+		- \frac{f-n}{2} \cr
+		1
+	\end{array}
+\right]
+\qquad \surd
+$$
+
+Next, scale the frustum, dividing it in each dimension by half that dimension.  
+
+$$
+Scale = 
+\left[
+	\begin{array}{*4{>{\displaystyle\vrule width 0pt height 16pt depth 12pt}c}}
+		\frac{2}{r-l} & 0 & 0 & 0 \cr
+		0 & \frac{2}{t-b} & 0 & 0 \cr
+		0 & 0 & \frac{2}{n-f} & 0 \cr
+		0 & 0 & 0 & 1 \cr
+	\end{array}
+\right]
+$$
+
+These two matrices together are the $M_{ort,norm}$ array.  
+
+Check that it takes the point above to $(1,1,1)$.  
+
+$$
+Scale \times Center \times  
+\left[
+	\begin{array}{*4{>{\displaystyle\vrule width 0pt height 16pt depth 12pt}c}}
+		r \cr t \cr -f \cr 1 \cr
+	\end{array}
+\right]
+=
+\left[
+	\begin{array}{*4{>{\displaystyle\vrule width 0pt height 16pt depth 12pt}c}}
+		\frac{2}{r-l} & 0 & 0 & 0 \cr
+		0 & \frac{2}{t-b} & 0 & 0 \cr
+		0 & 0 & \frac{2}{n-f} & 0 \cr
+		0 & 0 & 0 & 1 \cr
+	\end{array}
+\right]
+\left[
+	\begin{array}{*4{>{\displaystyle\vrule width 0pt height 16pt depth 12pt}c}}
+		\frac{r-l}{2} \cr
+		\frac{t-b}{2} \cr
+		- \frac{f-n}{2} \cr
+		1
+	\end{array}
+\right]
+=
+\left[
+	\begin{array}{*4{>{\displaystyle\vrule width 0pt height 16pt depth 12pt}c}}
+		1 \cr 1 \cr 1 \cr 1 \cr
+	\end{array}
+\right]
+\qquad \surd
+$$
+
+\subsection{Perspective Matrix}
+
+Next, the perspective matrix.  
+
+$$
+M_{per} = 
+\left[
+	\begin{array}{*4{>{\displaystyle\vrule width 0pt height 16pt depth 12pt}c}}
+		-n & 0 & 0 & 0 \cr
+		0 & -n & 0 & 0 \cr
+		0 & 0 & -(n+f) & -nf \cr
+		0 & 0 & 1 & 0 \cr
+	\end{array}
+\right]
+$$
+
+\subsection{Put it All Together}
+
+The array we want, $M_{per,norm}$ is $M_{ort,norm} \times M_{per}$.
+
+$$
+M_{per,norm} = 
+\left[
+	\begin{array}{*4{>{\displaystyle\vrule width 0pt height 16pt depth 12pt}c}}
+		\frac{2}{r-l} & 0 & 0 & 0 \cr
+		0 & \frac{2}{t-b} & 0 & 0 \cr
+		0 & 0 & \frac{2}{n-f} & 0 \cr
+		0 & 0 & 0 & 1 \cr
+	\end{array}
+\right]
+\left[
+	\begin{array}{*4{>{\displaystyle\vrule width 0pt height 16pt depth 12pt}c}}
+		1 & 0 & 0 & -\frac{r+l}{2} \cr
+		0 & 1 & 0 & -\frac{t+b}{2} \cr
+		0 & 0 & 1 & \frac{n+f}{2} \cr
+		0 & 0 & 0 & 1 \cr
+	\end{array}
+\right]
+\left[
+	\begin{array}{*4{>{\displaystyle\vrule width 0pt height 16pt depth 12pt}c}}
+		-n & 0 & 0 & 0 \cr
+		0 & -n & 0 & 0 \cr
+		0 & 0 & -(n+f) & -nf \cr
+		0 & 0 & 1 & 0 \cr
+	\end{array}
+\right]
+$$
+
+$$
+\left[
+	\begin{array}{*4{>{\displaystyle\vrule width 0pt height 16pt depth 12pt}c}}
+		\frac{2}{r-l} & 0 & 0 & -\frac{r+l}{r-l} \cr
+		0 & \frac{2}{t-b} & 0 & -\frac{t+b}{t-b} \cr
+		0 & 0 & \frac{2}{n-f} & \frac{n+f}{n-f} \cr
+		0 & 0 & 0 & 1 \cr
+	\end{array}
+\right]
+\left[
+	\begin{array}{*4{>{\displaystyle\vrule width 0pt height 16pt depth 12pt}c}}
+		-n & 0 & 0 & 0 \cr
+		0 & -n & 0 & 0 \cr
+		0 & 0 & -(n+f) & -nf \cr
+		0 & 0 & 1 & 0 \cr
+	\end{array}
+\right]
+$$
+
+$$
+=
+\left[
+	\begin{array}{*4{>{\displaystyle\vrule width 0pt height 16pt depth 12pt}c}}
+		-\frac{2n}{r-l} & 0 & -\frac{r+l}{r-l} & 0  \cr
+		0 & -\frac{2n}{t-b} & -\frac{t+b}{t-b} & 0 \cr
+		0 & 0 & -\frac{2(n+f)}{n-f} + \frac{n+f}{n-f} & -\frac{2nf}{n-f} \cr
+		0 & 0 & 1 & 0 \cr
+	\end{array}
+\right]
+$$
+
+$$
+=
+\left[
+	\begin{array}{*4{>{\displaystyle\vrule width 0pt height 16pt depth 12pt}c}}
+		-\frac{2n}{r-l} & 0 & -\frac{r+l}{r-l} & 0  \cr
+		0 & -\frac{2n}{t-b} & -\frac{t+b}{t-b} & 0 \cr
+		0 & 0 & -\frac{n+f}{n-f} & -\frac{2nf}{n-f} \cr
+		0 & 0 & 1 & 0 \cr
+	\end{array}
+\right]
+$$
+
+$$
+=
+-1 \times
+\left[
+	\begin{array}{*4{>{\displaystyle\vrule width 0pt height 16pt depth 12pt}c}}
+		\frac{2n}{r-l} & 0 & \frac{r+l}{r-l} & 0  \cr
+		0 & \frac{2n}{t-b} & \frac{t+b}{t-b} & 0 \cr
+		0 & 0 & \frac{n+f}{n-f} & \frac{2nf}{n-f} \cr
+		0 & 0 & -1 & 0 \cr
+	\end{array}
+\right]
+$$
+
+In the second set of slides, page 9, it says
+
+\begin{quote}Look up glFrustum documentation to see the final result. All terms mayappear negated: this results in the same 3D point since it is justmultiplying a homogeneous transform by a constant
+\end{quote}
+
+So multiplying by $-1$ is okay.  
+
+Thus, we have the projection matrix $P$ at the top of Assignment \#5.  
 
 \end{spacing}
 \end{document}
