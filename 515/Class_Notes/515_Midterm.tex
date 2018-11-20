@@ -32,11 +32,11 @@
 \section{Checklist}
 
 \begin{itemize}
-	\item To Do:  Exercise \#9, 17, 18
+	\item To Do:  Exercise \#17, 18
 	\item To Expand/Fix:  Exercise \#13, 20
-	\item Not Sure:  \#1, 3
+	\item Not Sure:  \#3
 	\item Review Hard:  \#10
-	\item Done:  \#2,  4, 5, 6, 7, 8, 11, 12, 14, 15, 16
+	\item Done:  \#1, 2,  4, 5, 6, 7, 8, 9, 11, 12, 14, 15, 16
 \end{itemize}
 
 \section{Topics to Solidify}
@@ -52,7 +52,8 @@
 \section{Study Guide Questions}
 %%%%%%%%%%%%%%%%%
 
-\subsection{Question 1:  Confused}
+%%%%%%%%%
+\subsection{Question 1:  Refresh Buffers}
 1.  Both raster and vector displays use a refresh buffer.  What is the difference between the two in terms of refresh buffer contents?
 
 \subsubsection{First Punt, Brad Burkman, 11/17 7:41pm}
@@ -80,7 +81,15 @@ Q1: According to my class notes
     \item Raster Display Refresh Buffers contain a 2-dimensional bitmap/pixmap which is then used to render per-pixel data via the video controller onto the display.
 \end{itemize}
 
-\subsection{Question 2:  Done}
+\subsubsection{Brief Answer}
+
+In a vector display, the refresh buffer contains instructions for drawing the page.  
+
+In a raster display, the refresh buffer contains a pixmap of the page.  
+
+
+%%%%%%%%%%%
+\subsection{Question 2:  Besenham Algorithm}
 2.  For the midpoint line algorithm, how were floating point operations converted to integer operations for the main loop?  (Be as specific as possible.)
 
 \subsubsection{First guess, Brad Burkman, 11/14 7:44pm}
@@ -190,9 +199,12 @@ Now since we moved NE, $d = d+2 \Delta y - 10 = 3 + 2(2) - 10 = -3$
 
 Since $d = -3$ is negative, move E.
 
+\subsubsection{Brief Answer}
 
+In the midpoint line (Besenham) algorithm, the floating point algorithm was adding some multiples of $m = \frac{\Delta y}{\Delta x}$ and $0.5$, so scale everything by $2\Delta x$ and you have integers.  
 
-\subsection{Question 3:  Unsure}
+%%%%%%%%%%%%%%
+\subsection{Question 3:  Vocabulary}
 3.  What is meant by each of the three terms geometry, topology, and attributes for a polygonal surface model?
 
 \subsubsection{Information from Class Notes, Brad Burkman, 17 November 10:11pm}
@@ -203,7 +215,8 @@ Since $d = -3$ is negative, move E.
 	\item Attributes are colors and normal vectors, perhaps the texture?
 \end{itemize}
 
-\subsection{Question 4:  Done}
+%%%%%%%%%%%%%
+\subsection{Question 4:  Triangle Strips}
 
 \sout{4.  Give an example of an operation that would normally be faster with pointers-to-a-vertex-list mesh representation than with an explicit representation.  Justify your answer.  }
 
@@ -220,8 +233,8 @@ Triangle Strips Question
 	\item Given a rotated surface with $np$ number of points to be rotated and $nm$ steps of rotation, how many vertices, cells, triangles, triangles, triangle strips, elements in the vertex list, elements in the index list ... are there?
 \end{itemize}
 
-
-\subsection{Question 5:  Done}
+%%%%%%%%%%%%%%%%
+\subsection{Question 5:  Transformations}
 5.  Answer true or false for each item below.  
 
 For transforms as discussed in class:
@@ -348,8 +361,8 @@ $$XY =
 $$
 
 
-
-\subsection{Question 6:  Done}
+%%%%%%%%%%%%%%%%%%
+\subsection{Question 6:  Composite Homogeneous Transform}
 6.  Give a $4 \times 4$ homogeneous transform (sixteen numbers) for describing an object's local coordinate system with respect to the world coordinate system such that:
 
 \begin{itemize}
@@ -413,7 +426,8 @@ $$=
 \right]
 $$
 
-\subsection{Question 7:  Done}
+%%%%%%%%%%%%%%%%
+\subsection{Question 7:  Inverse Transform}
 
 Give the inverse of the transform.  
 
@@ -502,8 +516,8 @@ $$ A A^{-1} = \left[
 $$
 
 
-
-\subsection{Question 8:  Done}
+%%%%%%%%%%%%%%%%%
+\subsection{Question 8:  Unit Normal Vector}
 8.  The diagrams below show a house model.  Give $\hat{\mathbf{n}}$, the unit normal vector for the right side of the roof.  
 
 \subsubsection{First guess for \#8, Brad Burkman, 7:58pm, 11 November}
@@ -557,7 +571,8 @@ $\displaystyle
 \right]
 $
 
-\subsection{Question 9:  To Do}
+%%%%%%%%%%%%%%%%
+\subsection{Question 9:  Fixed Axis Angle / Euler Rotations}
 9.  Recall the plane diagram above.  Suppose plane orientation is stored as an $X-Z-Y$ fixed axis set $(\theta, \phi, \alpha)$, that is, three rotations about fixed world axes in the order $X$, $Z$, $Y$.  In terms of the composite rotation resulting from these three components and for arbitrary plane orientation:
 
 \begin{enumerate}[label=\arabic*)]
@@ -592,7 +607,8 @@ Q9: According to my class notes
     \item Euler Angle rotations are calculated left to right, for XYZ you'll get X * Y * Z.
 \end{itemize}
 
-\subsection{Question 10:  Review}
+%%%%%%%%%%%%%%%%%%%
+\subsection{Question 10:  Quaternion}
 10.  How could we convert an orientation expressed in a 3-angle set convention above to a single quaternion representing the same orientation?  Give a concise but accurate conceptual description.
 
 \subsubsection{Dr. Borst's Answer}
@@ -622,7 +638,8 @@ Q10: From deduction and expanding on Dr. Borst explanation of  "Convert each of 
     \item Note: I don't claim for this to be the full expansion or correct, this is merely logical meandering based on what I currently understand.
     \end{itemize}
     
-\subsection{Question 11:  Done}
+%%%%%%%%%%%%%%%%%
+\subsection{Question 11:  Sequence of Transforms from Camera (Eye) to Object}
 11.  The graph below represents the relationships between coordinate systems (objects, if you prefer) using notation from lecture.  Suppose $\{D\}$ is the camera's local frame in an OpenGL application.  When rendering an object having vertices described in frame $\{E\}$, what would the value of the modelview matrix be?
 
 \subsubsection{First Guess, Brad Burkman, 8:26pm 14 November}
@@ -637,16 +654,17 @@ $$
 	^A_BT \cdot 
 	^B_ET
 	$$
-	
-\subsection{Question 12:  Done}
+
+%%%%%%%%%%%%%%%%%
+\subsection{Question 12:  Local/Global Transform}
 12.  Suppose, for the above diagram, we want to rotate frame $\{B\}$ by a rotation transform $R$ that is to act as a rotation described with respect to the  current $\{B\}$ frame.  How exactly should $R$ be applied to update one of the transforms in the graph?
 
 \subsubsection{Dr. Borst's Answer}
 
 $^A_BT$ gets modified.  Multiply by $R$ on the right to be a local change to $B$.  
 
-
-\subsection{Question 13:  Expand and Review}
+%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Question 13:  Perspective Projection Matrices}
 13.  Give any one of the perspective projection matrices, $M_{per}$ from the lecture slides.  
 
 \subsubsection{Orthographic Projection from Simple Example}
@@ -760,19 +778,22 @@ $Z$-coordinate is unchanged at near and far boundaries
 
 Transforms the frustum into an orthographic view volume.  
 
-\subsection{Question 14:  Done}
+%%%%%%%%%%%%%%%%%%
+\subsection{Question 14:  Normalizing Transform}
 14.  What is meant by a normalizing transform and what two substeps can be used to build the normalizing transform for the orthographic projection case described in lecture?  A good conceptual description is sufficient; exact transforms are not requested.
 
 \subsubsection{Dr. Borst's Answer}
 
 Normalizing transform takes a box in the view and transforms it to $[-1,1]\times [-1,1] \times [-1,1]$.  Transform the center to the origin and scale.  
 
-\subsection{Question 15:  Done}
+%%%%%%%%%%%%%%%%%
+\subsection{Question 15:  Modelview Matrix (Definition)}
 15.  In the OpenGL pipeline, after the modelview matrix is applied to a vertex, the result is that the vertex is described with respect to which coordinate system?
 
 \
 
-ModelView Matrix is the composition of all of the transformations from the camera to thenode being rendered.
+ModelView Matrix is the composition of all of the transformations from the camera to the
+node being rendered.
 
 \ 
 
@@ -780,7 +801,8 @@ Answer:  Camera View
 \subsubsection{Note from Marcus Shannon for \#15 and \#16}
 Q15 \& Q16: This is a trivial point to make but the Camera View, from my understanding, is equivalent to the Eye Coordinate System.
 
-\subsection{Question 16:  Done}
+%%%%%%%%%%%%%%%%
+\subsection{Question 16:  Perspective Frustum}
 16.  The six common parameters (near, far, left, $\dots$) of a perspective frustum description are coordinates describing the viewing volume with respect to which coordinate system?
 
 \
@@ -791,7 +813,8 @@ Answer:  Camera View
 
 Eye (camera) coordinate system.
 
-\subsection{Question 17:  To Do}
+%%%%%%%%%%%%%%%%%
+\subsection{Question 17:  Illumination Equation}
 17.  Below, circle all correct answers for questions about the illumination equation from lecture.  
 
 \begin{enumerate}[label=\arabic*)]
@@ -820,7 +843,8 @@ Q17: This is simply about looking at the Phong Illumination Equation and identif
       \item Therefore 3) is Direction to light, Surface Normal, \& Direction to Viewer.
 \end{itemize}
 
-\subsection{Question 18: To Do}
+%%%%%%%%%%%%%%%%%
+\subsection{Question 18: Phong/Gouraud Shading}
 18.  Describe why a triangle may look different with Phong shading than with Gouraud shading, and include a sketch of shaded triangles that illustrate the difference you discuss. 
 
 \subsubsection{Marcus Shannon's Solution}
@@ -832,11 +856,12 @@ Q18: Pulled from the slides (paraphrased):
     \item For triangle shading, review the second set of slides provided on moodle and scroll down a bit.
 \end{itemize}
 
-
-\subsection{Question 19:  Not on Exam}
+%%%%%%%%%%%%%%%%%%
+\subsection{Question 19:  Painter's Algorithm}
 \sout{19.  Sketch a scene with two or three polygons for which the painter's algorithm would be insufficient for visible surface determination.  }
 
-\subsection{Question 20:  To Fix}
+%%%%%%%%%%%%%%%%%%
+\subsection{Question 20:  Scan Conversion}
 20.  Consider scan conversion of the illustrated triangle.  Assume that scan conversion is done from the bottom up, that the triangle crosses several scan lines, and that the geometry matches the illustration.  
 
 \begin{tikzpicture}[x=20mm,y=20mm]
@@ -899,6 +924,14 @@ Q20: Almost got the same answer, I pulled slightly different equations from my n
     \item Which of us is correct, I honestly couldn't say.
 \end{itemize}
 
+%%%%%%%%%%%%%%%%%%
+\section{Additional Exam Question}
+
+He said in class that this one would be on the test.  
+
+Assignment \#4, Question \#10
+
+Prove that the inverse of a rotation matrix is its transpose.  
 
 \end{spacing}
 \end{document}
