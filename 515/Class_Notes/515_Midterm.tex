@@ -1,5 +1,6 @@
 \documentclass[11pt]{article}
 \usepackage{tikz}
+\usetikzlibrary{arrows}
 \usepackage{pgfmath}
 \usepackage{setspace}
 \usepackage{amsmath}
@@ -32,11 +33,11 @@
 \section{Checklist}
 
 \begin{itemize}
-	\item To Do:  Exercise \#17, 18
+	\item To Do: 
 	\item To Expand/Fix:  Exercise \#13, 20
-	\item Not Sure:  \#3
+	\item Not Sure:  
 	\item Review Hard:  \#10
-	\item Done:  \#1, 2,  4, 5, 6, 7, 8, 9, 11, 12, 14, 15, 16
+	\item Done:  \#1, 2, 3,  4, 5, 6, 7, 8, 9, 11, 12, 14, 15, 16, 17, 18
 \end{itemize}
 
 \section{Topics to Solidify}
@@ -843,6 +844,72 @@ Q17: This is simply about looking at the Phong Illumination Equation and identif
       \item Therefore 3) is Direction to light, Surface Normal, \& Direction to Viewer.
 \end{itemize}
 
+\subsubsection{Lighting Equation}
+
+\begin{tikzpicture}[x=30mm,y=30mm]
+	\clip (-2,-.5) rectangle (2,1.5);
+	\draw (0,-1) circle (1);
+	\draw [-triangle 60] (0,0) -- ({cos(90)},{sin(90)}) node [above] {$\vec{N}$}; 
+	\draw [-triangle 60] (0,0) -- ({cos(60)},{sin(60)}) node [above] {$\vec{R}$};  
+	\draw [-triangle 60] (0,0) -- ({cos(120)},{sin(120)}) node [above] {$\vec{L}$}; 
+	\draw [-triangle 60] (0,0) -- ({cos(20)},{sin(20)}) node [above] {$\vec{V}$}; 
+	\draw ({0.5*cos(90)},{0.5*sin(90)}) arc (90:120:0.5) node [midway, above] {$\theta$};
+	\draw ({0.4*cos(60)},{0.4*sin(60)}) arc (60:90:0.4) node [midway, above] {$\theta$};
+	\draw ({0.5*cos(20)},{0.5*sin(20)}) arc (20:60:0.5) node [midway, above right] {$\phi$};
+\end{tikzpicture}
+
+{\bf Ambient Component}  $I = k_a I_a O_a$
+
+$k_a \in [0,1]$ is the reflective coefficient, proportion of incident light reflected.  Usually a property of the material.
+
+$I_a \in [0,1]$ is ambient light intensity
+
+$O_a$ ambient color term
+
+\
+
+\noindent{\bf Diffuse Component}:  Which way is the surface facing?
+
+$k_d$ object's diffuse-reflection coefficient
+
+$I_l$ Light source intensity
+
+$O_d$ Diffuse color term
+
+$\hat{\mathbf{N}}$ Surface unit normal
+
+$\hat{\mathbf{L}}$ Unit vector towards light
+
+$\theta$ Angle between surface normal and direction towards light
+
+$$I = k_d I_l O_d \cos \theta = k_d I_l O_d \left( \hat{\mathbf{N}} \cdot \hat{\mathbf{L}} \right)$$
+
+\
+
+\noindent {\bf Specular Component}:  Sharp reflections
+
+$k_s$ Specular reflection coefficient
+
+$I_l$ Light intensity
+
+$O_s$ Object's specular color
+
+$\phi$ Angle between reflection and viewer.  
+
+Note:  If $\phi = 0$, then it's reflecting right into the eye view.  
+
+$n$ Specular exponent.  The higher the $n$, the sharper the more narrow the reflection.  
+
+$$I = k_s I_l O_s \cos^n \phi = k_s I_l O_s \left(\hat{\mathbf{R}} \cdot \hat{\mathbf{V}}\right) ^n$$
+
+
+$$ I = k_a I_a O_a + k_d I_l O_l \cos \theta + k_s I_l O_s \cos^n \phi$$
+
+$$\cos \theta = \hat{\mathbf{N}} \cdot \hat{\mathbf{L}}, \qquad 
+\cos \phi = \hat{\mathbf{R}} \cdot \hat{\mathbf{V}}$$
+
+$$ I = k_a I_a O_a + k_d I_l O_l \hat{\mathbf{N}} \cdot \hat{\mathbf{L}} + k_s I_l O_s \left(\hat{\mathbf{R}} \cdot \hat{\mathbf{V}}\right)^n$$
+
 %%%%%%%%%%%%%%%%%
 \subsection{Question 18: Phong/Gouraud Shading}
 18.  Describe why a triangle may look different with Phong shading than with Gouraud shading, and include a sketch of shaded triangles that illustrate the difference you discuss. 
@@ -855,6 +922,16 @@ Q18: Pulled from the slides (paraphrased):
     \item Phong shading will interpolate surface normals from vertices \& then apply lighting equation per-pixel.
     \item For triangle shading, review the second set of slides provided on moodle and scroll down a bit.
 \end{itemize}
+
+\subsubsection{Brad's Solution (Same idea, expressed slightly differently)}
+
+In Gouraud shading, the lighting equation is calculated at vertices and interpolated across the polygon to get values at each pixel.  
+
+In Phong shading, the lighting equation is calculated at each pixel.  
+
+Gouraud shading will be much smoother, with no spots of intensity.  
+
+Phong shading, especially with strong diffuse and specular coefficients will have much sharper ``highlights.''  
 
 %%%%%%%%%%%%%%%%%%
 \subsection{Question 19:  Painter's Algorithm}
@@ -932,6 +1009,11 @@ He said in class that this one would be on the test.
 Assignment \#4, Question \#10
 
 Prove that the inverse of a rotation matrix is its transpose.  
+
+%%%%%%%%%%%%%%%%%%%
+\section{Path to View}
+
+Memory $\to$ Vertex Shader $\to$ Rasterizer $\to$ Fragment (pixel) Shader $\to$ Frame Buffer
 
 \end{spacing}
 \end{document}

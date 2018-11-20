@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  19 NOV 2018 18:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  19 NOV 2018 20:32
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -344,10 +344,17 @@ File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 s/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
 )))
-(/usr/local/texlive/2016/texmf-dist/tex/latex/setspace/setspace.sty
+(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+code.tex
+File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
+\arrowsize=\dimen151
+)) (/usr/local/texlive/2016/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
-)
-(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsmath.sty
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2016/03/10 v2.15b AMS math features
 \@mathmargin=\skip43
 
@@ -358,11 +365,11 @@ Package: amstext 2000/06/29 v2.01 AMS text
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks27
-\ex@=\dimen151
+\ex@=\dimen152
 ))
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen152
+\pmbraise@=\dimen153
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
@@ -379,7 +386,7 @@ LaTeX Info: Redefining \dots on input line 397.
 LaTeX Info: Redefining \cdots on input line 518.
 \Mathstrutbox@=\box37
 \strutbox@=\box38
-\big@size=\dimen153
+\big@size=\dimen154
 LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
 \macc@depth=\count112
@@ -392,12 +399,12 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
 \column@=\count117
 \maxfields@=\count118
 \andhelp@=\toks29
-\eqnshift@=\dimen154
-\alignsep@=\dimen155
-\tagshift@=\dimen156
-\tagwidth@=\dimen157
-\totwidth@=\dimen158
-\lineht@=\dimen159
+\eqnshift@=\dimen155
+\alignsep@=\dimen156
+\tagshift@=\dimen157
+\tagwidth@=\dimen158
+\totwidth@=\dimen159
+\lineht@=\dimen160
 \@envbody=\toks30
 \multlinegap=\skip44
 \multlinetaggap=\skip45
@@ -407,8 +414,8 @@ LaTeX Info: Redefining \] on input line 2740.
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/array.sty
 Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen160
-\extrarowheight=\dimen161
+\col@sep=\dimen161
+\extrarowheight=\dimen162
 \NC@list=\toks32
 \extratabsurround=\skip46
 \backup@length=\skip47
@@ -469,7 +476,7 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
-\@linkdim=\dimen162
+\@linkdim=\dimen163
 \Hy@linkcounter=\count119
 \Hy@pagecounter=\count120
 
@@ -495,10 +502,10 @@ Package hyperref Info: Bookmarks ON on input line 4691.
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5044.
-\XeTeXLinkMargin=\dimen163
+\XeTeXLinkMargin=\dimen164
 \Fld@menulength=\count123
-\Field@Width=\dimen164
-\Fld@charsize=\dimen165
+\Field@Width=\dimen165
+\Fld@charsize=\dimen166
 Package hyperref Info: Hyper figures OFF on input line 6298.
 Package hyperref Info: Link nesting OFF on input line 6303.
 Package hyperref Info: Hyper index ON on input line 6306.
@@ -534,7 +541,7 @@ Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \labelindent=\skip49
-\enit@outerparindent=\dimen166
+\enit@outerparindent=\dimen167
 \enit@toks=\toks34
 \enit@inbox=\box39
 \enitdp@description=\count129
@@ -544,41 +551,41 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \UL@hyphenbox=\box41
 \UL@skip=\skip50
 \UL@hook=\toks35
-\UL@height=\dimen167
+\UL@height=\dimen168
 \UL@pe=\count130
-\UL@pixel=\dimen168
+\UL@pixel=\dimen169
 \ULC@box=\box42
 Package: ulem 2012/05/18
-\ULdepth=\dimen169
+\ULdepth=\dimen170
 )
-(./515_Midterm.aux)
+No file 515_Midterm.aux.
 \openout1 = `515_Midterm.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
- ABD: EveryShipout initializing macros
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+ABD: EveryShipout initializing macros
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count131
-\scratchdimen=\dimen170
+\scratchdimen=\dimen171
 \scratchbox=\box43
 \nofMPsegments=\count132
 \nofMParguments=\count133
 \everyMPshowfont=\toks36
 \MPscratchCnt=\count134
-\MPscratchDim=\dimen171
+\MPscratchDim=\dimen172
 \MPnumerator=\count135
 \makeMPintoPDFobject=\count136
 \everyMPtoPDFconversion=\toks37
@@ -598,7 +605,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box44
-Package hyperref Info: Link coloring OFF on input line 27.
+Package hyperref Info: Link coloring OFF on input line 28.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -608,86 +615,90 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count137
 )
-LaTeX Info: Redefining \ref on input line 27.
-LaTeX Info: Redefining \pageref on input line 27.
-LaTeX Info: Redefining \nameref on input line 27.
-
-(./515_Midterm.out) (./515_Midterm.out)
+LaTeX Info: Redefining \ref on input line 28.
+LaTeX Info: Redefining \pageref on input line 28.
+LaTeX Info: Redefining \nameref on input line 28.
 \@outlinefile=\write4
 \openout4 = `515_Midterm.out'.
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 35.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 36.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 35.
-
-(./515_Midterm.toc [1
-
-{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2])
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 36.
 \tf@toc=\write5
 \openout5 = `515_Midterm.toc'.
 
- [3]
-Overfull \hbox (21.419pt too wide) in paragraph at lines 130--131
+ [1
+
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (21.419pt too wide) in paragraph at lines 131--132
 [] 
  []
 
-[4] [5] [6]
+[2] [3] [4] [5]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 268.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 268.
+(hyperref)                removing `math shift' on input line 269.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 281.
+(hyperref)                removing `math shift' on input line 269.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 281.
+(hyperref)                removing `math shift' on input line 282.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 294.
+(hyperref)                removing `math shift' on input line 282.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 294.
+(hyperref)                removing `math shift' on input line 295.
 
 
-Overfull \hbox (11.38556pt too wide) detected at line 334
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 295.
+
+
+Overfull \hbox (11.38556pt too wide) detected at line 335
 \OML/cmm/m/it/10.95 YX \OT1/cmr/m/n/10.95 = [] [] = []
  []
 
 
-Overfull \hbox (22.00096pt too wide) detected at line 361
+Overfull \hbox (22.00096pt too wide) detected at line 362
 \OML/cmm/m/it/10.95 XY \OT1/cmr/m/n/10.95 = [] [] = []
  []
 
-[7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 937.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 937.
+[6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1019.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1019.
  (./515_Midterm.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 937.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 937.
-Package rerunfilecheck Info: File `515_Midterm.out' has not changed.
-(rerunfilecheck)             Checksum: A7EA28726DFD7772123EB9560276A681;4938.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 937.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1019.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1019.
+
+
+
+Package rerunfilecheck Warning: File `515_Midterm.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `515_Midterm.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  297A69C5FF427272EBA97A5EE9096019;5188.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1019.
  ) 
 Here is how much of TeX's memory you used:
- 16140 strings out of 493014
- 303933 string characters out of 6133351
- 372857 words of memory out of 5000000
- 19331 multiletter control sequences out of 15000+600000
+ 16699 strings out of 493014
+ 319646 string characters out of 6133351
+ 380104 words of memory out of 5000000
+ 19889 multiletter control sequences out of 15000+600000
  10604 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,9n,54p,412b,565s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,9n,54p,415b,605s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
@@ -700,10 +711,10 @@ l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/t
 exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texl
 ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on 515_Midterm.pdf (17 pages, 200679 bytes).
+Output written on 515_Midterm.pdf (17 pages, 197886 bytes).
 PDF statistics:
- 449 PDF objects out of 1000 (max. 8388607)
- 413 compressed objects within 5 object streams
- 85 named destinations out of 1000 (max. 500000)
- 469 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 220 PDF objects out of 1000 (max. 8388607)
+ 187 compressed objects within 2 object streams
+ 88 named destinations out of 1000 (max. 500000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
